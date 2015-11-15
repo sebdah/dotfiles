@@ -64,12 +64,4 @@ HIST_STAMPS="yyyy-mm-dd"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git tmux)
 
-# User configuration
-export PATH="/Users/sebdah/.rbenv/bin:/Users/sebdah/.rbenv/shims:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/docker-workstation/vagrant-workstation/bin:/Users/sebdah/bin:/Users/sebdah/go/bin:/usr/local/go/bin:/usr/local/opt/go/libexec/bin:./node_modules/.bin:./../node_modules/.bin:/Users/sebdah/work/platform-utilities/instance-ips:/Users/sebdah/git/avail/tools/pys3"
-# export MANPATH="/usr/local/man:$MANPATH"
-
 source $ZSH/oh-my-zsh.sh
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
