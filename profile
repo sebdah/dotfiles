@@ -1,11 +1,4 @@
 # Alias
-alias g='hub'
-alias git='hub'
-alias gci='git commit'
-alias gco='git checkout'
-alias gdiff='git diff'
-alias gpl='git pull-request'
-alias gst='git status'
 alias grep='grep --color'
 alias ls='ls -G'
 alias ssh="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
