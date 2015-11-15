@@ -1,4 +1,5 @@
 # Path to your oh-my-zsh installation.
+source $HOME/.profile
 export ZSH=/Users/sebdah/.dotfiles/oh-my-zsh
 
 HISTFILE=~/.histfile
@@ -7,8 +8,7 @@ SAVEHIST=1000
 setopt appendhistory autocd extendedglob nomatch
 unsetopt beep
 bindkey -v
-# End of lines configured by zsh-newuser-install
-# The following lines were added by compinstall
+
 zstyle :compinstall filename '/Users/sebdah/.zshrc'
 
 autoload -Uz compinit
@@ -62,14 +62,13 @@ HIST_STAMPS="yyyy-mm-dd"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git golang ruby osx javascript)
+plugins=(git tmux)
 
 # User configuration
 export PATH="/Users/sebdah/.rbenv/bin:/Users/sebdah/.rbenv/shims:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/docker-workstation/vagrant-workstation/bin:/Users/sebdah/bin:/Users/sebdah/go/bin:/usr/local/go/bin:/usr/local/opt/go/libexec/bin:./node_modules/.bin:./../node_modules/.bin:/Users/sebdah/work/platform-utilities/instance-ips:/Users/sebdah/git/avail/tools/pys3"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
-source $HOME/.profile
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
