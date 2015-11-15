@@ -1,0 +1,6 @@
+*.iml
+.idea
+.DS_Store
+.ruby-version
+.ropeproject/
+npm-debug.log
