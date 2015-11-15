@@ -40,6 +40,8 @@ export LSCOLORS 'Exfxcxdxbxegedabagacad'
 # PS1 configuration
 #export PS1='\[\e[1;37m\][\u \[\e[1;35m\]\w\[\e[m\]\[\e[1;37m\]$(__git_ps1 " (%s)")]\$\[\e[0m\] '
 
+export EDITOR='vim'
+
 # ls colors (Mac OS X ls)
 export LSCOLORS='Exfxcxdxbxegedabagacad'
 
