@@ -53,7 +53,7 @@ DISABLE_AUTO_TITLE="true"
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy"
+HIST_STAMPS="yyyy-mm-dd"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -65,34 +65,13 @@ DISABLE_AUTO_TITLE="true"
 plugins=(git golang ruby osx javascript)
 
 # User configuration
-
 export PATH="/Users/sebdah/.rbenv/bin:/Users/sebdah/.rbenv/shims:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/docker-workstation/vagrant-workstation/bin:/Users/sebdah/bin:/Users/sebdah/go/bin:/usr/local/go/bin:/usr/local/opt/go/libexec/bin:./node_modules/.bin:./../node_modules/.bin:/Users/sebdah/work/platform-utilities/instance-ips:/Users/sebdah/git/avail/tools/pys3"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
+source $HOME/.profile
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
 export EDITOR='vim'
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
