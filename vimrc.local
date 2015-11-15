@@ -1,0 +1,37 @@
+" Set the background to dark
+set background=dark
+
+" Colorscheme
+colorscheme hybrid
+
+" Uncomment the lines below if you would like to
+" use the solarized colorscheme.
+"
+" Please remember to configure set background=dark|light
+" accordingly to get the appropriate solarized colorscheme
+"
+"let g:solarized_termcolors=256
+" colorscheme hybrid
+
+" Remove trailing white spaces on :w
+autocmd BufWritePre * :%s/\s\+$//e
+
+" vim-airline configuration
+let g:airline#extensions#tabline#enabled = 1
+
+" Enable vim-airline powerline fonts
+" Please follow the instructions below before enabling:
+" https://github.com/bling/vim-airline#integrating-with-powerline-fonts
+let g:airline_powerline_fonts = 1
+
+" Enable SCSS highlighting on *.css files
+"au BufRead,BufNewFile *.scss set filetype=scss.css
+
+" Open the tagbar automatically for go files
+"au FileType go TagbarOpen
+
+" Disable arrow keys
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
