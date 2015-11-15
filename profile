@@ -33,12 +33,12 @@ export LSCOLORS 'Exfxcxdxbxegedabagacad'
 #eval "$(boot2docker shellinit 2> /dev/null)"
 
 # Enable git completion
-if [ -f `brew --prefix`/etc/bash_completion ]; then
-    . `brew --prefix`/etc/bash_completion
-fi
+#if [ -f `brew --prefix`/etc/bash_completion ]; then
+    #. `brew --prefix`/etc/bash_completion
+#fi
 
 # PS1 configuration
-export PS1='\[\e[1;37m\][\u \[\e[1;35m\]\w\[\e[m\]\[\e[1;37m\]$(__git_ps1 " (%s)")]\$\[\e[0m\] '
+#export PS1='\[\e[1;37m\][\u \[\e[1;35m\]\w\[\e[m\]\[\e[1;37m\]$(__git_ps1 " (%s)")]\$\[\e[0m\] '
 
 # ls colors (Mac OS X ls)
 export LSCOLORS='Exfxcxdxbxegedabagacad'
