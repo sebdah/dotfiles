@@ -66,6 +66,7 @@ plugins=(git tmux)
 source $ZSH/oh-my-zsh.sh
 
 # Alias
+alias grps="git rev-parse --short HEAD"
 alias grep='grep --color'
 alias ls='ls -G'
 alias ssh="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
