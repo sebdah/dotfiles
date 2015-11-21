@@ -1,0 +1,3 @@
+[submodule "prezto"]
+	path = prezto
+	url = git@github.com:sebdah/prezto.git
