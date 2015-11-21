@@ -2,6 +2,19 @@
 
 Awesome dotfiles for this and that!
 
+## Dependencies
+
+- [Homebrew](http://brew.sh/)
+- vim (install via `brew`)
+- tmux (install via `brew`)
+- zsh (install via `brew`)
+
+### tmux dependencies
+
+For OS X copy super powers
+
+    brew install reattach-to-user-namespace
+
 ## Installation
 
 Update all submodules
