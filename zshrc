@@ -13,3 +13,5 @@ fi
 autoload -Uz promptinit
 promptinit
 prompt peepcode
+
+bindkey -e
