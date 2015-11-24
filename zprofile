@@ -82,7 +82,7 @@ alias grps='git rev-parse --short HEAD'
 alias gst='git status'
 
 # Go
-export GOPATH="~/go"
+export GOPATH="${HOME}/go"
 
 #
 # Less
