@@ -17,7 +17,7 @@ colorscheme hybrid
 autocmd BufWritePre * :%s/\s\+$//e
 
 " vim-airline configuration
-"let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
 
 " Enable vim-airline powerline fonts
 " Please follow the instructions below before enabling:
