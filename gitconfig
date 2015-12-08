@@ -57,7 +57,8 @@
 [mergetool]
 	prompt = false
 [merge]
-	tool = Kaleidoscope
+	tool = vimdiff
+	conflictstyle = diff3
 [push]
 	default = current
 [filter "lfs"]
