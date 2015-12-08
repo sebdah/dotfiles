@@ -77,9 +77,7 @@ alias ssh="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
 alias scp="scp -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
 alias tmux="tmux -2"
 alias wrk="workstation"
-alias gL='git pull'
-alias grps='git rev-parse --short HEAD'
-alias gst='git status'
+source ${HOME}/.dotfiles/gitaliases
 
 # Go
 export GOPATH="${HOME}/go"

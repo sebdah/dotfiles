@@ -1,0 +1,81 @@
+#// vim: set ft=zsh
+#
+# Git aliases
+#
+alias g='git'
+
+# Add
+alias ga='git add'
+
+# Branch
+alias gb='git branch'
+alias gbc='git checkout -c'
+alias gbd='git branch -d'
+alias gbD='git branch -D'
+
+# Commit
+alias gc='git commit --verbose'
+alias gca='git commit --amend --reuse-message=HEAD'
+alias gce='git commit --allow-empty'
+alias gcs='git show'
+alias gcp='git cherry-pick'
+alias gcr='git revert'
+
+# Checkout
+alias gco='git checkout'
+
+# Conflict (C)
+alias gCl='git status | sed -n "s/^.*both [a-z]*ed: *//p"'
+alias gCa='git add $(gCl)'
+alias gCe='git mergetool $(gCl)'
+alias gCo='git checkout --ours --'
+alias gCO='gCo $(gCl)'
+alias gCt='git checkout --theirs --'
+alias gCT='gCt $(gCl)'
+
+# Pull request
+alias gpr='hub pull-request'
+
+# Fetch / pull
+alias gf='git fetch'
+alias gL='git pull'
+
+# Log
+alias gl='git log'
+
+# Merge
+alias gm='git merge'
+
+# Push
+alias gp='git push'
+alias gpf='git push force --with-lease'
+alias gpff='git push force'
+
+# Rebase
+alias gr='git rebase'
+alias gra='git rebase --abort'
+alias grc='git rebase --continue'
+alias gri='git rebase --interactive'
+alias grs='git rebase --skip'
+
+# Rev parse
+alias grps='git rev-parse --short HEAD'
+
+# Working copy
+alias gwc='git clean -n'
+alias gwC='git clean -f'
+alias gwd='git diff'
+alias gwr='git reset --soft HEAD'
+alias gwR='git reset --hard HEAD'
+
+# Stash
+alias gs='git stash'
+
+# Status
+alias gst='git status'
+
+# Submodules
+alias gSa='git submodule add'
+alias gSi='git submodule init'
+alias gSs='git submodule status'
+alias gSu='git submodule update --recursive'
