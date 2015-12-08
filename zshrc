@@ -14,4 +14,6 @@ autoload -Uz promptinit
 promptinit
 prompt peepcode
 
+setopt append_history no_inc_append_history no_share_history
+
 bindkey -e
