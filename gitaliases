@@ -9,7 +9,7 @@ alias ga='git add'
 
 # Branch
 alias gb='git branch'
-alias gbc='git checkout -c'
+alias gbc='git checkout -b'
 alias gbd='git branch -d'
 alias gbD='git branch -D'
 
@@ -48,8 +48,8 @@ alias gm='git merge'
 
 # Push
 alias gp='git push'
-alias gpf='git push force --with-lease'
-alias gpff='git push force'
+alias gpf='git push --force-with-lease'
+alias gpff='git push --force'
 
 # Rebase
 alias gr='git rebase'
