@@ -57,7 +57,7 @@
 [mergetool]
 	prompt = false
 [merge]
-	tool = vimdiff
+	tool = Kaleidoscope
 	conflictstyle = diff3
 [push]
 	default = current
