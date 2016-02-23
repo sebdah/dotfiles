@@ -41,8 +41,12 @@ alias gpr='hub pull-request'
 alias gf='git fetch'
 alias gL='git pull'
 
+# Grep
+alias gg='git grep'
+alias ggi='git grep -i'
+
 # Log
-alias gl='git log'
+alias gl="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
 # Merge
 alias gm='git merge'
