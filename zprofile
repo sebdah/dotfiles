@@ -5,6 +5,12 @@
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 
 #
+# General
+#
+export GITHUB_TOKEN="1a5a12c5df286ea71ef06474469a1e096d702837"
+
+
+#
 # Avail settings
 #
 export UMBRELLA_PATH="${HOME}/git/avail/umbrella"
@@ -15,6 +21,7 @@ export UMBRELLA_PATH="${HOME}/git/avail/umbrella"
 export SALTSIDE_SOURCE_DIR="${HOME}/work"
 export WORKSTATION_VAGRANTFILE=$SALTSIDE_SOURCE_DIR/docker-workstation/Vagrantfile
 export PROJECT_PATH=$SALTSIDE_SOURCE_DIR
+export SANDBOX_EMAIL="sebastian@saltside.se"
 
 #
 # Browser
@@ -31,6 +38,11 @@ fi
 export EDITOR='vim'
 export VISUAL='vim'
 export PAGER='less'
+
+#
+# Android
+#
+export ANDROID_HOME=/usr/local/opt/android-sdk
 
 #
 # Language
@@ -77,6 +89,14 @@ alias ssh="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
 alias scp="scp -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
 alias tmux="tmux -2"
 alias wrk="workstation"
+alias s="sandbox"
+alias sd="sandbox dev"
+alias sl="sandbox logs"
+alias sm="sandbox market"
+alias sr="sandbox reset"
+alias ss="sandbox sync"
+alias su="sandbox update"
+alias cist="watch -n10 hub ci-status"
 source ${HOME}/.dotfiles/gitaliases
 
 # Go
