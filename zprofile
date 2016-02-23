@@ -5,12 +5,6 @@
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 
 #
-# General
-#
-export GITHUB_TOKEN="1a5a12c5df286ea71ef06474469a1e096d702837"
-
-
-#
 # Avail settings
 #
 export UMBRELLA_PATH="${HOME}/git/avail/umbrella"
