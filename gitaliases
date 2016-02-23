@@ -75,6 +75,7 @@ alias gwR='git reset --hard HEAD'
 
 # Stash
 alias gs='git stash'
+alias gsp='git stash pop'
 
 # Status
 alias gst='git status'
