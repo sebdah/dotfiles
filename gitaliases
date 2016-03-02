@@ -81,6 +81,7 @@ alias gsp='git stash pop'
 alias gst='git status'
 
 # Submodules
+alias gS='git submodule'
 alias gSa='git submodule add'
 alias gSi='git submodule init'
 alias gSs='git submodule status'
