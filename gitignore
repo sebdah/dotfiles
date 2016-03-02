@@ -3,4 +3,5 @@
 .DS_Store
 .ruby-version
 .ropeproject/
-npm-debug.log
+*.log
+npm*.log*
