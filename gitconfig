@@ -1,6 +1,7 @@
 [user]
 	name = Sebastian Dahlgren
 	email = sebastian.dahlgren@gmail.com
+	signingkey = 11A9CF4B
 [alias]
 	a = add
 	b = branch
@@ -71,3 +72,5 @@
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+[rebase]
+	autosquash = true

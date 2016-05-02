@@ -86,11 +86,11 @@ alias wrk="workstation"
 alias s="sandbox"
 alias sd="sandbox dev"
 alias se="sandbox exec"
-alias sl="sandbox logs"
+alias sL="sandbox logs -f"
 alias sm="sandbox market"
 alias sr="sandbox reset"
 alias ss="sandbox sync"
-alias su="sandbox update"
+alias sU="sandbox update"
 alias cist="watch -n10 hub ci-status"
 source ${HOME}/.dotfiles/gitaliases
 
