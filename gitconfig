@@ -5,6 +5,13 @@
 [alias]
 	a = add
 	b = branch
+	branches = !git for-each-ref \
+		--sort=-committerdate \
+		--format=\"%(color:blue)%(authordate:relative)\t \
+				 %(color:red)%(authorname)\t \
+				 %(color:green)%(refname:short)\" \
+		refs/remotes \
+		| column -t -s \"\t\"
 	ci = commit
 	c = commit
 	co = checkout
@@ -18,10 +25,10 @@
 	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
 	mt = mergetool
 	ign = ls-files -o -i --exclude-standard
-  p = push
-  pl = pull
-  rp = rev-parse
-  sm = submodule
+	p = push
+	pl = pull
+	rp = rev-parse
+	sm = submodule
 	st = status
 	s = status
 [core]

@@ -9,6 +9,7 @@ alias ga='git add'
 
 # Branch
 alias gb='git branch'
+alias gbs='git branches'
 alias gbc='git checkout -b'
 alias gbd='git branch -d'
 alias gbD='git branch -D'
@@ -68,7 +69,7 @@ alias grps='git rev-parse --short HEAD'
 
 # Working copy
 alias gwc='git clean -n'
-alias gwC='git clean -f'
+alias gwC='git clean -f -d'
 alias gwd='git diff'
 alias gwr='git reset --soft HEAD'
 alias gwR='git reset --hard HEAD'
