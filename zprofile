@@ -37,6 +37,7 @@ export PAGER='less'
 # Android
 #
 export ANDROID_HOME=/usr/local/opt/android-sdk
+export ANDROID_HOME=~/Library/Android/sdk
 
 #
 # Language
@@ -64,7 +65,7 @@ typeset -gU cdpath fpath mailpath path
 path=(
   ~/.rbenv/{bin,shims}
   /usr/local/{bin,sbin}
-  ${SALTSIDE_SOURCE_DIR}/docker-workstation/vagrant-workstation/bin
+  ${SALTSIDE_SOURCE_DIR}/workstation/bin
   ~/bin
   ~/go/bin
   /usr/local/go/bin
@@ -83,20 +84,23 @@ alias ssh="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
 alias scp="scp -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
 alias tmux="tmux -2"
 alias wrk="workstation"
-alias s="sandbox"
-alias sE="export SANDBOX_NAME=buynow && export AWS_DEFAULT_REGION=eu-west-1 && sandbox"
-alias sd="sandbox dev"
-alias se="sandbox exec"
-alias sL="sandbox logs -f"
-alias sLE="export SANDBOX_NAME=buynow && export AWS_DEFAULT_REGION=eu-west-1 && sandbox logs -f"
-alias sm="sandbox market"
-alias smE="export SANDBOX_NAME=buynow && export AWS_DEFAULT_REGION=eu-west-1 && sandbox market"
-alias sr="sandbox reset"
-alias srE="export SANDBOX_NAME=buynow && export AWS_DEFAULT_REGION=eu-west-1 && sandbox reset"
-alias ss="sandbox sync"
-alias sU="sandbox update"
-alias sUE="export SANDBOX_NAME=buynow && export AWS_DEFAULT_REGION=eu-west-1 && sandbox update"
+alias s="saltside-workstation sandbox"
+alias sE="export SANDBOX_NAME=buynow && export AWS_DEFAULT_REGION=eu-west-1 && saltside-workstation sandbox"
+alias sd="saltside-workstation sandbox dev"
+alias se="saltside-workstation sandbox exec"
+alias sL="saltside-workstation sandbox logs -f"
+alias sLE="export SANDBOX_NAME=buynow && export AWS_DEFAULT_REGION=eu-west-1 && saltside-workstation sandbox logs -f"
+alias sm="saltside-workstation sandbox market"
+alias smE="export SANDBOX_NAME=buynow && export AWS_DEFAULT_REGION=eu-west-1 && saltside-workstation sandbox market"
+alias sr="saltside-workstation sandbox reset"
+alias srE="export SANDBOX_NAME=buynow && export AWS_DEFAULT_REGION=eu-west-1 && saltside-workstation sandbox reset"
+alias ss="saltside-workstation sandbox sync"
+alias sU="saltside-workstation sandbox update"
+alias sUE="export SANDBOX_NAME=buynow && export AWS_DEFAULT_REGION=eu-west-1 && saltside-workstation sandbox update"
 alias cist="watch -n10 hub ci-status"
+
+alias w="saltside-workstation"
+
 source ${HOME}/.dotfiles/gitaliases
 
 # Go

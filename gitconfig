@@ -57,6 +57,7 @@
 	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 [diff]
 	tool = Kaleidoscope
+  compactionHeuristic = true
 [difftool]
 	prompt = false
 [mergetool "Kaleidoscope"]
@@ -81,3 +82,7 @@
 	trustExitCode = true
 [rebase]
 	autosquash = true
+[pull]
+	rebase = true
+[branch]
+	autoSetupRebase = always

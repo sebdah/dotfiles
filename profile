@@ -8,12 +8,13 @@ alias wrk="workstation"
 
 # Path
 export PATH="${HOME}/.rbenv/bin:${HOME}/.rbenv/shims:/usr/local/bin:${PATH}"
-export PATH="${PATH}:$SALTSIDE_SOURCE_DIR/docker-workstation/vagrant-workstation/bin"
+export PATH="${PATH}:$SALTSIDE_SOURCE_DIR/workstation/bin"
 export PATH="${PATH}:${HOME}/bin"
 export PATH="${PATH}:${HOME}/go/bin"
 export PATH="${PATH}:/usr/local/go/bin"
 export PATH="${PATH}:/usr/local/opt/go/libexec/bin"
 export PATH="${PATH}:./node_modules/.bin:./../node_modules/.bin"
+export PATH="${PATH}:~/Library/Android/sdk/tools:~/Library/Android/sdk/platform-tools"
 
 # Go
 export GOPATH="${HOME}/go"
