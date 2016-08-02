@@ -56,16 +56,6 @@ source ${HOME}/.profile-secrets
 
 #########################################################
 #
-#                 Saltside settings
-#
-#########################################################
-export SALTSIDE_SOURCE_DIR="${HOME}/work"
-export WORKSTATION_VAGRANTFILE=$SALTSIDE_SOURCE_DIR/docker-workstation/Vagrantfile
-export PROJECT_PATH=$SALTSIDE_SOURCE_DIR
-export PATH=$PATH:${HOME}/work/platform-utilities/instance-ips
-
-#########################################################
-#
 #                 Avail settings
 #
 #########################################################
