@@ -4,18 +4,13 @@
 # Authors:
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 
+# Load the secrets
+source ${HOME}/.profile-secrets
+
 #
 # Avail settings
 #
 export UMBRELLA_PATH="${HOME}/git/avail/umbrella"
-
-#
-# Saltside settings
-#
-export SALTSIDE_SOURCE_DIR="${HOME}/work"
-export WORKSTATION_VAGRANTFILE=$SALTSIDE_SOURCE_DIR/docker-workstation/Vagrantfile
-export PROJECT_PATH=$SALTSIDE_SOURCE_DIR
-export SANDBOX_EMAIL="sebastian@saltside.se"
 
 #
 # Browser
@@ -83,7 +78,6 @@ alias ls='ls -G'
 alias ssh="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
 alias scp="scp -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
 alias tmux="tmux -2"
-alias wrk="workstation"
 alias s="saltside-workstation sandbox"
 alias sE="export SANDBOX_NAME=buynow && export AWS_DEFAULT_REGION=eu-west-1 && saltside-workstation sandbox"
 alias sd="saltside-workstation sandbox dev"
@@ -134,5 +128,3 @@ TMPPREFIX="${TMPDIR%/}/zsh"
 #export NVM_DIR=~/.nvm
 #source $(brew --prefix nvm)/nvm.sh
 
-# Load the secrets
-source ${HOME}/.profile-secrets
