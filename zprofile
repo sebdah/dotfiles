@@ -90,6 +90,7 @@ alias ss="saltside-workstation sandbox sync"
 alias sr="saltside-workstation sandbox reload"
 alias srE="export SANDBOX_NAME=buynow && export AWS_DEFAULT_REGION=eu-west-1 && saltside-workstation sandbox reset"
 alias cist="watch -n10 hub ci-status"
+alias work="cd ${HOME}/go/src/github.com/saltside"
 
 alias w="saltside-workstation"
 
