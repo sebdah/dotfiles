@@ -1,8 +1,8 @@
+" Colorscheme
+colorscheme PaperColor
+
 " Set the background to dark
 set background=dark
-
-" Colorscheme
-colorscheme hybrid
 
 " Uncomment the lines below if you would like to
 " use the solarized colorscheme.
