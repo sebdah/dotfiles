@@ -5,3 +5,4 @@
 .ropeproject/
 *.log
 npm*.log*
+.vim-bookmarks
