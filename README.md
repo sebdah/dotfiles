@@ -7,7 +7,7 @@ Awesome dotfiles for this and that!
 - [Homebrew](http://brew.sh/)
 - vim (install via `brew`)
 - tmux (install via `brew`)
-- zsh (install via `brew`)
+- fish (install via `brew`)
 
 ### tmux dependencies
 

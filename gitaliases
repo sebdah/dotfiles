@@ -1,89 +1,79 @@
-#// vim: set ft=zsh
 #
 # Git aliases
 #
-alias g='git'
+alias g 'git'
 
 # Add
-alias ga='git add'
+alias ga 'git add'
 
 # Branch
-alias gb='git branch'
-alias gbs='git branches'
-alias gbc='git checkout -b'
-alias gbd='git branch -d'
-alias gbD='git branch -D'
+alias gb 'git branch'
+alias gbs 'git branches'
+alias gbc 'git checkout -b'
+alias gbd 'git branch -d'
+alias gbD 'git branch -D'
 
 # Commit
-alias gc='git commit --verbose'
-alias gca='git commit --amend --reuse-message=HEAD'
-alias gce='git commit --allow-empty'
-alias gcs='git show'
-alias gcp='git cherry-pick'
-alias gcr='git revert'
+alias gc 'git commit --verbose'
+alias gca 'git commit --amend --reuse-message=HEAD'
+alias gce 'git commit --allow-empty'
+alias gcs 'git show'
+alias gcp 'git cherry-pick'
+alias gcr 'git revert'
 
 # Checkout
-alias gcl='git clone'
-alias gco='git checkout'
-
-# Conflict (C)
-alias gCl='git status | sed -n "s/^.*both [a-z]*ed: *//p"'
-alias gCa='git add $(gCl)'
-alias gCe='git mergetool $(gCl)'
-alias gCo='git checkout --ours --'
-alias gCO='gCo $(gCl)'
-alias gCt='git checkout --theirs --'
-alias gCT='gCt $(gCl)'
+alias gcl 'git clone'
+alias gco 'git checkout'
 
 # Pull request
-alias gpr='hub pull-request'
+alias gpr 'hub pull-request'
 
 # Fetch / pull
-alias gf='git fetch'
-alias gL='git pull'
+alias gf 'git fetch'
+alias gL 'git pull'
 
 # Grep
-alias gg='git grep'
-alias ggi='git grep -i'
+alias gg 'git grep'
+alias ggi 'git grep -i'
 
 # Log
-alias gl="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias gl "git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
 # Merge
-alias gm='git merge'
+alias gm 'git merge'
 
 # Push
-alias gp='git push'
-alias gpf='git push --force-with-lease'
-alias gpff='git push --force'
+alias gp 'git push'
+alias gpf 'git push --force-with-lease'
+alias gpff 'git push --force'
 
 # Rebase
-alias gr='git rebase'
-alias gra='git rebase --abort'
-alias grc='git rebase --continue'
-alias gri='git rebase --interactive'
-alias grs='git rebase --skip'
+alias gr 'git rebase'
+alias gra 'git rebase --abort'
+alias grc 'git rebase --continue'
+alias gri 'git rebase --interactive'
+alias grs 'git rebase --skip'
 
 # Rev parse
-alias grps='git rev-parse --short HEAD'
+alias grps 'git rev-parse --short HEAD'
 
 # Working copy
-alias gwc='git clean -n'
-alias gwC='git clean -f -d'
-alias gwd='git diff'
-alias gwr='git reset --soft HEAD'
-alias gwR='git reset --hard HEAD'
+alias gwc 'git clean -n'
+alias gwC 'git clean -f -d'
+alias gwd 'git diff'
+alias gwr 'git reset --soft HEAD'
+alias gwR 'git reset --hard HEAD'
 
 # Stash
-alias gs='git stash'
-alias gsp='git stash pop'
+alias gs 'git stash'
+alias gsp 'git stash pop'
 
 # Status
-alias gst='git status'
+alias gst 'git status'
 
 # Submodules
-alias gS='git submodule'
-alias gSa='git submodule add'
-alias gSi='git submodule init'
-alias gSs='git submodule status'
-alias gSu='git submodule update --recursive --init'
+alias gS 'git submodule'
+alias gSa 'git submodule add'
+alias gSi 'git submodule init'
+alias gSs 'git submodule status'
+alias gSu 'git submodule update --recursive --init'

@@ -1,0 +1,318 @@
+<?xml version="1.0"?>
+<FileZilla3 version="3.14.1" platform="*nix">
+	<Settings>
+		<Setting name="Use Pasv mode">1</Setting>
+		<Setting name="Limit local ports">0</Setting>
+		<Setting name="Limit ports low">6000</Setting>
+		<Setting name="Limit ports high">7000</Setting>
+		<Setting name="Limit ports offset">0</Setting>
+		<Setting name="External IP mode">0</Setting>
+		<Setting name="External IP" />
+		<Setting name="External address resolver">http://ip.filezilla-project.org/ip.php</Setting>
+		<Setting name="Last resolved IP" />
+		<Setting name="No external ip on local conn">1</Setting>
+		<Setting name="Pasv reply fallback mode">0</Setting>
+		<Setting name="Timeout">20</Setting>
+		<Setting name="Logging Debug Level">0</Setting>
+		<Setting name="Logging Raw Listing">0</Setting>
+		<Setting name="fzsftp executable" />
+		<Setting name="Allow transfermode fallback">1</Setting>
+		<Setting name="Reconnect count">2</Setting>
+		<Setting name="Reconnect delay">5</Setting>
+		<Setting name="Enable speed limits">0</Setting>
+		<Setting name="Speedlimit inbound">100</Setting>
+		<Setting name="Speedlimit outbound">20</Setting>
+		<Setting name="Speedlimit burst tolerance">0</Setting>
+		<Setting name="Preallocate space">0</Setting>
+		<Setting name="View hidden files">0</Setting>
+		<Setting name="Preserve timestamps">0</Setting>
+		<Setting name="Socket recv buffer size (v2)">4194304</Setting>
+		<Setting name="Socket send buffer size (v2)">262144</Setting>
+		<Setting name="FTP Keep-alive commands">0</Setting>
+		<Setting name="FTP Proxy type">0</Setting>
+		<Setting name="FTP Proxy host" />
+		<Setting name="FTP Proxy user" />
+		<Setting name="FTP Proxy password" />
+		<Setting name="FTP Proxy login sequence" />
+		<Setting name="SFTP keyfiles" />
+		<Setting name="SFTP compression">0</Setting>
+		<Setting name="Proxy type">0</Setting>
+		<Setting name="Proxy host" />
+		<Setting name="Proxy port">0</Setting>
+		<Setting name="Proxy user" />
+		<Setting name="Proxy password" />
+		<Setting name="Logging file" />
+		<Setting name="Logging filesize limit">10</Setting>
+		<Setting name="Logging show detailed logs">0</Setting>
+		<Setting name="Size format">0</Setting>
+		<Setting name="Size thousands separator">1</Setting>
+		<Setting name="Size decimal places">1</Setting>
+		<Setting name="Number of Transfers">2</Setting>
+		<Setting name="Ascii Binary mode">0</Setting>
+		<Setting name="Auto Ascii files">am|asp|bat|c|cfm|cgi|conf|cpp|css|dhtml|diz|h|hpp|htm|html|in|inc|java|js|jsp|lua|m4|mak|md5|nfo|nsi|pas|patch|php|phtml|pl|po|py|qmail|sh|sha1|sha256|sha512|shtml|sql|svg|tcl|tpl|txt|vbs|xhtml|xml|xrc</Setting>
+		<Setting name="Auto Ascii no extension">1</Setting>
+		<Setting name="Auto Ascii dotfiles">1</Setting>
+		<Setting name="Theme">opencrystal/</Setting>
+		<Setting name="Language Code" />
+		<Setting name="Last Server Path">1 0</Setting>
+		<Setting name="Concurrent download limit">0</Setting>
+		<Setting name="Concurrent upload limit">0</Setting>
+		<Setting name="Update Check">1</Setting>
+		<Setting name="Update Check Interval">7</Setting>
+		<Setting name="Last automatic update check">2016-10-02 01:32:13</Setting>
+		<Setting name="Update Check New Version">nightly 2016-10-01 http://filezilla-project.org/nightlies/2016-10-01/x86_64-apple-darwin13.4.0/FileZilla3.app.tar.bz2 7975776 sha512 ab07d2257da732b475031980f67be87d2fd78b2ac02091321fbc56f63a6518542d07fb3d2499d29566203546582451aae78366bacb10dcb8360eec662550956d 
+release 3.22.0 http://downloads.sourceforge.net/filezilla/FileZilla_3.22.0_macosx-x86.app.tar.bz2 7706599 sha512 3549fa6065cfc65a14d8f0cffdcebd60bf9be0c97fd8cca926081592ed8d29efd0c3a1a2e12bee7f70c587fc634e91ba52a0955e14e021bdff5977dab2e6c2e2
+
+3.22.0 (2016-10-01)
+
+- Bookmarks with the "Directory comparison" checkbox set now work correctly
+- MSW: Fix background clearing issue on the size format settings page
+- MSW: Toggling the log timestamp option no longer results in wrong log colors
+- Fix for premature queue completion action
+
+3.22.0-rc1 (2016-09-24)
+
++ Directory listing filters can now be exported and imported
++ Added the "not all" filter match type to filter out all items not matching all conditions
++ Added the "not all" search match type to search for all items not matching all conditions
++ Building and running FileZilla now depends on libfilezilla &gt;= 0.7.0 (https://lib.filezilla-project.org/).
++ Building and running FileZilla now depends on GnuTLS &gt;= 3.4.15
+- Speed up creation of socket and file i/o threads through the use of a thread pool
+- Replace invalid characters in filenames when calculating the local filename for editing remote files
+- The updater can now handle HTTPS servers that redirect to other HTTPS servers
+- SFTP: Try password based login if a password-protected keyfile is rejected by the server instead of failing the login
+- MSW: Tee shell extension now supports long paths on Windows 10
+
+3.21.0 (2016-08-23)
+
+! Fixed a string format vulnerability introduced in 3.20.0-rc1 when listing directories using SFTP
++ SFTP: Added support for AES-GCM ciphers as implemented in OpenSSH
++ OS X: Ctrl+Tab and Ctrl+Shift+Tab can now be used to switch forward and backward between opened tabs
+- Reduced time between TCP keepalive packets to 15 minutes on supporting platforms
+- Fixed saving of directory listing filters with an attribute condition
+
+3.20.1 (2016-08-03)
+
+- Fixed rename file exists action on downloads
+- Fixed possible crash if disabling log abbreviation
+- Official binaries now link against a patched version of GnuTLS so that a better error message can be printed on broken servers that send malformed certificate chains
+
+3.20.0 (2016-07-27)
+
++ Display error message if entering a non-existing path on local file search
++ Building and running FileZilla now depends on libfilezilla &gt;= 0.6.1 (https://lib.filezilla-project.org/).
+
+3.20.0-rc1 (2016-07-21)
+
++ Building and running FileZilla now depends on libfilezilla &gt;= 0.6.0 (https://lib.filezilla-project.org/).
++ Building and running FileZilla now depends on GnuTLS 3.4.0 or higher
+- Fixed regression introduced in 3.19.0-rc1, reconnecting again uses the last used remote directory instead of the initial default remote directory
+- Fixed crash if creating a new site via the bookmarks dialog
+- Queuing remote directories for transfer no longer exits comparison mode
+- Fixed a rare crash using FTP over TLS if the control connection fails at the same time the data connection gets established
+- Entering invalid regular expressions in filter and search conditions now shows an error message
+- Fixed title of search dialog
+- Stricter certificate chain validation to supplement the Tofu model
+- *nix: Fix initial size of Site Manager dialog with some GTK versions
+
+3.19.0 (2016-06-27)
+
++ Building FileZilla now depends on libfilezilla &gt;= 0.5.3 (https://lib.filezilla-project.org/).
+- Fixed context menu in search dialog if not connected to server
+- OS X, *nix: Fix displayed text in file list status bar if selecting a single item in the file list out of multiple already selected items
+
+3.19.0-rc1 (2016-06-20)
+
++ In the Site Manager a background colour for sites can now be selected
++ Open tabs can be re-arranged using drag&amp;drop
+- Fixed copying URLs of multiple selected files to clipboard
+- Setting remote file timestamps did not take timezone offsets configured through the Site Manager into account
+
+3.18.0 (2016-05-27)
+
+- Small fixes to local file search
+- Fixed a regression introduced in 3.18.0-rc1 when formatting hostnames for display
+
+3.18.0-rc1 (2016-05-20)
+
++ The search functionality can now also be used to search local file
++ Reduced CPU consumption of adding files to the list of search results
++ Opening the remote context menu while holding shift allows copying URLs to clipboard that include the password
++ Added an option to the configuration file through which initiating drag&amp;drop can be disallowed
++ Reduced memory footprint of some data structures
++ Building FileZilla now depends on libfilezilla &gt;= 0.5.2 (https://lib.filezilla-project.org/).
+- The remote file list context menu no longer shows inapplicable entries while files are being added to queue
+- Fix date validation in filter and search conditions
+
+3.17.0.1 (2016-05-09)
+
+! MSW: Quoted the path to the uninstaller when executed from the installer to prevent an attacker from tricking the installer into running some other program instead
+- SFTP: Fixed resuming SFTP transfers
+- MSW: Loading the system default locale no longer fails on systems that have any English locale installed, yet do not have the US-English locale installed
+- Fixed crash if update dialog is opened at the very same moment FileZilla is being closed.
+
+3.17.0 (2016-04-22)
+
+- *nix: Removed a label on the filter dialog that doesn't apply to *nix builds
+- Fix compilation if Nettle is installed in a custom location
+- Fix potential issues with destruction order when closing FileZilla
+
+3.17.0-rc1 (2016-04-15)
+
++ Recursivly queing local files for upload now displays the progress below the local file list
++ MSW: Use dynamic TCP send buffer sizes to improve upload speeds on high-latency connections
++ SFTP: Use hardware-accelerated AES on x86_64 CPUs if available by using the AES implementation from Nettle instead of PuTTY
++ Building FileZilla now depends on the Nettle library, version 3.1 or later
++ Building FileZilla now depends on libfilezilla &gt;= 0.5.0 (https://lib.filezilla-project.org/).
+- MSW: The installer now warns if it detects old versions of FileZilla outside of the installation directory
+- Improve compatibility with directory listings where midnight is represented as 24:00:00 of the prior day
+- SFTP: Failed downloads due to write failures, e.g. due to a full disk, no longer show up as successful
+- SFTP: Fix transfer failures if multiple transfers try to list the same directory
+- SFTP: Updated PuTTY components
+- FTP over TLS: Debug logs now contain additional information about the TLS handshake
+
+3.16.1 (2016-03-16)
+
+! MSW: Updated installer to NSIS 3.0b3 to prevent DLL hijacking
+- MSW: Fix string conversion functions of MiNGW runtime libraries
+- Updated PuTTY components
+- Updated translations
+- Official binaries now link against GnuTLS 3.4.10
+- Official binaries now link against SQLite 3.11.1
+
+3.16.0 (2016-02-29)
+
+- Small fix for remembering queue completion actions
+
+3.16.0-rc1 (2016-02-22)
+
++ Make notification bubble on queue completion configurable though the queue's context menu
++ Selected queue completion action is now remembered, excluding the system shutdown/sleep actions.
++ Added new servertype to the Site Manager for servers using MS-DOS style paths with forward slashes as separators
++ Building FileZilla now depends on libfilezilla &gt;= 0.4.0 (https://lib.filezilla-project.org/).
+- Fixes for network configuration wizard leading to incorrect test result
+- MSW: Installer now removes leftover files from improperly uninstalled previous versions
+
+3.15.0.2 (2016-02-10)
+
+- MSW: Binaries are now also signed using a SHA256 signature and certificate.
+- OS X: Move location of COPYING file containing the GPL to a different location in the bundle. On some systems OS X cannot verify the bundle with the file at the old location
+- Restore focused item if changing directory listing sort order
+- Fix restoring the column widths of the failed transfers tab in the queue when starting FileZilla
+- MSW: Double-clicking a divider between a list header in the queue now adjust the sizes in the other tabs just as dragging the width would
+
+3.15.0.1 (2016-02-02)
+
+- Fix for search dialog not displaying the results from the last visited directory of a search
+
+3.15.0 (2016-01-30)
+
++ MSW: Display notification bubble if FileZilla isn't in the forgeground and all active transfers have finished.
+
+3.15.0-rc1 (2016-01-23)
+
+- Fix regression from 3.16.0-beta1 where extra data being appended to some downloaded files
+- Fix setting initial pane sizes when creating new tabs
+- OS X: Fix display of issuer and subject details in certificate verification dialog
+- Updated SFTP components from PuTTY
+- Official binaries now link against GnuTLS 3.4.8
+- Official binaries now link against SQLite 3.10.2
+
+3.15.0-beta1 (2016-01-13)
+
++ Building FileZilla now depends on libfilezilla 0.3.0 (https://lib.filezilla-project.org/).
++ Added support for downloading and deleting multiple unrelated directories from the search dialog
++ *nix: Vastly speed up line-ending conversion when downloading files using the ASCII data type
++ Improved compatibility with broken servers omitting the mandatory 1yz reply to transfer commands
+- Fix handling of SFTP keyfiles with non-ASCII characters in their paths
+- Add missing directory comparison checkbox to new bookmark dialog
+- MSW: Installer now sets appid on desktop icon
+- Updated built-in pugixml
+</Setting>
+		<Setting name="Update Check Check Beta">0</Setting>
+		<Setting name="Show debug menu">0</Setting>
+		<Setting name="File exists action download">0</Setting>
+		<Setting name="File exists action upload">0</Setting>
+		<Setting name="Allow ascii resume">0</Setting>
+		<Setting name="Greeting version">3.14.1</Setting>
+		<Setting name="Onetime Dialogs" />
+		<Setting name="Show Tree Local">1</Setting>
+		<Setting name="Show Tree Remote">1</Setting>
+		<Setting name="File Pane Layout">0</Setting>
+		<Setting name="File Pane Swap">0</Setting>
+		<Setting name="Last local directory">/</Setting>
+		<Setting name="Filelist directory sort">0</Setting>
+		<Setting name="Filelist name sort">1</Setting>
+		<Setting name="Queue successful autoclear">0</Setting>
+		<Setting name="Queue column widths">180 60 180 80 60 150</Setting>
+		<Setting name="Local filelist colwidths">120 80 100 120</Setting>
+		<Setting name="Remote filelist colwidths">80 75 80 100 80 80</Setting>
+		<Setting name="Window position and size">0 251 49 1178 857 </Setting>
+		<Setting name="Splitter positions (v2)">242 -132 500000000 177 177 500000000</Setting>
+		<Setting name="Local filelist sortorder">0 0</Setting>
+		<Setting name="Remote filelist sortorder">0 0</Setting>
+		<Setting name="Time Format" />
+		<Setting name="Date Format" />
+		<Setting name="Show message log">1</Setting>
+		<Setting name="Show queue">1</Setting>
+		<Setting name="Default editor" />
+		<Setting name="Always use default editor">0</Setting>
+		<Setting name="Inherit system associations">1</Setting>
+		<Setting name="Custom file associations" />
+		<Setting name="Comparison mode">1</Setting>
+		<Setting name="Comparison threshold">1</Setting>
+		<Setting name="Site Manager position">0 525 290 630 428 </Setting>
+		<Setting name="Theme icon size" />
+		<Setting name="Timestamp in message log">0</Setting>
+		<Setting name="Sitemanager last selected">0/Avail/SFTP</Setting>
+		<Setting name="Local filelist shown columns">1111</Setting>
+		<Setting name="Remote filelist shown columns">111111</Setting>
+		<Setting name="Local filelist column order">0,1,2,3</Setting>
+		<Setting name="Remote filelist column order">0,1,2,3,4,5</Setting>
+		<Setting name="Filelist status bar">1</Setting>
+		<Setting name="Filter toggle state">0</Setting>
+		<Setting name="Show quickconnect bar">1</Setting>
+		<Setting name="Messagelog position">0</Setting>
+		<Setting name="Last connected site">0/Avail/SFTP</Setting>
+		<Setting name="File doubleclock action">0</Setting>
+		<Setting name="Dir doubleclock action">0</Setting>
+		<Setting name="Minimize to tray">0</Setting>
+		<Setting name="Search column widths" />
+		<Setting name="Search column shown" />
+		<Setting name="Search column order" />
+		<Setting name="Search window size" />
+		<Setting name="Comparison hide identical">0</Setting>
+		<Setting name="Search sort order" />
+		<Setting name="Edit track local">1</Setting>
+		<Setting name="Prevent idle sleep">1</Setting>
+		<Setting name="Filteredit window size" />
+		<Setting name="Enable invalid char filter">1</Setting>
+		<Setting name="Invalid char replace">_</Setting>
+		<Setting name="Already connected choice">1</Setting>
+		<Setting name="Edit status dialog size" />
+		<Setting name="Display current speed">0</Setting>
+		<Setting name="Toolbar hidden">0</Setting>
+		<Setting name="Strip VMS revisions">0</Setting>
+		<Setting name="Show Site Manager on startup">0</Setting>
+		<Setting name="Prompt password change">1</Setting>
+		<Setting name="Persistent Choices">0</Setting>
+		<Setting name="Config Location">/Users/sebdah/.config/filezilla/</Setting>
+		<Setting name="Kiosk mode">0</Setting>
+		<Setting name="Disable update check">0</Setting>
+		<LastServer>
+			<Host>upload.avail.net</Host>
+			<Port>4422</Port>
+			<Protocol>1</Protocol>
+			<Type>0</Type>
+			<User>1219750a-82d7-11e0-9cab-12313b0349b4</User>
+			<Pass encoding="base64">Y2RhbG96bzc=</Pass>
+			<Logontype>1</Logontype>
+			<TimezoneOffset>0</TimezoneOffset>
+			<PasvMode>MODE_DEFAULT</PasvMode>
+			<MaximumMultipleConnections>0</MaximumMultipleConnections>
+			<EncodingType>Auto</EncodingType>
+			<BypassProxy>0</BypassProxy>
+			<Name>SFTP</Name>
+		</LastServer>
+	</Settings>
+</FileZilla3>

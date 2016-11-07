@@ -2,7 +2,7 @@
 
 echo "Linking configuration"
 
-FILES=(gitconfig gitignore profile tmux.conf vimrc.local zlogin zlogout zpreztorc zprofile zshenv zshrc)
+FILES=(config gitconfig gitignore profile tmux.conf vimrc.local)
 
 function backup_or_unlink {
   DEST=$1 ; shift
@@ -31,11 +31,5 @@ do
   echo "Linking ${FILE}"
   ln -s ${SRC} ${DEST}
 done
-
-#
-# Special cases
-#
-echo "Linking .zprezto"
-ln -s $(pwd)/prezto ${HOME}/.zprezto
 
 echo "Done installing dotfiles"
