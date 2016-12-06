@@ -120,6 +120,12 @@ nnoremap <silent> <c-\> :TmuxNavigatePrevious<cr>
 nnoremap <c-t> :CtrlPBufTag<CR>
 nnoremap <c-T> :CtrlPBufTagAll<CR>
 
+" Ignore list
+let g:ctrlp_custom_ignore = {
+  \ 'dir': 'venv$\|\.git$',
+  \ 'file': '\.pyc$'
+  \ }
+
 "----------------------------------------------
 " Plugin: moll/vim-bbye
 "----------------------------------------------
