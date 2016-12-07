@@ -7,6 +7,7 @@
 "----------------------------------------------
 call plug#begin('~/.vim/plugged')
 
+Plug 'MattesGroeger/vim-bookmarks'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
@@ -19,6 +20,7 @@ Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'tclh123/vim-thrift'
+Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-fugitive'
 
 call plug#end()
@@ -85,6 +87,45 @@ nnoremap <leader>h :split<CR>
 
 " Closing splits
 nnoremap <leader>q :close<CR>
+
+"----------------------------------------------
+" Plugin: MattesGroeger/vim-bookmarks
+"----------------------------------------------
+" Auto save bookmarks
+let g:bookmark_auto_save = 1
+
+" Store the bookmarks in the projects
+let g:bookmark_save_per_working_dir = 1
+
+" Disable the default key mappings
+let g:bookmark_no_default_key_mappings = 1
+
+" Configure key mappings
+" This part also fixes conflicts with NERDTree
+function! BookmarkMapKeys()
+    nmap Mm :BookmarkToggle<CR>
+    nmap Mi :BookmarkAnnotate<CR>
+    nmap Mn :BookmarkNext<CR>
+    nmap Mp :BookmarkPrev<CR>
+    nmap Ma :BookmarkShowAll<CR>
+    nmap Mc :BookmarkClear<CR>
+    nmap Mx :BookmarkClearAll<CR>
+    nmap Mkk :BookmarkMoveUp
+    nmap Mjj :BookmarkMoveDown
+endfunction
+function! BookmarkUnmapKeys()
+    unmap Mm
+    unmap Mi
+    unmap Mn
+    unmap Mp
+    unmap Ma
+    unmap Mc
+    unmap Mx
+    unmap Mkk
+    unmap Mjj
+endfunction
+autocmd BufEnter * :call BookmarkMapKeys()
+autocmd BufEnter NERD_tree_* :call BookmarkUnmapKeys()
 
 "----------------------------------------------
 " Plugin: bling/vim-airline
@@ -176,6 +217,14 @@ au FileType go nmap <F11> <Plug>(go-doc-vertical)
 au FileType go nmap <F12> <Plug>(go-def)
 au FileType go nmap <Leader>gd <Plug>(go-doc)
 au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
+
+"----------------------------------------------
+" Language: Python
+"----------------------------------------------
+au FileType python set expandtab
+au FileType go set shiftwidth=4
+au FileType go set softtabstop=4
+au FileType go set tabstop=4
 
 "----------------------------------------------
 " Language: Thrift
