@@ -28,25 +28,25 @@ call plug#end()
 "----------------------------------------------
 " General settings
 "----------------------------------------------
-set autoindent                         " take indent for new line from previous line
-set autoread                           " reload file if the file changes on the disk
-set autowrite                          " write when switching buffers
-set autowriteall                       " write on :quit
-set colorcolumn=80                     " highlight the 80th column as an indicator
-set cursorline                         " highlight the current line for the cursor
+set autoindent                     " take indent for new line from previous line
+set autoread                       " reload file if the file changes on the disk
+set autowrite                      " write when switching buffers
+set autowriteall                   " write on :quit
+set colorcolumn=80                 " highlight the 80th column as an indicator
+set cursorline                     " highlight the current line for the cursor
 set encoding=utf-8
-set expandtab                          " expands tabs to spaces
-set list                               " show trailing whitespace
+set expandtab                      " expands tabs to spaces
+set list                           " show trailing whitespace
 set listchars=tab:▸\ ,trail:▫
-set nospell                            " disable spelling
-set noswapfile                         " disable swapfile usage
+set nospell                        " disable spelling
+set noswapfile                     " disable swapfile usage
 set nowrap
-set number                             " show number ruler
-set relativenumber                     " show relative numbers in the ruler
+set number                         " show number ruler
+set relativenumber                 " show relative numbers in the ruler
 set ruler
 set softtabstop=2
 set tabstop=2
-set title                              " let vim set the terminal title
+set title                          " let vim set the terminal title
 
 " Colors
 set background=dark
