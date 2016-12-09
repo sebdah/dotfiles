@@ -207,7 +207,6 @@ let g:vimwiki_list = [{'path': '~/Dropbox/vimwiki'}]
 "----------------------------------------------
 " Language: Golang
 "----------------------------------------------
-au FileType go let b:delimitMate_expand_space = 0
 au FileType go set noexpandtab
 au FileType go set shiftwidth=4
 au FileType go set softtabstop=4
