@@ -183,7 +183,14 @@ nnoremap <leader>d :NERDTreeToggle<CR>
 nnoremap <F2> :NERDTreeToggle<CR>
 
 " Files to ignore
-let NERDTreeIgnore = ['\~$', '\.pyc$', '^\.DS_Store$', '^node_modules$', '^.git$', '^.ropeproject$', '^__pycache__$']
+let NERDTreeIgnore = [
+        \ '\~$',
+        \ '\.pyc$',
+        \ '^\.DS_Store$',
+        \ '^node_modules$',
+        \ '^.git$',
+        \ '^.ropeproject$',
+        \ '^__pycache__$']
 
 " Close vim if NERDTree is the only opened window
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
