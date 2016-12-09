@@ -22,6 +22,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'tclh123/vim-thrift'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
 Plug 'vimwiki/vimwiki'
 
 call plug#end()
