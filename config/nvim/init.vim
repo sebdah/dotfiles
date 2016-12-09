@@ -22,6 +22,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'tclh123/vim-thrift'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-fugitive'
+Plug 'vimwiki/vimwiki'
 
 call plug#end()
 
@@ -188,6 +189,12 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 
 " Show hidden files by default
 let NERDTreeShowHidden = 1
+
+"----------------------------------------------
+" Plugin: vimwiki/vimwiki
+"----------------------------------------------
+" Path to wiki
+let g:vimwiki_list = [{'path': '~/Dropbox/vimwiki'}]
 
 "----------------------------------------------
 " Language: Golang
