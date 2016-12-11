@@ -204,6 +204,10 @@ let NERDTreeShowHidden = 1
 " Path to wiki
 let g:vimwiki_list = [{'path': '~/Dropbox/vimwiki'}]
 
+au FileType vimwiki set shiftwidth=2
+au FileType vimwiki set softtabstop=2
+au FileType vimwiki set tabstop=2
+
 "----------------------------------------------
 " Language: Golang
 "----------------------------------------------
