@@ -248,9 +248,9 @@ au FileType html set tabstop=2
 " Language: Python
 "----------------------------------------------
 au FileType python set expandtab
-au FileType go set shiftwidth=4
-au FileType go set softtabstop=4
-au FileType go set tabstop=4
+au FileType python set shiftwidth=4
+au FileType python set softtabstop=4
+au FileType python set tabstop=4
 
 "----------------------------------------------
 " Language: Thrift
