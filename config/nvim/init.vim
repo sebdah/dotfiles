@@ -245,6 +245,14 @@ au FileType html set softtabstop=2
 au FileType html set tabstop=2
 
 "----------------------------------------------
+" Language: JavaScript
+"----------------------------------------------
+au FileType javascript set expandtab
+au FileType javascript set shiftwidth=2
+au FileType javascript set softtabstop=2
+au FileType javascript set tabstop=2
+
+"----------------------------------------------
 " Language: Python
 "----------------------------------------------
 au FileType python set expandtab
