@@ -238,6 +238,13 @@ au FileType go nmap <Leader>gd <Plug>(go-doc)
 au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
 
 "----------------------------------------------
+" Language: HTML
+"----------------------------------------------
+au FileType html set shiftwidth=2
+au FileType html set softtabstop=2
+au FileType html set tabstop=2
+
+"----------------------------------------------
 " Language: Python
 "----------------------------------------------
 au FileType python set expandtab
