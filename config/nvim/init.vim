@@ -59,6 +59,9 @@ set softtabstop=2
 set tabstop=2
 set title                         " let vim set the terminal title
 
+" Set the leader button
+let mapleader = ','
+
 " Colors
 set background=dark
 colorscheme PaperColor
@@ -69,8 +72,8 @@ autocmd BufLeave * silent! :wa
 " Remove trailing white spaces on save
 autocmd BufWritePre * :%s/\s\+$//e
 
-" Set the leader button
-let mapleader = ','
+" Toggle background with <leader>bg
+map <leader>bg :let &background = ( &background == "dark"? "light" : "dark" )<CR>
 
 "----------------------------------------------
 " Navigation
