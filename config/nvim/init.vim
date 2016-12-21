@@ -16,6 +16,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'fatih/vim-go'
 Plug 'kchmck/vim-coffee-script'
+Plug 'majutsushi/tagbar'
 Plug 'moll/vim-bbye'
 Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdcommenter'
@@ -171,6 +172,12 @@ let g:ctrlp_custom_ignore = {
   \ 'dir': 'venv$\|\.git$',
   \ 'file': '\.pyc$'
   \ }
+
+"----------------------------------------------
+" Plugin: 'majutsushi/tagbar'
+"----------------------------------------------
+" Add shortcut for toggling the tag bar
+nnoremap <F3> :TagbarToggle<CR>
 
 "----------------------------------------------
 " Plugin: moll/vim-bbye
