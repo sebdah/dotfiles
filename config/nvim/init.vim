@@ -17,7 +17,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'fatih/vim-go'
 Plug 'kchmck/vim-coffee-script'
 Plug 'majutsushi/tagbar'
-Plug 'moll/vim-bbye'
+Plug 'rbgrouleff/bclose.vim'
 Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
@@ -210,10 +210,10 @@ let g:tagbar_type_go = {
 \ }
 
 "----------------------------------------------
-" Plugin: moll/vim-bbye
+" Plugin: rbgrouleff/bclose.vim
 "----------------------------------------------
 " Close buffers
-nnoremap <leader>w :Bdelete<CR>
+nnoremap <leader>w :Bclose<CR>
 
 "----------------------------------------------
 " Plugin: scrooloose/nerdtree
