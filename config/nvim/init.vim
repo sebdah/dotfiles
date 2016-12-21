@@ -7,25 +7,30 @@
 "----------------------------------------------
 call plug#begin('~/.vim/plugged')
 
+" General plugins
 Plug 'MattesGroeger/vim-bookmarks'
-Plug 'NLKNguyen/papercolor-theme'
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'fatih/vim-go'
-Plug 'kchmck/vim-coffee-script'
 Plug 'majutsushi/tagbar'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
-Plug 'tclh123/vim-thrift'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'vimwiki/vimwiki'
+
+" Language support
+Plug 'fatih/vim-go'
+Plug 'kchmck/vim-coffee-script'
+Plug 'tclh123/vim-thrift'
+
+" Colorschemes
+Plug 'NLKNguyen/papercolor-theme'
 
 call plug#end()
 
