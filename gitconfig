@@ -85,3 +85,5 @@
 	autosquash = true
 [branch]
 	autoSetupRebase = always
+[github]
+	user = sebdah
