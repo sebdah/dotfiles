@@ -64,6 +64,9 @@ set softtabstop=2
 set tabstop=2
 set title                         " let vim set the terminal title
 
+" Allow vim to set a custom font or color for a word
+syntax enable
+
 " Set the leader button
 let mapleader = ','
 
