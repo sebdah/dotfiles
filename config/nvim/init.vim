@@ -77,7 +77,7 @@ autocmd BufLeave * silent! :wa
 autocmd BufWritePre * :%s/\s\+$//e
 
 " Toggle background with <leader>bg
-map <leader>bg :let &background = ( &background == "dark"? "light" : "dark" )<CR>
+map <leader>bg :let &background = (&background == "dark"? "light" : "dark")<CR>
 
 " Clear search highlights
 map <leader>c :nohlsearch<CR>
