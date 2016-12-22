@@ -51,6 +51,8 @@ set hlsearch                      " disable search result highlighting
 set nospell                       " disable spelling
 set noswapfile                    " disable swapfile usage
 set nowrap
+set noerrorbells                  " No bells!
+set novisualbell                  " I said, no bells!
 set inccommand=split              " enables interactive search and replace
 set number                        " show number ruler
 set relativenumber                " show relative numbers in the ruler
