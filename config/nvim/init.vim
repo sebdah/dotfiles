@@ -25,6 +25,7 @@ Plug 'tpope/vim-surround'
 Plug 'vimwiki/vimwiki'
 
 " Language support
+Plug 'digitaltoad/vim-pug'
 Plug 'fatih/vim-go'
 Plug 'kchmck/vim-coffee-script'
 Plug 'tclh123/vim-thrift'
