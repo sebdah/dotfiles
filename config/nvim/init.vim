@@ -9,6 +9,7 @@ call plug#begin('~/.vim/plugged')
 
 " General plugins
 Plug 'MattesGroeger/vim-bookmarks'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
 Plug 'christoomey/vim-tmux-navigator'
@@ -147,6 +148,12 @@ function! BookmarkUnmapKeys()
 endfunction
 autocmd BufEnter * :call BookmarkMapKeys()
 autocmd BufEnter NERD_tree_* :call BookmarkUnmapKeys()
+
+"----------------------------------------------
+" Plugin: 'Shougo/deoplete.nvim'
+"----------------------------------------------
+" Enable deoplete on startup
+let g:deoplete#enable_at_startup = 1
 
 "----------------------------------------------
 " Plugin: bling/vim-airline
@@ -292,6 +299,14 @@ au FileType go nmap <Leader>gd <Plug>(go-doc)
 au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
 
 "----------------------------------------------
+" Language: CSS
+"----------------------------------------------
+au FileType css set expandtab
+au FileType css set shiftwidth=2
+au FileType css set softtabstop=2
+au FileType css set tabstop=2
+
+"----------------------------------------------
 " Language: HTML
 "----------------------------------------------
 au FileType html set shiftwidth=2
@@ -305,6 +320,14 @@ au FileType javascript set expandtab
 au FileType javascript set shiftwidth=2
 au FileType javascript set softtabstop=2
 au FileType javascript set tabstop=2
+
+"----------------------------------------------
+" Language: LESS
+"----------------------------------------------
+au FileType less set expandtab
+au FileType less set shiftwidth=2
+au FileType less set softtabstop=2
+au FileType less set tabstop=2
 
 "----------------------------------------------
 " Language: Python
