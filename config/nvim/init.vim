@@ -47,7 +47,7 @@ set encoding=utf-8
 set expandtab                     " expands tabs to spaces
 set list                          " show trailing whitespace
 set listchars=tab:▸\ ,trail:▫
-set nohlsearch                    " disable search result highlighting
+set hlsearch                      " disable search result highlighting
 set nospell                       " disable spelling
 set noswapfile                    " disable swapfile usage
 set nowrap
@@ -74,6 +74,9 @@ autocmd BufWritePre * :%s/\s\+$//e
 
 " Toggle background with <leader>bg
 map <leader>bg :let &background = ( &background == "dark"? "light" : "dark" )<CR>
+
+" Clear search highlights
+map <leader>c :nohlsearch<CR>
 
 "----------------------------------------------
 " Navigation
