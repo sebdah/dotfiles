@@ -14,6 +14,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'easymotion/vim-easymotion'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'majutsushi/tagbar'
 Plug 'rbgrouleff/bclose.vim'
@@ -235,6 +236,13 @@ let g:tagbar_type_go = {
 \ }
 
 "----------------------------------------------
+" Plugin: easymotion/vim-easymotion
+"----------------------------------------------
+" Enable support for bidirectional motions
+map  <leader><leader>w <Plug>(easymotion-bd-w)
+nmap <leader><leader>w <Plug>(easymotion-overwin-w)
+
+"----------------------------------------------
 " Plugin: rbgrouleff/bclose.vim
 "----------------------------------------------
 " Close buffers
@@ -298,8 +306,8 @@ au FileType go nmap <F9> :GoMetaLinter<cr>
 au FileType go nmap <F10> <Plug>(go-test)
 au FileType go nmap <F11> <Plug>(go-doc-vertical)
 au FileType go nmap <F12> <Plug>(go-def)
-au FileType go nmap <Leader>gd <Plug>(go-doc)
-au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
+au FileType go nmap <leader>gd <Plug>(go-doc)
+au FileType go nmap <leader>gv <Plug>(go-doc-vertical)
 
 "----------------------------------------------
 " Language: CSS
