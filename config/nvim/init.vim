@@ -7,6 +7,9 @@
 "----------------------------------------------
 call plug#begin('~/.vim/plugged')
 
+" Dependencies
+Plug 'godlygeek/tabular'  " This must come before plasticboy/vim-markdown
+
 " General plugins
 Plug 'MattesGroeger/vim-bookmarks'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -30,6 +33,7 @@ Plug 'vimwiki/vimwiki'
 Plug 'digitaltoad/vim-pug'
 Plug 'fatih/vim-go'
 Plug 'kchmck/vim-coffee-script'
+Plug 'plasticboy/vim-markdown'
 Plug 'tclh123/vim-thrift'
 
 " Colorschemes
@@ -63,6 +67,7 @@ set relativenumber                " show relative numbers in the ruler
 set ruler
 set softtabstop=2
 set tabstop=2
+set textwidth=80
 set title                         " let vim set the terminal title
 
 " Allow vim to set a custom font or color for a word
@@ -157,7 +162,7 @@ autocmd BufEnter NERD_tree_* :call BookmarkUnmapKeys()
 " Plugin: 'Shougo/deoplete.nvim'
 "----------------------------------------------
 " Enable deoplete on startup
-let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_at_startup = 0
 
 "----------------------------------------------
 " Plugin: bling/vim-airline
@@ -241,6 +246,15 @@ let g:tagbar_type_go = {
 " Enable support for bidirectional motions
 map  <leader><leader>w <Plug>(easymotion-bd-w)
 nmap <leader><leader>w <Plug>(easymotion-overwin-w)
+
+"----------------------------------------------
+" Plugin: plasticboy/vim-markdown
+"----------------------------------------------
+" Disable folding
+let g:vim_markdown_folding_disabled = 1
+
+" Auto shrink the TOC, so that it won't take up 50% of the screen
+let g:vim_markdown_toc_autofit = 1
 
 "----------------------------------------------
 " Plugin: rbgrouleff/bclose.vim
@@ -340,6 +354,14 @@ au FileType less set expandtab
 au FileType less set shiftwidth=2
 au FileType less set softtabstop=2
 au FileType less set tabstop=2
+
+"----------------------------------------------
+" Language: Markdown
+"----------------------------------------------
+au FileType markdown set noexpandtab
+au FileType markdown set shiftwidth=4
+au FileType markdown set softtabstop=4
+au FileType markdown set tabstop=4
 
 "----------------------------------------------
 " Language: Python
