@@ -52,7 +52,7 @@ set smartindent                   " enable smart indentation
 set autoread                      " reload file if the file changes on the disk
 set autowrite                     " write when switching buffers
 set autowriteall                  " write on :quit
-set colorcolumn=80                " highlight the 80th column as an indicator
+set colorcolumn=81                " highlight the 80th column as an indicator
 set cursorline                    " highlight the current line for the cursor
 set encoding=utf-8
 set expandtab                     " expands tabs to spaces
