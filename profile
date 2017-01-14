@@ -1,7 +1,7 @@
 # Alias
 alias agrea="cd ${HOME}/go/src/github.com/agrea"
 alias cist="hub ci-status"
-alias cistw="watch -n10 hub ci-status"
+alias cistw="watch -n5 hub ci-status"
 alias grep='grep --color'
 alias ls='ls -G'
 alias s="saltside-workstation sandbox"
