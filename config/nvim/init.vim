@@ -333,10 +333,10 @@ au FileType go let g:go_auto_sameids = 1
 let g:go_list_type = "quickfix"
 
 " Mappings
-au FileType go nmap <F9> :GoMetaLinter<cr>
+au FileType go nmap <F9> <Plug>(go-metalinter)
 au FileType go nmap <F10> <Plug>(go-test)
-au FileType go nmap <F11> <Plug>(go-doc-vertical)
 au FileType go nmap <F12> <Plug>(go-def)
+au FileType go nmap <leader>gc <Plug>(go-coverage-toggle)
 au FileType go nmap <leader>gd <Plug>(go-doc)
 au FileType go nmap <leader>gv <Plug>(go-doc-vertical)
 
