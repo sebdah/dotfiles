@@ -21,6 +21,8 @@ Plug 'easymotion/vim-easymotion'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'junegunn/goyo.vim'
 Plug 'majutsushi/tagbar'
+Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
+Plug 'zchee/deoplete-go', { 'do': 'make'}
 Plug 'rbgrouleff/bclose.vim'
 Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdcommenter'
@@ -163,7 +165,7 @@ autocmd BufEnter NERD_tree_* :call BookmarkUnmapKeys()
 " Plugin: 'Shougo/deoplete.nvim'
 "----------------------------------------------
 " Enable deoplete on startup
-let g:deoplete#enable_at_startup = 0
+let g:deoplete#enable_at_startup = 1
 
 "----------------------------------------------
 " Plugin: bling/vim-airline
