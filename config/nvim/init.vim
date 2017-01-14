@@ -64,7 +64,6 @@ set noswapfile                    " disable swapfile usage
 set nowrap
 set noerrorbells                  " No bells!
 set novisualbell                  " I said, no bells!
-set inccommand=split              " enables interactive search and replace
 set number                        " show number ruler
 set relativenumber                " show relative numbers in the ruler
 set ruler
@@ -72,6 +71,12 @@ set softtabstop=2
 set tabstop=2
 set textwidth=80
 set title                         " let vim set the terminal title
+set updatetime=100                " redraw the status bar often
+
+" neovim specific settings
+if has('nvim')
+  set inccommand=split              " enables interactive search and replace
+endif
 
 " Allow vim to set a custom font or color for a word
 syntax enable
@@ -170,6 +175,9 @@ let g:deoplete#enable_at_startup = 1
 "----------------------------------------------
 " Plugin: bling/vim-airline
 "----------------------------------------------
+" Show status bar by default
+set laststatus=2
+
 " Enable top tab line
 let g:airline#extensions#tabline#enabled = 1
 
@@ -314,6 +322,12 @@ au FileType go let g:go_highlight_methods = 1
 au FileType go let g:go_highlight_structs = 1
 au FileType go let g:go_highlight_operators = 1
 au FileType go let g:go_highlight_build_constraints = 1
+
+" Show type information
+au FileType go let g:go_auto_type_info = 1
+
+" Highlight variable uses
+au FileType go let g:go_auto_sameids = 1
 
 " Fix for location list when vim-go is used together with Syntastic
 let g:go_list_type = "quickfix"
