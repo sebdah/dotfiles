@@ -211,7 +211,7 @@ nnoremap <c-T> :CtrlPBufTagAll<CR>
 
 " Ignore list
 let g:ctrlp_custom_ignore = {
-  \ 'dir': 'venv$\|\.git$',
+  \ 'dir': 'venv$\|\.git$\|node_modules$',
   \ 'file': '\.pyc$'
   \ }
 
