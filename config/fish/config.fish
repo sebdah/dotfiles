@@ -83,5 +83,10 @@ set -gx PAGER less
 # Other
 #
 
+set -gx LANG en_US.UTF-8
+set -gx LANGUAGE en_US.utf-8
+set -gx LC_ALL en_US.UTF-8
+
+
 # ls colors (Mac OS X ls)
 set -gx LSCOLORS 'Exfxcxdxbxegedabagacad'
