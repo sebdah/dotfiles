@@ -349,6 +349,11 @@ au FileType css set softtabstop=2
 au FileType css set tabstop=2
 
 "----------------------------------------------
+" Language: gitcommit
+"----------------------------------------------
+au FileType gitcommit set spell
+
+"----------------------------------------------
 " Language: HTML
 "----------------------------------------------
 au FileType html set noexpandtab
