@@ -384,6 +384,7 @@ au FileType markdown set noexpandtab
 au FileType markdown set shiftwidth=4
 au FileType markdown set softtabstop=4
 au FileType markdown set tabstop=4
+au FileType markdown set spell
 
 "----------------------------------------------
 " Language: Python
