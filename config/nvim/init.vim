@@ -22,7 +22,6 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'junegunn/goyo.vim'
 Plug 'majutsushi/tagbar'
 Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
-Plug 'zchee/deoplete-go', { 'do': 'make'}
 Plug 'rbgrouleff/bclose.vim'
 Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdcommenter'
@@ -31,11 +30,13 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'vimwiki/vimwiki'
+Plug 'zchee/deoplete-go', { 'do': 'make'}
 
 " Language support
 Plug 'digitaltoad/vim-pug'
 Plug 'fatih/vim-go'
 Plug 'kchmck/vim-coffee-script'
+Plug 'kylef/apiblueprint.vim'
 Plug 'plasticboy/vim-markdown'
 Plug 'tclh123/vim-thrift'
 
