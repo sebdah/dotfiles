@@ -371,6 +371,14 @@ au FileType javascript set softtabstop=2
 au FileType javascript set tabstop=2
 
 "----------------------------------------------
+" Language: JSON
+"----------------------------------------------
+au FileType json set expandtab
+au FileType json set shiftwidth=2
+au FileType json set softtabstop=2
+au FileType json set tabstop=2
+
+"----------------------------------------------
 " Language: LESS
 "----------------------------------------------
 au FileType less set expandtab
