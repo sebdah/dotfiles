@@ -395,6 +395,14 @@ au FileType less set softtabstop=2
 au FileType less set tabstop=2
 
 "----------------------------------------------
+" Language: Make
+"----------------------------------------------
+au FileType make set noexpandtab
+au FileType make set shiftwidth=2
+au FileType make set softtabstop=2
+au FileType make set tabstop=2
+
+"----------------------------------------------
 " Language: Markdown
 "----------------------------------------------
 au FileType markdown set noexpandtab
@@ -418,3 +426,11 @@ au FileType thrift set expandtab
 au FileType thrift set shiftwidth=4
 au FileType thrift set softtabstop=4
 au FileType thrift set tabstop=4
+
+"----------------------------------------------
+" Language: YAML
+"----------------------------------------------
+au FileType yaml set expandtab
+au FileType yaml set shiftwidth=2
+au FileType yaml set softtabstop=2
+au FileType yaml set tabstop=2
