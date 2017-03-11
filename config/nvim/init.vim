@@ -55,6 +55,7 @@ set autoread                      " reload file if the file changes on the disk
 set autowrite                     " write when switching buffers
 set autowriteall                  " write on :quit
 set colorcolumn=81                " highlight the 80th column as an indicator
+set completeopt-=preview          " remove the horrendous preview window
 set cursorline                    " highlight the current line for the cursor
 set encoding=utf-8
 set expandtab                     " expands tabs to spaces
@@ -335,7 +336,8 @@ au FileType go let g:go_auto_sameids = 1
 let g:go_list_type = "quickfix"
 
 " Mappings
-au FileType go nmap <F9> <Plug>(go-metalinter)
+au FileType go nmap <F8> <Plug>(go-metalinter)
+au FileType go nmap <F9> <Plug>(go-coverage-toggle)
 au FileType go nmap <F10> <Plug>(go-test)
 au FileType go nmap <F12> <Plug>(go-def)
 au FileType go nmap <leader>gc <Plug>(go-coverage-toggle)
