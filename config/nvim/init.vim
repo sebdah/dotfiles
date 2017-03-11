@@ -170,7 +170,7 @@ autocmd BufEnter * :call BookmarkMapKeys()
 autocmd BufEnter NERD_tree_* :call BookmarkUnmapKeys()
 
 "----------------------------------------------
-" Plugin: 'Shougo/deoplete.nvim'
+" Plugin: Shougo/deoplete.nvim
 "----------------------------------------------
 " Enable deoplete on startup
 let g:deoplete#enable_at_startup = 1
@@ -307,6 +307,12 @@ let g:vimwiki_list = [{'path': '~/Dropbox/vimwiki'}]
 au FileType vimwiki set shiftwidth=2
 au FileType vimwiki set softtabstop=2
 au FileType vimwiki set tabstop=2
+
+"----------------------------------------------
+" Plugin: zchee/deoplete-go
+"----------------------------------------------
+" Enable completing of go pointers
+let g:deoplete#sources#go#pointer = 1
 
 "----------------------------------------------
 " Language: Golang
