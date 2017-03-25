@@ -288,7 +288,6 @@ let NERDTreeIgnore = [
         \ '\.pyc$',
         \ '^\.DS_Store$',
         \ '^node_modules$',
-        \ '^.git$',
         \ '^.ropeproject$',
         \ '^__pycache__$']
 
