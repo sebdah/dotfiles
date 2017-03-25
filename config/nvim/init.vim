@@ -342,8 +342,8 @@ let g:go_list_type = "quickfix"
 
 " Mappings
 au FileType go nmap <F8> <Plug>(go-metalinter)
-au FileType go nmap <F9> <Plug>(go-coverage-toggle)
-au FileType go nmap <F10> <Plug>(go-test)
+au FileType go nmap <F9> :GoCoverageToggle -short<CR>
+au FileType go nmap <F10> :GoTest -short<CR>
 au FileType go nmap <F12> <Plug>(go-def)
 au FileType go nmap <leader>gc <Plug>(go-coverage-toggle)
 au FileType go nmap <leader>gd <Plug>(go-doc)
