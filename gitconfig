@@ -32,7 +32,7 @@
 	st = status
 	s = status
 [core]
-	editor = vim
+	editor = nvim
 	whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
 	excludesfile = /Users/sebdah/.gitignore
 [gui]
