@@ -340,6 +340,17 @@ au FileType go let g:go_auto_sameids = 1
 " Fix for location list when vim-go is used together with Syntastic
 let g:go_list_type = "quickfix"
 
+" gometalinter configuration
+let g:go_metalinter_command = ""
+let g:go_metalinter_enabled = [
+        \ 'deadcode',
+        \ 'goconst',
+        \ 'gocyclo',
+        \ 'gosimple',
+        \ 'ineffassign',
+        \ 'vet',
+        \ 'vetshadow']
+
 " Mappings
 au FileType go nmap <F8> <Plug>(go-metalinter)
 au FileType go nmap <F9> :GoCoverageToggle -short<CR>
