@@ -364,9 +364,9 @@ au FileType go nmap <leader>gv <Plug>(go-doc-vertical)
 " Language: Bash
 "----------------------------------------------
 au FileType sh set noexpandtab
-au FileType sh set shiftwidth=4
-au FileType sh set softtabstop=4
-au FileType sh set tabstop=4
+au FileType sh set shiftwidth=2
+au FileType sh set softtabstop=2
+au FileType sh set tabstop=2
 
 "----------------------------------------------
 " Language: CSS
