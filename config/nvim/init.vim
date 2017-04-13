@@ -357,8 +357,10 @@ au FileType go nmap <F9> :GoCoverageToggle -short<CR>
 au FileType go nmap <F10> :GoTest -short<CR>
 au FileType go nmap <F12> <Plug>(go-def)
 au FileType go nmap <leader>gc <Plug>(go-coverage-toggle)
-au FileType go nmap <leader>gd <Plug>(go-doc)
-au FileType go nmap <leader>gv <Plug>(go-doc-vertical)
+au FileType go nmap <leader>gd <Plug>(go-def)
+au FileType go nmap <leader>gdv <Plug>(go-def-vertical)
+au FileType go nmap <leader>gD <Plug>(go-doc)
+au FileType go nmap <leader>gDv <Plug>(go-doc-vertical)
 
 "----------------------------------------------
 " Language: Bash
