@@ -14,6 +14,7 @@ Plug 'godlygeek/tabular'  " This must come before plasticboy/vim-markdown
 Plug 'MattesGroeger/vim-bookmarks'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'airblade/vim-gitgutter'
+Plug 'aklt/plantuml-syntax'
 Plug 'bling/vim-airline'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -431,6 +432,14 @@ au FileType markdown set shiftwidth=4
 au FileType markdown set softtabstop=4
 au FileType markdown set tabstop=4
 au FileType markdown set spell
+
+"----------------------------------------------
+" Language: PlantUML
+"----------------------------------------------
+au FileType plantuml set expandtab
+au FileType plantuml set shiftwidth=4
+au FileType plantuml set softtabstop=4
+au FileType plantuml set tabstop=4
 
 "----------------------------------------------
 " Language: Python
