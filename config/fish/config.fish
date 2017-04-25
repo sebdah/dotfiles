@@ -90,3 +90,6 @@ set -gx LC_ALL en_US.UTF-8
 
 # ls colors (Mac OS X ls)
 set -gx LSCOLORS 'Exfxcxdxbxegedabagacad'
+
+# Disable the fish greeting
+set fish_greeting ""
