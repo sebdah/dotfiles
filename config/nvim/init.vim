@@ -451,6 +451,14 @@ au FileType python set softtabstop=4
 au FileType python set tabstop=4
 
 "----------------------------------------------
+" Language: Ruby
+"----------------------------------------------
+au FileType ruby set expandtab
+au FileType ruby set shiftwidth=2
+au FileType ruby set softtabstop=2
+au FileType ruby set tabstop=2
+
+"----------------------------------------------
 " Language: Thrift
 "----------------------------------------------
 au FileType thrift set expandtab
