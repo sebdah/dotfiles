@@ -65,14 +65,6 @@ set -gx ANDROID_HOME /usr/local/opt/android-sdk
 set -gx GOPATH ~/go
 
 #
-# tmux
-#
-
-# This patches a mistake in tmux when compiled for OS X sierra.
-# Reference: https://github.com/tmux/tmux/issues/475
-set -gx EVENT_NOKQUEUE 1
-
-#
 # Browser
 #
 set -gx BROWSER open
