@@ -16,9 +16,10 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'majutsushi/tagbar'
 Plug 'mileszs/ack.vim'
@@ -210,16 +211,9 @@ nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
 nnoremap <silent> <c-\> :TmuxNavigatePrevious<cr>
 
 "----------------------------------------------
-" Plugin: ctrlpvim/ctrlp.vim
+" Plugin: 'junegunn/fzf.vim'
 "----------------------------------------------
-nnoremap <c-t> :CtrlPBufTag<CR>
-nnoremap <c-T> :CtrlPBufTagAll<CR>
-
-" Ignore list
-let g:ctrlp_custom_ignore = {
-  \ 'dir': 'venv$\|\.git$\|node_modules$\|vendor$',
-  \ 'file': '\.pyc$'
-  \ }
+nnoremap <c-p> :Files<CR>
 
 "----------------------------------------------
 " Plugin: 'majutsushi/tagbar'
