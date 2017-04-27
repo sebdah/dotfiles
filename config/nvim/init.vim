@@ -1,4 +1,4 @@
-"Python----------------------------------------------
+"----------------------------------------------
 " Plugin management
 "
 " Download vim-plug from the URL below and follow the installation
