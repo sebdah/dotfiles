@@ -1,4 +1,4 @@
-"----------------------------------------------
+"Python----------------------------------------------
 " Plugin management
 "
 " Download vim-plug from the URL below and follow the installation
@@ -18,6 +18,7 @@ Plug 'aklt/plantuml-syntax'
 Plug 'bling/vim-airline'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'dag/vim-fish'
 Plug 'easymotion/vim-easymotion'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'fishbullet/deoplete-ruby'
@@ -279,6 +280,12 @@ let g:vim_markdown_toc_autofit = 1
 nnoremap <leader>w :Bclose<CR>
 
 "----------------------------------------------
+" Plugin: rking/ag.vim
+"----------------------------------------------
+" Open ag
+nnoremap <leader>a :Ag<space>
+
+"----------------------------------------------
 " Plugin: scrooloose/nerdtree
 "----------------------------------------------
 nnoremap <leader>d :NERDTreeToggle<CR>
@@ -384,6 +391,14 @@ au FileType css set tabstop=2
 " Language: gitcommit
 "----------------------------------------------
 au FileType gitcommit set spell
+
+"----------------------------------------------
+" Language: fish
+"----------------------------------------------
+au FileType fish set expandtab
+au FileType fish set shiftwidth=2
+au FileType fish set softtabstop=2
+au FileType fish set tabstop=2
 
 "----------------------------------------------
 " Language: HTML
