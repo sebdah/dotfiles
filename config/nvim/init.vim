@@ -14,18 +14,14 @@ Plug 'godlygeek/tabular'  " This must come before plasticboy/vim-markdown
 Plug 'MattesGroeger/vim-bookmarks'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'airblade/vim-gitgutter'
-Plug 'aklt/plantuml-syntax'
 Plug 'bling/vim-airline'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'dag/vim-fish'
 Plug 'easymotion/vim-easymotion'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'fishbullet/deoplete-ruby'
 Plug 'junegunn/goyo.vim'
 Plug 'majutsushi/tagbar'
 Plug 'mileszs/ack.vim'
-Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 Plug 'rbgrouleff/bclose.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
@@ -33,15 +29,19 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'vimwiki/vimwiki'
-Plug 'zchee/deoplete-go', { 'do': 'make'}
 
 " Language support
+Plug 'aklt/plantuml-syntax'
+Plug 'dag/vim-fish'
 Plug 'digitaltoad/vim-pug'
 Plug 'fatih/vim-go'
+Plug 'fishbullet/deoplete-ruby'
 Plug 'kchmck/vim-coffee-script'
 Plug 'kylef/apiblueprint.vim'
+Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 Plug 'plasticboy/vim-markdown'
 Plug 'tclh123/vim-thrift'
+Plug 'zchee/deoplete-go', { 'do': 'make'}
 
 " Colorschemes
 Plug 'NLKNguyen/papercolor-theme'
