@@ -16,9 +16,14 @@ alias work "cd ~/go/src/github.com/saltside"
 alias cist "hub ci-status"
 alias cistw "watch -n10 hub ci-status"
 
-alias s "saltside-workstation sandbox"
 alias w "saltside-workstation"
 alias g 'git'
+
+function s --description "s <command>"
+  cd ~/go/src/github.com/saltside/sandbox
+  saltside-workstation run ./bin/sandbox $argv
+  cd -
+end
 
 #
 # Path
