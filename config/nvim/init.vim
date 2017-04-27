@@ -24,9 +24,9 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'fishbullet/deoplete-ruby'
 Plug 'junegunn/goyo.vim'
 Plug 'majutsushi/tagbar'
+Plug 'mileszs/ack.vim'
 Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 Plug 'rbgrouleff/bclose.vim'
-Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'terryma/vim-multiple-cursors'
@@ -280,10 +280,10 @@ let g:vim_markdown_toc_autofit = 1
 nnoremap <leader>w :Bclose<CR>
 
 "----------------------------------------------
-" Plugin: rking/ag.vim
+" Plugin: mileszs/ack.vim
 "----------------------------------------------
-" Open ag
-nnoremap <leader>a :Ag<space>
+" Open ack
+nnoremap <leader>a :Ack<space>
 
 "----------------------------------------------
 " Plugin: scrooloose/nerdtree
