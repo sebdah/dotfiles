@@ -23,6 +23,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'majutsushi/tagbar'
 Plug 'mileszs/ack.vim'
+Plug 'neomake/neomake'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
@@ -211,6 +212,13 @@ nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
 nnoremap <silent> <c-\> :TmuxNavigatePrevious<cr>
 
 "----------------------------------------------
+" Plugin: easymotion/vim-easymotion
+"----------------------------------------------
+" Enable support for bidirectional motions
+map  <leader><leader>w <Plug>(easymotion-bd-w)
+nmap <leader><leader>w <Plug>(easymotion-overwin-w)
+
+"----------------------------------------------
 " Plugin: 'junegunn/fzf.vim'
 "----------------------------------------------
 nnoremap <c-p> :Files<CR>
@@ -252,11 +260,10 @@ let g:tagbar_type_go = {
 \ }
 
 "----------------------------------------------
-" Plugin: easymotion/vim-easymotion
+" Plugin: neomake/neomake
 "----------------------------------------------
-" Enable support for bidirectional motions
-map  <leader><leader>w <Plug>(easymotion-bd-w)
-nmap <leader><leader>w <Plug>(easymotion-overwin-w)
+" Run neomake on each write
+autocmd! BufWritePost * Neomake
 
 "----------------------------------------------
 " Plugin: plasticboy/vim-markdown
