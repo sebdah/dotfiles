@@ -316,6 +316,7 @@ let g:vimwiki_list = [{
         \ 'syntax': 'markdown',
         \ 'ext': '.md'}]
 
+au FileType vimwiki set expandtab
 au FileType vimwiki set shiftwidth=2
 au FileType vimwiki set softtabstop=2
 au FileType vimwiki set tabstop=2
