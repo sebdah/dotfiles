@@ -311,7 +311,10 @@ let NERDTreeShowHidden = 1
 " Plugin: vimwiki/vimwiki
 "----------------------------------------------
 " Path to wiki
-let g:vimwiki_list = [{'path': '~/Dropbox/vimwiki'}]
+let g:vimwiki_list = [{
+        \ 'path': '~/Dropbox/vimwiki',
+        \ 'syntax': 'markdown',
+        \ 'ext': '.md'}]
 
 au FileType vimwiki set shiftwidth=2
 au FileType vimwiki set softtabstop=2
