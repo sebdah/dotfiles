@@ -377,6 +377,14 @@ au FileType go nmap <leader>gD <Plug>(go-doc)
 au FileType go nmap <leader>gDv <Plug>(go-doc-vertical)
 
 "----------------------------------------------
+" Language: apiblueprint
+"----------------------------------------------
+au FileType apiblueprint set expandtab
+au FileType apiblueprint set shiftwidth=4
+au FileType apiblueprint set softtabstop=4
+au FileType apiblueprint set tabstop=4
+
+"----------------------------------------------
 " Language: Bash
 "----------------------------------------------
 au FileType sh set noexpandtab
