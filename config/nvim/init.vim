@@ -262,8 +262,8 @@ let g:tagbar_type_go = {
 "----------------------------------------------
 " Plugin: neomake/neomake
 "----------------------------------------------
-" Run neomake on each write
-autocmd! BufWritePost * Neomake
+" Run neomake on each write for certain languages
+au FileType ruby autocmd! BufWritePost * Neomake
 
 "----------------------------------------------
 " Plugin: plasticboy/vim-markdown
