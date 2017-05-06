@@ -84,6 +84,13 @@ set updatetime=100                " redraw the status bar often
 " neovim specific settings
 if has('nvim')
   set inccommand=split              " enables interactive search and replace
+
+  " Set the Python binaries neovim is using. Please note that you will need to
+  " install the neovim package for these binaries separately like this for
+  " example:
+  " pip3.6 install -U neovim
+  let g:python_host_prog = '/usr/local/bin/python2.7'
+  let g:python3_host_prog = '/usr/local/bin/python3.6'
 endif
 
 " Allow vim to set a custom font or color for a word
@@ -186,8 +193,12 @@ let g:deoplete#enable_at_startup = 1
 " Show status bar by default
 set laststatus=2
 
-" Enable top tab line
+" Enable top tabline
 let g:airline#extensions#tabline#enabled = 1
+
+" Disable showing tabs in the tabline. This will ensure that the buffers are
+" what is shown in the tabline at all times.
+let g:airline#extensions#tabline#show_tabs = 0
 
 "----------------------------------------------
 " Plugin: christoomey/vim-tmux-navigator
