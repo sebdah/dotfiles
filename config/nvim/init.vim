@@ -44,6 +44,7 @@ Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' 
 Plug 'plasticboy/vim-markdown'
 Plug 'tclh123/vim-thrift'
 Plug 'zchee/deoplete-go', { 'do': 'make'}
+Plug 'zchee/deoplete-jedi'
 
 " Colorschemes
 Plug 'NLKNguyen/papercolor-theme'
