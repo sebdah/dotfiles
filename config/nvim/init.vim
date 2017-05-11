@@ -500,6 +500,14 @@ au FileType ruby set softtabstop=2
 au FileType ruby set tabstop=2
 
 "----------------------------------------------
+" Language: SQL
+"----------------------------------------------
+au FileType sql set expandtab
+au FileType sql set shiftwidth=2
+au FileType sql set softtabstop=2
+au FileType sql set tabstop=2
+
+"----------------------------------------------
 " Language: Thrift
 "----------------------------------------------
 au FileType thrift set expandtab
