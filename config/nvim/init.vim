@@ -34,6 +34,7 @@ Plug 'vimwiki/vimwiki'
 
 " Language support
 Plug 'aklt/plantuml-syntax'
+Plug 'cespare/vim-toml'
 Plug 'dag/vim-fish'
 Plug 'digitaltoad/vim-pug'
 Plug 'fatih/vim-go'
