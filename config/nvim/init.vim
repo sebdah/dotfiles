@@ -508,6 +508,14 @@ au FileType thrift set softtabstop=4
 au FileType thrift set tabstop=4
 
 "----------------------------------------------
+" Language: TOML
+"----------------------------------------------
+au FileType toml set expandtab
+au FileType toml set shiftwidth=2
+au FileType toml set softtabstop=2
+au FileType toml set tabstop=2
+
+"----------------------------------------------
 " Language: YAML
 "----------------------------------------------
 au FileType yaml set expandtab
