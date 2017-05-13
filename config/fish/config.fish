@@ -15,7 +15,7 @@ alias skymill "cd ~/go/src/github.com/skymill"
 alias work "cd ~/go/src/github.com/saltside"
 
 alias cist "hub ci-status"
-alias cistw "watch -n10 hub ci-status"
+alias cistw "watch -n5 hub ci-status"
 
 alias w "saltside-workstation"
 alias g 'git'
@@ -91,3 +91,4 @@ set -gx LSCOLORS 'Exfxcxdxbxegedabagacad'
 
 # Disable the fish greeting
 set fish_greeting ""
+set -g fish_user_paths "/usr/local/opt/node@4/bin" $fish_user_paths
