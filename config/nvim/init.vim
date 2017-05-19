@@ -89,14 +89,14 @@ set updatetime=100                " redraw the status bar often
 
 " neovim specific settings
 if has('nvim')
-  set inccommand=split              " enables interactive search and replace
+    set inccommand=split              " enables interactive search and replace
 
-  " Set the Python binaries neovim is using. Please note that you will need to
-  " install the neovim package for these binaries separately like this for
-  " example:
-  " pip3.6 install -U neovim
-  let g:python_host_prog = '/usr/local/bin/python2.7'
-  let g:python3_host_prog = '/usr/local/bin/python3.6'
+    " Set the Python binaries neovim is using. Please note that you will need to
+    " install the neovim package for these binaries separately like this for
+    " example:
+    " pip3.6 install -U neovim
+    let g:python_host_prog = '/usr/local/bin/python2.7'
+    let g:python3_host_prog = '/usr/local/bin/python3.6'
 endif
 
 " Allow vim to set a custom font or color for a word
@@ -211,10 +211,10 @@ let g:airline#extensions#tabline#show_tabs = 0
 "----------------------------------------------
 " tmux will send xterm-style keys when its xterm-keys option is on
 if &term =~ '^screen'
-  execute "set <xUp>=\e[1;*A"
-  execute "set <xDown>=\e[1;*B"
-  execute "set <xRight>=\e[1;*C"
-  execute "set <xLeft>=\e[1;*D"
+    execute "set <xUp>=\e[1;*A"
+    execute "set <xDown>=\e[1;*B"
+    execute "set <xRight>=\e[1;*C"
+    execute "set <xLeft>=\e[1;*D"
 endif
 
 " Tmux vim integration
@@ -311,12 +311,13 @@ nnoremap <F2> :NERDTreeToggle<CR>
 
 " Files to ignore
 let NERDTreeIgnore = [
-        \ '\~$',
-        \ '\.pyc$',
-        \ '^\.DS_Store$',
-        \ '^node_modules$',
-        \ '^.ropeproject$',
-        \ '^__pycache__$']
+    \ '\~$',
+    \ '\.pyc$',
+    \ '^\.DS_Store$',
+    \ '^node_modules$',
+    \ '^.ropeproject$',
+    \ '^__pycache__$'
+\]
 
 " Close vim if NERDTree is the only opened window
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
@@ -394,13 +395,14 @@ let g:go_list_type = "quickfix"
 " gometalinter configuration
 let g:go_metalinter_command = ""
 let g:go_metalinter_enabled = [
-        \ 'deadcode',
-        \ 'goconst',
-        \ 'gocyclo',
-        \ 'gosimple',
-        \ 'ineffassign',
-        \ 'vet',
-        \ 'vetshadow']
+    \ 'deadcode',
+    \ 'goconst',
+    \ 'gocyclo',
+    \ 'gosimple',
+    \ 'ineffassign',
+    \ 'vet',
+    \ 'vetshadow'
+\]
 
 " Mappings
 au FileType go nmap <F8> <Plug>(go-metalinter)
