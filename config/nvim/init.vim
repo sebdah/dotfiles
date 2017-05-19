@@ -9,6 +9,7 @@ call plug#begin('~/.vim/plugged')
 
 " Dependencies
 Plug 'godlygeek/tabular'  " This must come before plasticboy/vim-markdown
+Plug 'tpope/vim-rhubarb'  " Depenency for tpope/fugitive
 
 " General plugins
 Plug 'MattesGroeger/vim-bookmarks'
