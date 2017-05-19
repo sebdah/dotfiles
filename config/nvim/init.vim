@@ -548,6 +548,14 @@ au FileType toml set softtabstop=2
 au FileType toml set tabstop=2
 
 "----------------------------------------------
+" Language: vimscript
+"----------------------------------------------
+au FileType vim set expandtab
+au FileType vim set shiftwidth=4
+au FileType vim set softtabstop=4
+au FileType vim set tabstop=4
+
+"----------------------------------------------
 " Language: YAML
 "----------------------------------------------
 au FileType yaml set expandtab
