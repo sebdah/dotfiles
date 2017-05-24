@@ -537,9 +537,9 @@ au FileType sql set tabstop=2
 " Language: Thrift
 "----------------------------------------------
 au FileType thrift set expandtab
-au FileType thrift set shiftwidth=4
-au FileType thrift set softtabstop=4
-au FileType thrift set tabstop=4
+au FileType thrift set shiftwidth=2
+au FileType thrift set softtabstop=2
+au FileType thrift set tabstop=2
 
 "----------------------------------------------
 " Language: TOML
