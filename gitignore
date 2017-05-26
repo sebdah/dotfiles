@@ -6,3 +6,4 @@
 *.log
 npm*.log*
 .vim-bookmarks
+tags
