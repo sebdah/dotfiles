@@ -302,7 +302,7 @@ nnoremap <leader>w :Bclose<CR>
 " Plugin: mileszs/ack.vim
 "----------------------------------------------
 " Open ack
-nnoremap <leader>a :Ack<space>
+nnoremap <leader>a :Ack!<space>
 
 "----------------------------------------------
 " Plugin: scrooloose/nerdtree
