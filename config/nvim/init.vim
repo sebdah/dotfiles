@@ -397,6 +397,7 @@ let g:go_list_type = "quickfix"
 let g:go_metalinter_command = ""
 let g:go_metalinter_enabled = [
     \ 'deadcode',
+    \ 'gas',
     \ 'goconst',
     \ 'gocyclo',
     \ 'gosimple',
