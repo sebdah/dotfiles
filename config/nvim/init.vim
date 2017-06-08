@@ -414,9 +414,9 @@ au FileType go nmap <leader>gDv <Plug>(go-doc-vertical)
 "----------------------------------------------
 " Language: gitcommit
 "----------------------------------------------
-au FileType gitcommit set spell
+au FileType gitcommit setlocal spell
 
 "----------------------------------------------
 " Language: Markdown
 "----------------------------------------------
-au FileType markdown set spell
+au FileType markdown setlocal spell
