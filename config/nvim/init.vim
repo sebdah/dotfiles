@@ -405,6 +405,9 @@ let g:go_metalinter_enabled = [
     \ 'vetshadow'
 \]
 
+" Set whether the JSON tags should be snakecase or camelcase
+let g:go_addtags_transform = "snakecase"
+
 " Mappings
 au FileType go nmap <F8> <Plug>(go-metalinter)
 au FileType go nmap <F9> :GoCoverageToggle -short<CR>
