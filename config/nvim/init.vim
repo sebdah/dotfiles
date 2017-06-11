@@ -448,6 +448,7 @@ au FileType css set tabstop=2
 " Language: gitcommit
 "----------------------------------------------
 au FileType gitcommit setlocal spell
+au FileType gitcommit setlocal textwidth=80
 
 "----------------------------------------------
 " Language: fish
