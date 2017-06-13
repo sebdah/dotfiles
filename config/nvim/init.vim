@@ -353,7 +353,7 @@ let g:neosnippet#snippets_directory='~/.config/nvim/snippets'
 let g:vimwiki_list = [{
         \ 'path': '~/Dropbox/vimwiki',
         \ 'syntax': 'markdown',
-        \ 'ext': '.md'}]
+        \ 'ext': '.vimwiki.markdown'}]
 
 au FileType vimwiki set expandtab
 au FileType vimwiki set shiftwidth=2
@@ -502,10 +502,11 @@ au FileType make set tabstop=2
 " Language: Markdown
 "----------------------------------------------
 au FileType markdown setlocal spell
-au FileType markdown set noexpandtab
+au FileType markdown set expandtab
 au FileType markdown set shiftwidth=4
 au FileType markdown set softtabstop=4
 au FileType markdown set tabstop=4
+au FileType markdown set syntax=markdown
 
 "----------------------------------------------
 " Language: PlantUML
@@ -514,6 +515,14 @@ au FileType plantuml set expandtab
 au FileType plantuml set shiftwidth=4
 au FileType plantuml set softtabstop=4
 au FileType plantuml set tabstop=4
+
+"----------------------------------------------
+" Language: Protobuf
+"----------------------------------------------
+au FileType proto set expandtab
+au FileType proto set shiftwidth=2
+au FileType proto set softtabstop=2
+au FileType proto set tabstop=2
 
 "----------------------------------------------
 " Language: Python
