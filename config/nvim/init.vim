@@ -20,6 +20,7 @@ Plug 'Shougo/neosnippet-snippets'  " Default snippets for many languages
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -378,11 +379,14 @@ au FileType go set tabstop=4
 au FileType go let g:go_fmt_command = "goimports"
 
 " Enable syntax highlighting per default
+au FileType go let g:go_highlight_types = 1
+au FileType go let g:go_highlight_fields = 1
 au FileType go let g:go_highlight_functions = 1
 au FileType go let g:go_highlight_methods = 1
 au FileType go let g:go_highlight_structs = 1
 au FileType go let g:go_highlight_operators = 1
 au FileType go let g:go_highlight_build_constraints = 1
+au FileType go let g:go_highlight_extra_types = 1
 
 " Show type information
 au FileType go let g:go_auto_type_info = 1
@@ -395,11 +399,14 @@ let g:go_list_type = "quickfix"
 
 " gometalinter configuration
 let g:go_metalinter_command = ""
+let g:go_metalinter_deadline = "5s"
 let g:go_metalinter_enabled = [
     \ 'deadcode',
+    \ 'errcheck',
     \ 'gas',
     \ 'goconst',
     \ 'gocyclo',
+    \ 'golint',
     \ 'gosimple',
     \ 'ineffassign',
     \ 'vet',
