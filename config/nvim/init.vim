@@ -8,9 +8,9 @@
 call plug#begin('~/.vim/plugged')
 
 " Dependencies
-Plug 'Shougo/neocomplcache'  " Depenency for Shougo/neosnippet
-Plug 'godlygeek/tabular'     " This must come before plasticboy/vim-markdown
-Plug 'tpope/vim-rhubarb'     " Depenency for tpope/fugitive
+Plug 'Shougo/neocomplcache'        " Depenency for Shougo/neosnippet
+Plug 'godlygeek/tabular'           " This must come before plasticboy/vim-markdown
+Plug 'tpope/vim-rhubarb'           " Depenency for tpope/fugitive
 
 " General plugins
 Plug 'MattesGroeger/vim-bookmarks'
@@ -90,7 +90,7 @@ set updatetime=100                " redraw the status bar often
 
 " neovim specific settings
 if has('nvim')
-    set inccommand=split              " enables interactive search and replace
+    set inccommand=split          " enables interactive search and replace
 
     " Set the Python binaries neovim is using. Please note that you will need to
     " install the neovim package for these binaries separately like this for
