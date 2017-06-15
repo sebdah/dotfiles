@@ -118,10 +118,10 @@ autocmd BufLeave * silent! :wa
 autocmd BufWritePre * :%s/\s\+$//e
 
 " Toggle background with <leader>bg
-map <leader>bg :let &background = (&background == "dark"? "light" : "dark")<CR>
+map <leader>bg :let &background = (&background == "dark"? "light" : "dark")<cr>
 
 " Clear search highlights
-map <leader>c :nohlsearch<CR>
+map <leader>c :nohlsearch<cr>
 
 "----------------------------------------------
 " Navigation
@@ -133,8 +133,8 @@ noremap <Left> <NOP>
 noremap <Right> <NOP>
 
 " Move between buffers with Shift + arrow key
-nnoremap <S-Left> :bprevious<CR>
-nnoremap <S-Right> :bnext<CR>
+nnoremap <S-Left> :bprevious<cr>
+nnoremap <S-Right> :bnext<cr>
 
 "----------------------------------------------
 " Splits
@@ -144,11 +144,11 @@ set splitbelow
 set splitright
 
 " Creating splits
-nnoremap <leader>v :vsplit<CR>
-nnoremap <leader>h :split<CR>
+nnoremap <leader>v :vsplit<cr>
+nnoremap <leader>h :split<cr>
 
 " Closing splits
-nnoremap <leader>q :close<CR>
+nnoremap <leader>q :close<cr>
 
 "----------------------------------------------
 " Plugin: MattesGroeger/vim-bookmarks
@@ -165,13 +165,13 @@ let g:bookmark_no_default_key_mappings = 1
 " Configure key mappings
 " This part also fixes conflicts with NERDTree
 function! BookmarkMapKeys()
-    nmap Mm :BookmarkToggle<CR>
-    nmap Mi :BookmarkAnnotate<CR>
-    nmap Mn :BookmarkNext<CR>
-    nmap Mp :BookmarkPrev<CR>
-    nmap Ma :BookmarkShowAll<CR>
-    nmap Mc :BookmarkClear<CR>
-    nmap Mx :BookmarkClearAll<CR>
+    nmap Mm :BookmarkToggle<cr>
+    nmap Mi :BookmarkAnnotate<cr>
+    nmap Mn :BookmarkNext<cr>
+    nmap Mp :BookmarkPrev<cr>
+    nmap Ma :BookmarkShowAll<cr>
+    nmap Mc :BookmarkClear<cr>
+    nmap Mx :BookmarkClearAll<cr>
     nmap Mkk :BookmarkMoveUp
     nmap Mjj :BookmarkMoveDown
 endfunction
@@ -240,13 +240,13 @@ nmap <leader><leader>w <Plug>(easymotion-overwin-w)
 "----------------------------------------------
 " Plugin: 'junegunn/fzf.vim'
 "----------------------------------------------
-nnoremap <c-p> :Files<CR>
+nnoremap <c-p> :Files<cr>
 
 "----------------------------------------------
 " Plugin: 'majutsushi/tagbar'
 "----------------------------------------------
 " Add shortcut for toggling the tag bar
-nnoremap <F3> :TagbarToggle<CR>
+nnoremap <F3> :TagbarToggle<cr>
 
 " Language: Go
 " Tagbar configuration for Golang
@@ -297,7 +297,7 @@ let g:vim_markdown_toc_autofit = 1
 " Plugin: rbgrouleff/bclose.vim
 "----------------------------------------------
 " Close buffers
-nnoremap <leader>w :Bclose<CR>
+nnoremap <leader>w :Bclose<cr>
 
 "----------------------------------------------
 " Plugin: mileszs/ack.vim
@@ -308,8 +308,8 @@ nnoremap <leader>a :Ack!<space>
 "----------------------------------------------
 " Plugin: scrooloose/nerdtree
 "----------------------------------------------
-nnoremap <leader>d :NERDTreeToggle<CR>
-nnoremap <F2> :NERDTreeToggle<CR>
+nnoremap <leader>d :NERDTreeToggle<cr>
+nnoremap <F2> :NERDTreeToggle<cr>
 
 " Files to ignore
 let NERDTreeIgnore = [
@@ -416,14 +416,19 @@ let g:go_metalinter_enabled = [
 " Set whether the JSON tags should be snakecase or camelcase
 let g:go_addtags_transform = "snakecase"
 
+" Open test files in a vertical split
+let g:go_alternate_mode = "vsplit"
+
 " Mappings
 au FileType go nmap <F8> <Plug>(go-metalinter)
-au FileType go nmap <F9> :GoCoverageToggle -short<CR>
-au FileType go nmap <F10> :GoTest -short<CR>
+au FileType go nmap <F9> :GoCoverageToggle -short<cr>
+au FileType go nmap <F10> :GoTest -short<cr>
 au FileType go nmap <F12> <Plug>(go-def)
+au FileType go nmap <leader>gt :GoDeclsDir<cr>
 au FileType go nmap <leader>gc <Plug>(go-coverage-toggle)
 au FileType go nmap <leader>gd <Plug>(go-def)
 au FileType go nmap <leader>gdv <Plug>(go-def-vertical)
+au FileType go nmap <leader>gdh <Plug>(go-def-horizontal)
 au FileType go nmap <leader>gD <Plug>(go-doc)
 au FileType go nmap <leader>gDv <Plug>(go-doc-vertical)
 
