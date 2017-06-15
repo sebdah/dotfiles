@@ -375,24 +375,37 @@ au FileType go set shiftwidth=4
 au FileType go set softtabstop=4
 au FileType go set tabstop=4
 
+" Mappings
+au FileType go nmap <F8> <Plug>(go-metalinter)
+au FileType go nmap <F9> :GoCoverageToggle -short<cr>
+au FileType go nmap <F10> :GoTest -short<cr>
+au FileType go nmap <F12> <Plug>(go-def)
+au FileType go nmap <leader>gt :GoDeclsDir<cr>
+au FileType go nmap <leader>gc <Plug>(go-coverage-toggle)
+au FileType go nmap <leader>gd <Plug>(go-def)
+au FileType go nmap <leader>gdv <Plug>(go-def-vertical)
+au FileType go nmap <leader>gdh <Plug>(go-def-horizontal)
+au FileType go nmap <leader>gD <Plug>(go-doc)
+au FileType go nmap <leader>gDv <Plug>(go-doc-vertical)
+
 " Run goimports when running gofmt
-au FileType go let g:go_fmt_command = "goimports"
+let g:go_fmt_command = "goimports"
 
 " Enable syntax highlighting per default
-au FileType go let g:go_highlight_types = 1
-au FileType go let g:go_highlight_fields = 1
-au FileType go let g:go_highlight_functions = 1
-au FileType go let g:go_highlight_methods = 1
-au FileType go let g:go_highlight_structs = 1
-au FileType go let g:go_highlight_operators = 1
-au FileType go let g:go_highlight_build_constraints = 1
-au FileType go let g:go_highlight_extra_types = 1
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_extra_types = 1
 
 " Show type information
-au FileType go let g:go_auto_type_info = 1
+let g:go_auto_type_info = 1
 
 " Highlight variable uses
-au FileType go let g:go_auto_sameids = 1
+let g:go_auto_sameids = 1
 
 " Fix for location list when vim-go is used together with Syntastic
 let g:go_list_type = "quickfix"
@@ -418,19 +431,6 @@ let g:go_addtags_transform = "snakecase"
 
 " Open test files in a vertical split
 let g:go_alternate_mode = "vsplit"
-
-" Mappings
-au FileType go nmap <F8> <Plug>(go-metalinter)
-au FileType go nmap <F9> :GoCoverageToggle -short<cr>
-au FileType go nmap <F10> :GoTest -short<cr>
-au FileType go nmap <F12> <Plug>(go-def)
-au FileType go nmap <leader>gt :GoDeclsDir<cr>
-au FileType go nmap <leader>gc <Plug>(go-coverage-toggle)
-au FileType go nmap <leader>gd <Plug>(go-def)
-au FileType go nmap <leader>gdv <Plug>(go-def-vertical)
-au FileType go nmap <leader>gdh <Plug>(go-def-horizontal)
-au FileType go nmap <leader>gD <Plug>(go-doc)
-au FileType go nmap <leader>gDv <Plug>(go-doc-vertical)
 
 "----------------------------------------------
 " Language: apiblueprint
