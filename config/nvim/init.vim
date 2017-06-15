@@ -107,10 +107,6 @@ syntax enable
 " Set the leader button
 let mapleader = ','
 
-" Colors
-set background=dark
-colorscheme PaperColor
-
 " Autosave buffers before leaving them
 autocmd BufLeave * silent! :wa
 
@@ -122,6 +118,19 @@ map <leader>bg :let &background = (&background == "dark"? "light" : "dark")<cr>
 
 " Clear search highlights
 map <leader>c :nohlsearch<cr>
+
+"----------------------------------------------
+" Colors
+"----------------------------------------------
+set background=dark
+colorscheme PaperColor
+
+" Override the search highlight color with a combination that is easier to
+" read. The default PaperColor is dark green backgroun with black foreground.
+"
+" Reference:
+" - http://vim.wikia.com/wiki/Xterm256_color_names_for_console_Vim
+highlight Search guibg=DeepPink4 guifg=White ctermbg=53 ctermfg=White
 
 "----------------------------------------------
 " Navigation
