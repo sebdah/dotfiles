@@ -72,6 +72,7 @@ set completeopt-=preview          " remove the horrendous preview window
 set cursorline                    " highlight the current line for the cursor
 set encoding=utf-8
 set expandtab                     " expands tabs to spaces
+set incsearch                     " move to match as you type the search query
 set list                          " show trailing whitespace
 set listchars=tab:\|\ ,trail:▫
 set hlsearch                      " disable search result highlighting
