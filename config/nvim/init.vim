@@ -20,7 +20,7 @@ Plug 'Shougo/neosnippet-snippets'  " Default snippets for many languages
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'ctrlpvim/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'          " CtrlP is installed to support tag finding in vim-go
 Plug 'easymotion/vim-easymotion'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -262,6 +262,12 @@ nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
 nnoremap <silent> <c-\> :TmuxNavigatePrevious<cr>
 
 "----------------------------------------------
+" Plugin: 'ctrlpvim/ctrlp.vim'
+"----------------------------------------------
+" Disable the CtrlP mapping, since we want to use FZF.
+let g:ctrlp_map = ''
+
+"----------------------------------------------
 " Plugin: easymotion/vim-easymotion
 "----------------------------------------------
 " Enable support for bidirectional motions
@@ -271,7 +277,7 @@ nmap <leader><leader>w <Plug>(easymotion-overwin-w)
 "----------------------------------------------
 " Plugin: 'junegunn/fzf.vim'
 "----------------------------------------------
-nnoremap <c-p> :Files<cr>
+nnoremap <c-p> :FZF<cr>
 
 "----------------------------------------------
 " Plugin: 'majutsushi/tagbar'
