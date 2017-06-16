@@ -221,8 +221,10 @@ autocmd BufEnter NERD_tree_* :call BookmarkUnmapKeys()
 "----------------------------------------------
 " Plugin: Shougo/deoplete.nvim
 "----------------------------------------------
-" Enable deoplete on startup
-let g:deoplete#enable_at_startup = 1
+if has('nvim')
+    " Enable deoplete on startup
+    let g:deoplete#enable_at_startup = 1
+endif
 
 "----------------------------------------------
 " Plugin: bling/vim-airline
