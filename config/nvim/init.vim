@@ -72,10 +72,8 @@ set completeopt-=preview          " remove the horrendous preview window
 set cursorline                    " highlight the current line for the cursor
 set encoding=utf-8
 set expandtab                     " expands tabs to spaces
-set incsearch                     " move to match as you type the search query
 set list                          " show trailing whitespace
 set listchars=tab:\|\ ,trail:▫
-set hlsearch                      " disable search result highlighting
 set nospell                       " disable spelling
 set noswapfile                    " disable swapfile usage
 set nowrap
@@ -92,8 +90,6 @@ set updatetime=100                " redraw the status bar often
 
 " neovim specific settings
 if has('nvim')
-    set inccommand=split          " enables interactive search and replace
-
     " Set the Python binaries neovim is using. Please note that you will need to
     " install the neovim package for these binaries separately like this for
     " example:
@@ -122,16 +118,8 @@ autocmd BufWritePre * :%s/\s\+$//e
 " Toggle background with <leader>bg
 map <leader>bg :let &background = (&background == "dark"? "light" : "dark")<cr>
 
-" Clear search highlights
-map <leader>c :nohlsearch<cr>
-
 " Center the screen quickly
 nnoremap <space> zz
-
-" Search mappings: These will make it so that going to the next one in a search
-" will center on the line it's found in.
-nnoremap n nzzzv
-nnoremap N Nzzzv
 
 "----------------------------------------------
 " Colors
@@ -145,6 +133,24 @@ colorscheme PaperColor
 " Reference:
 " - http://vim.wikia.com/wiki/Xterm256_color_names_for_console_Vim
 highlight Search guibg=DeepPink4 guifg=White ctermbg=53 ctermfg=White
+
+"----------------------------------------------
+" Searching
+"----------------------------------------------
+set incsearch                     " move to match as you type the search query
+set hlsearch                      " disable search result highlighting
+
+if has('nvim')
+    set inccommand=split          " enables interactive search and replace
+endif
+
+" Clear search highlights
+map <leader>c :nohlsearch<cr>
+
+" These mappings will make it so that going to the next one in a search will
+" center on the line it's found in.
+nnoremap n nzzzv
+nnoremap N Nzzzv
 
 "----------------------------------------------
 " Navigation
