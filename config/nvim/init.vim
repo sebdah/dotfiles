@@ -125,6 +125,9 @@ map <leader>bg :let &background = (&background == "dark"? "light" : "dark")<cr>
 " Clear search highlights
 map <leader>c :nohlsearch<cr>
 
+" Center the screen quickly
+nnoremap <space> zz
+
 "----------------------------------------------
 " Colors
 "----------------------------------------------
