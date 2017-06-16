@@ -264,7 +264,10 @@ nnoremap <silent> <c-\> :TmuxNavigatePrevious<cr>
 "----------------------------------------------
 " Plugin: 'ctrlpvim/ctrlp.vim'
 "----------------------------------------------
-" Disable the CtrlP mapping, since we want to use FZF.
+" Note: We are not using CtrlP much in this configuration. But vim-go depend on
+" it to run GoDecls(Dir).
+
+" Disable the CtrlP mapping, since we want to use FZF instead for <c-p>.
 let g:ctrlp_map = ''
 
 "----------------------------------------------
