@@ -22,8 +22,8 @@ end
 
 # dcleanup can be used to clean up docker images.
 function dcleanup
-  docker rm -v (docker ps --filter status=exited -q 2>/dev/null) ^ /dev/null
-  docker rmi (docker images --filter dangling=true -q 2>/dev/null) ^ /dev/null
+  docker rm -v (docker ps --filter status=exited -q ^ /dev/null) ^ /dev/null
+  docker rmi (docker images --filter dangling=true -q ^ /dev/null) ^ /dev/null
 end
 
 # Environment variables
