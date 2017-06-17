@@ -1,9 +1,7 @@
 . /Users/sebdah/.profile-secrets.fish
 . ~/.dotfiles/clearance-fish/fish_prompt.fish
 
-#
 # Aliases
-#
 alias grep 'grep --color'
 alias scp "scp -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
 alias ssh "ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
@@ -20,20 +18,21 @@ alias cistw "watch -n5 hub ci-status"
 alias w "saltside-workstation"
 alias g 'git'
 
+# s is running sandbox commands using the local sandbox, never the one in the
+# workstation.
 function s --description "s <command>"
   cd ~/go/src/github.com/saltside/sandbox
   saltside-workstation run ./bin/sandbox $argv
   cd -
 end
 
+# dcleanup can be used to clean up docker images.
 function dcleanup
   docker rm -v (docker ps --filter status=exited -q 2>/dev/null) ^ /dev/null
   docker rmi (docker images --filter dangling=true -q 2>/dev/null) ^ /dev/null
 end
 
-#
-# Path
-#
+# Environment variables
 set -gx PATH \
   ~/.rbenv/shims \
   /usr/local/bin \
@@ -51,47 +50,17 @@ set -gx PATH \
   ~/Library/Android/sdk/platform-tools \
   $PATH
 
-#
-# Less
-#
-
-# Set the default Less options.
-# Mouse-wheel scrolling has been disabled by -X (disable screen clearing).
-# Remove -X and -F (exit if the content fits on one screen) to enable it.
 set -gx LESS '-F -g -i -M -R -S -w -X -z-4'
-
-#
-# Android
-#
 set -gx ANDROID_HOME /usr/local/opt/android-sdk
-
-#
-# Go
-#
 set -gx GOPATH ~/go
-
-#
-# Browser
-#
 set -gx BROWSER open
-
-#
-# Editors
-#
 set -gx EDITOR vim
 set -gx VISUAL vim
 set -gx PAGER less
-
-#
-# Other
-#
-
 set -gx LANG en_US.UTF-8
 set -gx LANGUAGE en_US.utf-8
 set -gx LC_ALL en_US.UTF-8
 set -gx FZF_DEFAULT_COMMAND 'ag --hidden --skip-vcs-ignores --ignore .git --ignore vendor --ignore node_modules -g ""'
-
-# ls colors (Mac OS X ls)
 set -gx LSCOLORS 'Exfxcxdxbxegedabagacad'
 
 # Disable the fish greeting
