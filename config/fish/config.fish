@@ -12,12 +12,6 @@ alias sebdah "cd ~/go/src/github.com/sebdah"
 alias skymill "cd ~/go/src/github.com/skymill"
 alias work "cd ~/go/src/github.com/saltside"
 
-alias cist "hub ci-status"
-alias cistw "watch -n5 hub ci-status"
-
-alias w "saltside-workstation"
-alias g 'git'
-
 # s is running sandbox commands using the local sandbox, never the one in the
 # workstation.
 function s --description "s <command>"
