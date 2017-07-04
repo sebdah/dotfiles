@@ -14,6 +14,7 @@ Plug 'tpope/vim-rhubarb'           " Depenency for tpope/fugitive
 
 " General plugins
 Plug 'MattesGroeger/vim-bookmarks'
+Plug 'Raimondi/delimitMate'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'  " Default snippets for many languages
@@ -479,7 +480,7 @@ let g:go_metalinter_enabled = [
 let g:go_addtags_transform = "snakecase"
 
 " Open test files in a vertical split
-let g:go_alternate_mode = "vsplit"
+let g:go_alternate_mode = "edit"
 
 "----------------------------------------------
 " Language: apiblueprint
