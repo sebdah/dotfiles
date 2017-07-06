@@ -32,6 +32,7 @@ Plug 'mileszs/ack.vim'
 Plug 'neomake/neomake'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'scrooloose/nerdcommenter'
+Plug 'sebdah/vim-delve'
 Plug 'scrooloose/nerdtree'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-fugitive'
@@ -376,6 +377,12 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 
 " Show hidden files by default
 let NERDTreeShowHidden = 1
+
+"----------------------------------------------
+" Plugin: sebdah/vim-delve
+"----------------------------------------------
+" Set the Delve backend.
+let g:delve_backend = "native"
 
 "----------------------------------------------
 " Plugin: Shougo/neosnippet
