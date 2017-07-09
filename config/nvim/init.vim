@@ -29,7 +29,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'majutsushi/tagbar'
 Plug 'mileszs/ack.vim'
-Plug 'neomake/neomake'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'sebdah/vim-delve'
@@ -38,6 +37,7 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'vimwiki/vimwiki'
+Plug 'w0rp/ale'
 
 " Language support
 Plug 'aklt/plantuml-syntax'
@@ -330,12 +330,6 @@ let g:tagbar_type_go = {
 \ }
 
 "----------------------------------------------
-" Plugin: neomake/neomake
-"----------------------------------------------
-" Run neomake on each write for certain languages
-au FileType ruby autocmd! BufWritePost * Neomake
-
-"----------------------------------------------
 " Plugin: plasticboy/vim-markdown
 "----------------------------------------------
 " Disable folding
@@ -497,6 +491,16 @@ let g:go_addtags_transform = "snakecase"
 
 " Open test files in a vertical split
 let g:go_alternate_mode = "edit"
+
+"----------------------------------------------
+" Plugin: w0rp/ale
+"----------------------------------------------
+" Error and warning signs.
+let g:ale_sign_error = '⤫'
+let g:ale_sign_warning = '⚠'
+
+" Enable integration with airline.
+let g:airline#extensions#ale#enabled = 1
 
 "----------------------------------------------
 " Language: apiblueprint
