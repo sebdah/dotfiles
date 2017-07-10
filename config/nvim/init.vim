@@ -508,9 +508,6 @@ let g:go_metalinter_enabled = [
 " Set whether the JSON tags should be snakecase or camelcase
 let g:go_addtags_transform = "snakecase"
 
-" Open test files in a vertical split
-let g:go_alternate_mode = "edit"
-
 "----------------------------------------------
 " Plugin: w0rp/ale
 "----------------------------------------------
