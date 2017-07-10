@@ -263,7 +263,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_tabs = 0
 
 " Enable powerline fonts.
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 0
 
 "----------------------------------------------
 " Plugin: christoomey/vim-tmux-navigator
