@@ -455,6 +455,8 @@ au FileType go nmap <F8> <Plug>(go-metalinter)
 au FileType go nmap <F9> :GoCoverageToggle -short<cr>
 au FileType go nmap <F10> :GoTest -short<cr>
 au FileType go nmap <F12> <Plug>(go-def)
+au Filetype go nmap <leader>ga <Plug>(go-alternate-edit)
+au Filetype go nmap <leader>gav <Plug>(go-alternate-vertical)
 au FileType go nmap <leader>gt :GoDeclsDir<cr>
 au FileType go nmap <leader>gc <Plug>(go-coverage-toggle)
 au FileType go nmap <leader>gd <Plug>(go-def)
