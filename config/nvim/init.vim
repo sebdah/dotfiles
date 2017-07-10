@@ -381,11 +381,14 @@ let NERDTreeIgnore = [
     \ '^__pycache__$'
 \]
 
-" Close vim if NERDTree is the only opened window
+" Close vim if NERDTree is the only opened window.
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
-" Show hidden files by default
+" Show hidden files by default.
 let NERDTreeShowHidden = 1
+
+" Allow NERDTree to change session root.
+let g:NERDTreeChDirMode = 2
 
 "----------------------------------------------
 " Plugin: sebdah/vim-delve
@@ -511,7 +514,7 @@ let g:go_alternate_mode = "edit"
 " Plugin: w0rp/ale
 "----------------------------------------------
 " Error and warning signs.
-let g:ale_sign_error = '⤫'
+let g:ale_sign_error = '✗'
 let g:ale_sign_warning = '⚠'
 
 " Enable integration with airline.
