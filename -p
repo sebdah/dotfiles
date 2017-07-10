@@ -68,11 +68,15 @@ set smartindent                   " enable smart indentation
 set autoread                      " reload file if the file changes on the disk
 set autowrite                     " write when switching buffers
 set autowriteall                  " write on :quit
+set bomb                          " Handle reading of the BOM properly
+set binary                        " Enable reading and writing of binary files
 set clipboard=unnamedplus
 set colorcolumn=81                " highlight the 80th column as an indicator
 set completeopt-=preview          " remove the horrendous preview window
 set cursorline                    " highlight the current line for the cursor
 set encoding=utf-8
+set fileencoding=utf-8
+set fileencodings=utf-8
 set expandtab                     " expands tabs to spaces
 set list                          " show trailing whitespace
 set listchars=tab:\|\ ,trail:▫
@@ -166,18 +170,6 @@ noremap <Right> <NOP>
 " Move between buffers with Shift + arrow key
 nnoremap <S-Left> :bprevious<cr>
 nnoremap <S-Right> :bnext<cr>
-
-" Fix some common typos
-cnoreabbrev W! w!
-cnoreabbrev Q! q!
-cnoreabbrev Qall! qall!
-cnoreabbrev Wq wq
-cnoreabbrev Wa wa
-cnoreabbrev wQ wq
-cnoreabbrev WQ wq
-cnoreabbrev W w
-cnoreabbrev Q q
-cnoreabbrev Qall qall
 
 "----------------------------------------------
 " Splits
