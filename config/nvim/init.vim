@@ -14,7 +14,6 @@ Plug 'tpope/vim-rhubarb'           " Depenency for tpope/fugitive
 
 " General plugins
 Plug 'MattesGroeger/vim-bookmarks'
-Plug 'Raimondi/delimitMate'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'  " Default snippets for many languages
