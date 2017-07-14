@@ -28,6 +28,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
+Plug 'junegunn/vader.vim'
 Plug 'majutsushi/tagbar'
 Plug 'mileszs/ack.vim'
 Plug 'rbgrouleff/bclose.vim'
@@ -664,6 +665,14 @@ au FileType toml set expandtab
 au FileType toml set shiftwidth=2
 au FileType toml set softtabstop=2
 au FileType toml set tabstop=2
+
+"----------------------------------------------
+" Language: Vader
+"----------------------------------------------
+au FileType vader set expandtab
+au FileType vader set shiftwidth=2
+au FileType vader set softtabstop=2
+au FileType vader set tabstop=2
 
 "----------------------------------------------
 " Language: vimscript
