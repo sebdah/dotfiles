@@ -166,9 +166,15 @@ noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
 
-" Move between buffers with Shift + arrow key
+" Move between buffers with Shift + arrow key...
 nnoremap <S-Left> :bprevious<cr>
 nnoremap <S-Right> :bnext<cr>
+
+" ... but skip the quickfix when navigating
+augroup qf
+    autocmd!
+    autocmd FileType qf set nobuflisted
+augroup END
 
 " Fix some common typos
 cnoreabbrev W! w!
