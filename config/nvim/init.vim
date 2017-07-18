@@ -31,6 +31,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'junegunn/vader.vim'
 Plug 'majutsushi/tagbar'
 Plug 'mileszs/ack.vim'
+Plug 'neomake/neomake'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
@@ -39,7 +40,6 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'vimwiki/vimwiki'
-Plug 'w0rp/ale'
 
 " Language support
 Plug 'aklt/plantuml-syntax'
@@ -375,6 +375,15 @@ nnoremap <leader>w :Bclose<cr>
 nnoremap <leader>a :Ack!<space>
 
 "----------------------------------------------
+" Plugin: neomake/neomake
+"----------------------------------------------
+" Configure signs.
+let g:neomake_error_sign   = {'text': '✖', 'texthl': 'NeomakeErrorSign'}
+let g:neomake_warning_sign = {'text': '∆', 'texthl': 'NeomakeWarningSign'}
+let g:neomake_message_sign = {'text': '➤', 'texthl': 'NeomakeMessageSign'}
+let g:neomake_info_sign    = {'text': 'ℹ', 'texthl': 'NeomakeInfoSign'}
+
+"----------------------------------------------
 " Plugin: scrooloose/nerdtree
 "----------------------------------------------
 nnoremap <leader>d :NERDTreeToggle<cr>
@@ -515,18 +524,34 @@ let g:go_metalinter_enabled = [
     \ 'vetshadow'
 \]
 
-" Set whether the JSON tags should be snakecase or camelcase
+" Set whether the JSON tags should be snakecase or camelcase.
 let g:go_addtags_transform = "snakecase"
 
-"----------------------------------------------
-" Plugin: w0rp/ale
-"----------------------------------------------
-" Error and warning signs.
-let g:ale_sign_error = '✗'
-let g:ale_sign_warning = '⚠'
-
-" Enable integration with airline.
-let g:airline#extensions#ale#enabled = 1
+" neomake configuration for Go.
+au FileType go autocmd BufWritePost * Neomake
+let g:neomake_go_enabled_makers = [ 'go', 'gometalinter' ]
+let g:neomake_go_gometalinter_maker = {
+  \ 'args': [
+  \   '--tests',
+  \   '--enable-gc',
+  \   '--concurrency=3',
+  \   '--fast',
+  \   '-D', 'aligncheck',
+  \   '-D', 'dupl',
+  \   '-D', 'gocyclo',
+  \   '-D', 'gotype',
+  \   '-E', 'errcheck',
+  \   '-E', 'misspell',
+  \   '-E', 'unused',
+  \   '%:p:h',
+  \ ],
+  \ 'append_file': 0,
+  \ 'errorformat':
+  \   '%E%f:%l:%c:%trror: %m,' .
+  \   '%W%f:%l:%c:%tarning: %m,' .
+  \   '%E%f:%l::%trror: %m,' .
+  \   '%W%f:%l::%tarning: %m'
+  \ }
 
 "----------------------------------------------
 " Language: apiblueprint
@@ -647,6 +672,9 @@ au FileType ruby set expandtab
 au FileType ruby set shiftwidth=2
 au FileType ruby set softtabstop=2
 au FileType ruby set tabstop=2
+
+" Enable neomake for linting.
+au FileType ruby autocmd BufWritePost * Neomake
 
 "----------------------------------------------
 " Language: SQL
