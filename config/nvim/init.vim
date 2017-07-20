@@ -528,7 +528,6 @@ let g:go_metalinter_enabled = [
 let g:go_addtags_transform = "snakecase"
 
 " neomake configuration for Go.
-au FileType go autocmd BufWritePost * Neomake
 let g:neomake_go_enabled_makers = [ 'go', 'gometalinter' ]
 let g:neomake_go_gometalinter_maker = {
   \ 'args': [
