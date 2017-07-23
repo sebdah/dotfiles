@@ -1,4 +1,4 @@
-. /Users/sebdah/.profile-secrets.fish
+. ~/.profile-secrets.fish
 . ~/.dotfiles/clearance-fish/fish_prompt.fish
 
 # Aliases
