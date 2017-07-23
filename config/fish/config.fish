@@ -40,8 +40,6 @@ set -gx PATH \
   ./node_modules/.bin \
   ./../node_modules/.bin \
   ~/git/avail/tools/pys3 \
-  ~/Library/Android/sdk/tools \
-  ~/Library/Android/sdk/platform-tools \
   $PATH
 
 set -gx LESS '-F -g -i -M -R -S -w -X -z-4'
