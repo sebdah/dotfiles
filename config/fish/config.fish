@@ -43,7 +43,6 @@ set -gx PATH \
   $PATH
 
 set -gx LESS '-F -g -i -M -R -S -w -X -z-4'
-set -gx ANDROID_HOME /usr/local/opt/android-sdk
 set -gx GOPATH ~/go
 set -gx BROWSER open
 set -gx EDITOR vim

@@ -47,13 +47,6 @@ if (( $#commands[(i)lesspipe(|.sh)] )); then
   export LESSOPEN="| /usr/bin/env $commands[(i)lesspipe(|.sh)] %s 2>&-"
 fi
 
-#
-# Android
-#
-export ANDROID_HOME=/usr/local/opt/android-sdk
-export ANDROID_HOME=~/Library/Android/sdk
-export PATH="${PATH}:~/Library/Android/sdk/tools:~/Library/Android/sdk/platform-tools"
-
 # Go
 export GOPATH="${HOME}/go"
 
