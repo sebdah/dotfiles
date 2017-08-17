@@ -87,3 +87,7 @@
 	autoSetupRebase = always
 [github]
 	user = sebdah
+[commit]
+	gpgsign = true
+[gpg]
+	program = /usr/local/bin/gpg
