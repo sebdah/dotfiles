@@ -57,3 +57,6 @@ set -gx LSCOLORS 'Exfxcxdxbxegedabagacad'
 # Disable the fish greeting
 set fish_greeting ""
 set -g fish_user_paths "/usr/local/opt/node@4/bin" $fish_user_paths
+
+# Enable direnv (https://direnv.net/)
+eval (direnv hook fish)
