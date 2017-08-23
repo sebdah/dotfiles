@@ -687,7 +687,7 @@ au FileType ruby set softtabstop=2
 au FileType ruby set tabstop=2
 
 " Enable neomake for linting.
-au FileType ruby autocmd BufWritePost * Neomake
+"au FileType ruby autocmd BufWritePost * Neomake
 
 "----------------------------------------------
 " Language: SQL
