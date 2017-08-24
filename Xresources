@@ -1,0 +1,46 @@
+! Colors
+*.foreground: #ffffff
+*.background: [85]#1b1918
+*.cursorColor: #ffffff
+
+*.color0:       #1b1918
+*.color1:       #f22c40
+*.color2:       #5ab738
+*.color3:       #d5911a
+*.color4:       #407ee7
+*.color5:       #6666ea
+*.color6:       #00ad9c
+*.color7:       #a8a19f
+*.color8:       #766e6b
+*.color9:       #f22c40
+*.color10:      #5ab738
+*.color11:      #d5911a
+*.color12:      #407ee7
+*.color13:      #6666ea
+*.color14:      #00ad9c
+*.color15:      #f1efee
+*.color16:      #df5320
+*.color17:      #c33ff3
+*.color18:      #2c2421
+*.color19:      #68615e
+*.color20:      #9c9491
+*.color21:      #e6e2e0
+
+! Font
+URxvt.font: xft:Fira Mono:size=12,style=medium
+URxvf.letterspace: -2
+Xft.dpi: 192
+Xft.antialias: true
+Xft.rgba: rgb
+Xft.hinting: true
+Xft.hintstyle: hintlight
+
+! Look and feel
+URxvt.scrollBar: false
+URxvt.visualBell: false
+URxvt.internalBorder: 0
+URxvt.externalBorder: 0
+
+! General
+URxvt.iso14755: false
+URxvt.iso14755_52: false
