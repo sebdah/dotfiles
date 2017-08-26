@@ -34,9 +34,7 @@
 [core]
 	editor = nvim
 	whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
-	excludesfile = /Users/sebdah/.gitignore
-[gui]
-	recentrepo = /Users/sebastian/git/saas
+	excludesfile = ~/.gitignore
 [pull]
 	rebase = true
 [color]
