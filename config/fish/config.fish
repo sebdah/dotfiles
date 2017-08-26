@@ -26,27 +26,32 @@ function dcleanup
   docker rmi (docker images --filter dangling=true -q ^ /dev/null) ^ /dev/null
 end
 
-# Environment variables
 set -gx PATH \
-  ~/.rbenv/shims \
   /usr/local/bin \
   ~/go/src/github.com/saltside/workstation/bin \
-  ~/bin \
   ~/go/bin \
   /usr/bin \
   /usr/sbin \
-  /usr/local/go/bin \
-  /usr/local/opt/go/libexec/bin \
-  ./node_modules/.bin \
-  ./../node_modules/.bin \
-  ~/git/avail/tools/pys3 \
   $PATH
+
+switch (uname)
+  case Darwin
+    set -gx PATH \
+      ~/.rbenv/shims \
+      ~/bin \
+      /usr/local/go/bin \
+      /usr/local/opt/go/libexec/bin \
+      ./node_modules/.bin \
+      ./../node_modules/.bin \
+      ~/git/avail/tools/pys3 \
+      $PATH
+end
 
 set -gx LESS '-F -g -i -M -R -S -w -X -z-4'
 set -gx GOPATH ~/go
 set -gx BROWSER open
-set -gx EDITOR vim
-set -gx VISUAL vim
+set -gx EDITOR nvim
+set -gx VISUAL nvim
 set -gx PAGER less
 set -gx LANG en_US.UTF-8
 set -gx LANGUAGE en_US.utf-8
@@ -56,7 +61,6 @@ set -gx LSCOLORS 'Exfxcxdxbxegedabagacad'
 
 # Disable the fish greeting
 set fish_greeting ""
-set -g fish_user_paths "/usr/local/opt/node@4/bin" $fish_user_paths
 
 # Enable direnv (https://direnv.net/)
 eval (direnv hook fish)
