@@ -276,10 +276,17 @@ let g:airline#extensions#tabline#show_tabs = 0
 " Enable powerline fonts.
 let g:airline_powerline_fonts = 0
 
+" Explicitly define some symbols that did not work well for me in Linux.
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+let g:airline_symbols.branch = ''
+let g:airline_symbols.maxlinenr = ''
+
 "----------------------------------------------
 " Plugin: christoomey/vim-tmux-navigator
 "----------------------------------------------
-" tmux will send xterm-style keys when its xterm-keys option is on
+" tmux will send xterm-style keys when its xterm-keys option is on.
 if &term =~ '^screen'
     execute "set <xUp>=\e[1;*A"
     execute "set <xDown>=\e[1;*B"
