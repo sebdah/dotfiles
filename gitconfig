@@ -12,8 +12,8 @@
 				%(color:green)%(refname:short)\" \
 		refs/remotes \
 		| column -t -s \"\t\"
-	ci = commit
-	c = commit
+	ci = commit --verbose
+	c = commit --verbose
 	co = checkout
 	o = checkout
 	cp = cherry-pick
