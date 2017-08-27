@@ -1,3 +1,12 @@
+! Font
+URxvt.font: xft:Fira Mono for Powerline:size=12
+!URxvf.letterSpace: 2
+Xft.dpi: 192
+Xft.antialias: true
+Xft.rgba: rgb
+Xft.hinting: true
+Xft.hintstyle: hintlight
+
 ! Colors
 *.foreground: #ffffff
 *.background: [85]#1b1918
@@ -25,15 +34,6 @@
 *.color19:      #68615e
 *.color20:      #9c9491
 *.color21:      #e6e2e0
-
-! Font
-URxvt.font: xft:Fira Mono:size=12,style=medium
-URxvf.letterspace: -2
-Xft.dpi: 192
-Xft.antialias: true
-Xft.rgba: rgb
-Xft.hinting: true
-Xft.hintstyle: hintlight
 
 ! Look and feel
 URxvt.scrollBar: false
