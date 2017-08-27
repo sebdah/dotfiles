@@ -605,6 +605,14 @@ au FileType fish set softtabstop=2
 au FileType fish set tabstop=2
 
 "----------------------------------------------
+" Language: gitconfig
+"----------------------------------------------
+au FileType gitconfig set noexpandtab
+au FileType gitconfig set shiftwidth=2
+au FileType gitconfig set softtabstop=2
+au FileType gitconfig set tabstop=2
+
+"----------------------------------------------
 " Language: HTML
 "----------------------------------------------
 au FileType html set expandtab
