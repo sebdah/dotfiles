@@ -1,15 +1,15 @@
 [user]
 	name = Sebastian Dahlgren
 	email = sebastian.dahlgren@gmail.com
-  signingkey = 0AAC354611A9CF4B
+	signingkey = 0AAC354611A9CF4B
 [alias]
 	a = add
 	b = branch
 	branches = !git for-each-ref \
 		--sort=-committerdate \
 		--format=\"%(color:blue)%(authordate:relative)\t \
-				 %(color:red)%(authorname)\t \
-				 %(color:green)%(refname:short)\" \
+				%(color:red)%(authorname)\t \
+				%(color:green)%(refname:short)\" \
 		refs/remotes \
 		| column -t -s \"\t\"
 	ci = commit
@@ -57,7 +57,7 @@
 	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 [diff]
 	tool = Kaleidoscope
-  compactionHeuristic = true
+	compactionHeuristic = true
 [difftool]
 	prompt = false
 [mergetool "Kaleidoscope"]
