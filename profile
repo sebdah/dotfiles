@@ -28,7 +28,6 @@ export PATH="${PATH}:${HOME}/bin"
 export PATH="${PATH}:${HOME}/go/bin"
 export PATH="${PATH}:/usr/bin"
 export PATH="${PATH}:/usr/sbin"
-export PATH="${PATH}:/usr/local/go/bin"
 export PATH="${PATH}:/usr/local/opt/go/libexec/bin"
 export PATH="${PATH}:./node_modules/.bin:./../node_modules/.bin"
 
