@@ -2,7 +2,7 @@
 . ~/.dotfiles/clearance-fish/fish_prompt.fish
 
 # Aliases
-alias grep 'grep --color'
+alias grep 'grep --color=auto'
 alias scp "scp -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
 alias ssh "ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
 alias tmux "tmux -2"
@@ -26,26 +26,23 @@ function dcleanup
   docker rmi (docker images --filter dangling=true -q ^ /dev/null) ^ /dev/null
 end
 
+# Environment variables
 set -gx PATH \
+  ~/.rbenv/shims \
   /usr/local/bin \
   ~/go/src/github.com/saltside/workstation/bin \
+  ~/bin \
   ~/go/bin \
   /usr/bin \
   /usr/sbin \
+  /usr/local/go/bin \
+  /usr/local/opt/go/libexec/bin \
+  ./node_modules/.bin \
+  ./../node_modules/.bin \
+  ~/git/avail/tools/pys3 \
   $PATH
 
-switch (uname)
-  case Darwin
-    set -gx PATH \
-      ~/.rbenv/shims \
-      ~/bin \
-      /usr/local/go/bin \
-      /usr/local/opt/go/libexec/bin \
-      ./node_modules/.bin \
-      ./../node_modules/.bin \
-      ~/git/avail/tools/pys3 \
-      $PATH
-end
+set -g fish_user_paths "/usr/local/opt/node@4/bin" $fish_user_paths
 
 set -gx LESS '-F -g -i -M -R -S -w -X -z-4'
 set -gx GOPATH ~/go

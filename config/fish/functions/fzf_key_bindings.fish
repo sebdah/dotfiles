@@ -1,1 +1,1 @@
-/home/sebdah/.fzf/shell/key-bindings.fish
+/Users/sebdah/.fzf/shell/key-bindings.fish
