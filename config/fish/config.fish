@@ -24,6 +24,7 @@ end
 function dcleanup
   docker rm -v (docker ps --filter status=exited -q ^ /dev/null) ^ /dev/null
   docker rmi (docker images --filter dangling=true -q ^ /dev/null) ^ /dev/null
+  docker volume rm (docker volume ls -qf dangling=true)
 end
 
 # Environment variables
