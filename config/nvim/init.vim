@@ -674,9 +674,9 @@ au FileType markdown set syntax=markdown
 " Language: PlantUML
 "----------------------------------------------
 au FileType plantuml set expandtab
-au FileType plantuml set shiftwidth=4
-au FileType plantuml set softtabstop=4
-au FileType plantuml set tabstop=4
+au FileType plantuml set shiftwidth=2
+au FileType plantuml set softtabstop=2
+au FileType plantuml set tabstop=2
 
 "----------------------------------------------
 " Language: Protobuf
