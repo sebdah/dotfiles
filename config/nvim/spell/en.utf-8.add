@@ -54,3 +54,6 @@ EC2
 timestamp
 UTC
 Dahlgren
+AWS
+CloudFormation
+YAML
