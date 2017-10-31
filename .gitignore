@@ -1,3 +1,4 @@
 *.log
+config/configstore/update-notifier-npm.json
 config/filezilla
 config/direnv
