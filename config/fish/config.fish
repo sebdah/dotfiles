@@ -1,5 +1,5 @@
 . ~/.profile-secrets.fish
-. ~/.dotfiles/clearance-fish/fish_prompt.fish
+. ~/dotfiles/clearance-fish/fish_prompt.fish
 
 # Aliases
 alias grep 'grep --color=auto'
@@ -29,21 +29,14 @@ end
 
 # Environment variables
 set -gx PATH \
-  ~/.rbenv/shims \
-  /usr/local/bin \
-  ~/go/src/github.com/saltside/workstation/bin \
   ~/bin \
   ~/go/bin \
   /usr/bin \
   /usr/sbin \
-  /usr/local/go/bin \
-  /usr/local/opt/go/libexec/bin \
-  ./node_modules/.bin \
-  ./../node_modules/.bin \
-  ~/git/avail/tools/pys3 \
+  /usr/local/bin \
+  ~/.gem/ruby/2.4.0/bin \
+  ~/go/src/github.com/saltside/workstation/bin \
   $PATH
-
-set -g fish_user_paths "/usr/local/opt/node@4/bin" $fish_user_paths
 
 set -gx LESS '-F -g -i -M -R -S -w -X -z-4'
 set -gx GOPATH ~/go
