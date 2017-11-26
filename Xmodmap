@@ -1,7 +1,0 @@
-clear lock
-clear control
-clear mod4
-
-add control = Caps_Lock Control_L Control_R
-keycode 66 = Control_L Control_L NoSymbol NoSymbol
-keycode 133 = Alt_L Alt_L NoSymbol NoSymbol
