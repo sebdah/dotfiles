@@ -51,6 +51,7 @@ Plug 'tpope/vim-surround'
 Plug 'vimwiki/vimwiki'
 
 " Language support
+Plug 'Quramy/tsuquyomi', { 'do': 'make' }      " TypeScript auto completion
 Plug 'aklt/plantuml-syntax'
 Plug 'cespare/vim-toml'
 Plug 'chr4/nginx.vim'
@@ -62,9 +63,9 @@ Plug 'hashivim/vim-terraform'
 Plug 'kchmck/vim-coffee-script'
 Plug 'kylef/apiblueprint.vim'
 Plug 'leafgarland/typescript-vim'              " TypeScript syntax highlighting
-Plug 'Quramy/tsuquyomi', { 'do': 'make' }      " TypeScript auto completion
 Plug 'lifepillar/pgsql.vim'
 Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
+Plug 'othree/yajs.vim'                         " JavaScript syntax highlighting
 Plug 'plasticboy/vim-markdown'
 Plug 'tclh123/vim-thrift'
 Plug 'zchee/deoplete-go', { 'do': 'make'}
