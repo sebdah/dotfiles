@@ -48,24 +48,24 @@ Plug 'vimwiki/vimwiki'
 
 " Language support
 Plug 'Quramy/tsuquyomi', { 'do': 'make' }      " TypeScript auto completion
-Plug 'aklt/plantuml-syntax'
-Plug 'cespare/vim-toml'
-Plug 'chr4/nginx.vim'
-Plug 'dag/vim-fish'
-Plug 'digitaltoad/vim-pug'
-Plug 'fatih/vim-go'
-Plug 'fishbullet/deoplete-ruby'
-Plug 'hashivim/vim-terraform'
-Plug 'kchmck/vim-coffee-script'
-Plug 'kylef/apiblueprint.vim'
+Plug 'aklt/plantuml-syntax'                    " PlantUML syntax highlighting
+Plug 'cespare/vim-toml'                        " toml syntax highlighting
+Plug 'chr4/nginx.vim'                          " nginx syntax highlighting
+Plug 'dag/vim-fish'                            " Fish syntax highlighting
+Plug 'digitaltoad/vim-pug'                     " Pug syntax highlighting
+Plug 'fatih/vim-go'                            " Go support
+Plug 'fishbullet/deoplete-ruby'                " Ruby auto completion
+Plug 'hashivim/vim-terraform'                  " Terraform syntax highlighting
+Plug 'kchmck/vim-coffee-script'                " CoffeeScript syntax highlighting
+Plug 'kylef/apiblueprint.vim'                  " API Blueprint syntax highlighting
 Plug 'leafgarland/typescript-vim'              " TypeScript syntax highlighting
-Plug 'lifepillar/pgsql.vim'
-Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
+Plug 'lifepillar/pgsql.vim'                    " PostgreSQL syntax highlighting
+Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' } " Go auto completion
 Plug 'othree/yajs.vim'                         " JavaScript syntax highlighting
-Plug 'plasticboy/vim-markdown'
-Plug 'tclh123/vim-thrift'
-Plug 'zchee/deoplete-go', { 'do': 'make'}
-Plug 'zchee/deoplete-jedi'
+Plug 'plasticboy/vim-markdown'                 " Markdown syntax highlighting
+Plug 'tclh123/vim-thrift'                      " Thrift syntax highlighting
+Plug 'zchee/deoplete-go', { 'do': 'make'}      " Go auto completion
+Plug 'zchee/deoplete-jedi'                     " Go auto completion
 
 " Colorschemes
 Plug 'NLKNguyen/papercolor-theme'
