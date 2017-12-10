@@ -103,7 +103,6 @@ set ruler
 set formatoptions=tcqronj         " set vims text formatting options
 set softtabstop=2
 set tabstop=2
-set textwidth=80
 set title                         " let vim set the terminal title
 set updatetime=100                " redraw the status bar often
 
