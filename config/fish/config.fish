@@ -16,7 +16,7 @@ alias work "cd ~/go/src/github.com/saltside"
 # workstation.
 function s --description "s <command>"
   cd ~/go/src/github.com/saltside/sandbox
-  saltside-workstation run ./bin/sandbox $argv
+  saltside-workstation run ./bin/sandbox -t aws $argv
   cd -
 end
 
