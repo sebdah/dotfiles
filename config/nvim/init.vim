@@ -67,6 +67,7 @@ Plug 'lifepillar/pgsql.vim'                    " PostgreSQL syntax highlighting
 Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' } " Go auto completion
 Plug 'pangloss/vim-javascript'                 " JavaScript syntax highlighting
 Plug 'plasticboy/vim-markdown'                 " Markdown syntax highlighting
+Plug 'rodjek/vim-puppet'                       " Puppet syntax highlighting
 Plug 'tclh123/vim-thrift'                      " Thrift syntax highlighting
 Plug 'zchee/deoplete-go', { 'do': 'make'}      " Go auto completion
 Plug 'zchee/deoplete-jedi'                     " Go auto completion
