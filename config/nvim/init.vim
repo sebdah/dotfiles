@@ -51,7 +51,6 @@ if !has('nvim')
 endif
 
 " Language support
-Plug 'Quramy/tsuquyomi'                        " TypeScript auto completion
 Plug 'aklt/plantuml-syntax'                    " PlantUML syntax highlighting
 Plug 'cespare/vim-toml'                        " toml syntax highlighting
 Plug 'chr4/nginx.vim'                          " nginx syntax highlighting
