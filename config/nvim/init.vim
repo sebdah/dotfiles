@@ -13,13 +13,6 @@ Plug 'godlygeek/tabular'           " This must come before plasticboy/vim-markdo
 Plug 'tpope/vim-rhubarb'           " Depenency for tpope/fugitive
 
 " General plugins
-Plug 'KabbAmine/zeavim.vim', {'on': [
-    \ 'Zeavim', 'Docset',
-    \ '<Plug>Zeavim',
-    \ '<Plug>ZVVisSelection',
-    \ '<Plug>ZVKeyDocset',
-    \ '<Plug>ZVMotion'
-    \ ]}
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'  " Default snippets for many languages
