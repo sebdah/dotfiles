@@ -12,21 +12,6 @@ alias sebdah "cd ~/go/src/github.com/sebdah"
 alias skymill "cd ~/go/src/github.com/skymill"
 alias work "cd ~/go/src/github.com/saltside"
 
-# s is running sandbox commands using the local sandbox, never the one in the
-# workstation.
-function s --description "s <command>"
-  cd ~/go/src/github.com/saltside/sandbox
-  saltside-workstation run ./bin/sandbox -t aws $argv
-  cd -
-end
-
-# dcleanup can be used to clean up docker images.
-function dcleanup
-  docker rm -v (docker ps --filter status=exited -q ^ /dev/null) ^ /dev/null
-  docker rmi (docker images --filter dangling=true -q ^ /dev/null) ^ /dev/null
-  docker volume rm (docker volume ls -qf dangling=true)
-end
-
 # Environment variables
 set -gx PATH \
   ~/bin \
@@ -55,3 +40,25 @@ set fish_greeting ""
 
 # Enable direnv (https://direnv.net/)
 eval (direnv hook fish)
+
+# s is running sandbox commands using the local sandbox, never the one in the
+# workstation.
+function s --description "s <command>"
+  cd ~/go/src/github.com/saltside/sandbox
+  saltside-workstation run ./bin/sandbox -t aws $argv
+  cd -
+end
+
+# dcleanup can be used to clean up docker images.
+function dcleanup
+  docker rm -v (docker ps --filter status=exited -q ^ /dev/null) ^ /dev/null
+  docker rmi (docker images --filter dangling=true -q ^ /dev/null) ^ /dev/null
+  docker volume rm (docker volume ls -qf dangling=true)
+end
+
+function tmux-init
+  set -lx saltside_projects (ls -1 $GOPATH/src/github.com/saltside)
+  for project in $saltside_projects
+    tmux new -d -s $project -c /home/sebdah/go/src/github.com/saltside/$project
+  end
+end
