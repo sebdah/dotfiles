@@ -154,3 +154,6 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
+
+# Start up applications:
+exec --no-startup-id dropbox start
