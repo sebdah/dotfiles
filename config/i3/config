@@ -155,5 +155,8 @@ bar {
         status_command i3status
 }
 
+# Hide the borders on the outer edges of the window
+hide_edge_borders both
+
 # Start up applications:
 exec --no-startup-id dropbox start
