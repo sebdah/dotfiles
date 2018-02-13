@@ -62,3 +62,6 @@ function tmux-init
     tmux new -d -s $project -c /home/sebdah/go/src/github.com/saltside/$project
   end
 end
+
+
+. ~/.profile.fish
