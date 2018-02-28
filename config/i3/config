@@ -160,3 +160,4 @@ hide_edge_borders both
 
 # Start up applications:
 exec --no-startup-id dropbox start
+exec --no-startup-id nm-applet
