@@ -8,6 +8,7 @@ alias ssh "ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
 alias tmux "tmux -2"
 
 alias agrea "cd ~/go/src/github.com/agrea"
+alias funcd "cd ~/go/src/gitlab.com/funcd"
 alias sebdah "cd ~/go/src/github.com/sebdah"
 alias skymill "cd ~/go/src/github.com/skymill"
 alias work "cd ~/go/src/github.com/saltside"
