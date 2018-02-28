@@ -1,0 +1,42 @@
+URxvt.termName: rxvt-unicode
+URxvt.scrollBar: false
+URxvt.background: black
+URxvt.foreground: grey
+
+URxvt*font: xft:Fira Code Retina:pixelsize=18;hinting=True;antialias=True
+URxvt*boldFont: xft:Fira Code Retina:pixelsize=18;hinting=True;antialias=True
+URxvt*letterSpace: 0
+
+*.foreground: #F8F8F2
+*.background: #282A36
+
+!! black dark/light
+*.color0:     #000000
+*.color8:     #4D4D4D
+
+!! red dark/light
+*.color1:     #FF5555
+*.color9:     #FF6E67
+
+!! green dark/light
+*.color2:     #50FA7B
+*.color10:    #5AF78E
+!! yellow dark/light
+*.color3:     #F1FA8C
+*.color11:    #F4F99D
+
+!! blue dark/light
+*.color4:     #4758FF
+*.color12:    #00B6FF
+
+!! magenta dark/light
+*.color5:     #FF79C6
+*.color13:    #FF92D0
+
+!! cyan dark/light
+*.color6:     #8BE9FD
+*.color14:    #9AEDFE
+
+!! white dark/light
+*.color7:     #BFBFBF
+*.color15:    #EEEEEE
