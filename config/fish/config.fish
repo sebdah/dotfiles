@@ -58,9 +58,40 @@ function dcleanup
 end
 
 function tmux-init
-  set -lx saltside_projects (ls -1 $GOPATH/src/github.com/saltside)
-  for project in $saltside_projects
-    tmux new -d -s $project -c /home/sebdah/go/src/github.com/saltside/$project
+  tmux new -d -s "common/control" -c /home/sebdah
+  tmux new -d -s "common/weechat" -c /home/sebdah
+
+  set GITLAB_PROJECTS "funcd/notify"
+
+  set GITHUB_PROJECTS \
+    "saltside/admin" \
+    "saltside/admin-service" \
+    "saltside/apex" \
+    "saltside/apex-bridge" \
+    "saltside/apex-config" \
+    "saltside/api-gateway" \
+    "saltside/core-service" \
+    "saltside/email-service" \
+    "saltside/infrastructure" \
+    "saltside/platform-admin-data-contracts" \
+    "saltside/platform-data-contracts" \
+    "saltside/platform-puppet" \
+    "saltside/platform-thrift-files" \
+    "saltside/review-service" \
+    "saltside/sandbox" \
+    "saltside/search-service" \
+    "saltside/search-service-v2" \
+    "saltside/sms-service" \
+    "saltside/web" \
+    "saltside/web-pwa" \
+    "saltside/workstation" \
+
+  for project in $GITLAB_PROJECTS
+    tmux new -d -s "$project" -c /home/sebdah/go/src/gitlab.com/$project
+  end
+
+  for project in $GITHUB_PROJECTS
+    tmux new -d -s "$project" -c /home/sebdah/go/src/github.com/$project
   end
 end
 
