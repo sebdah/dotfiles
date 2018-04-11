@@ -23,7 +23,7 @@ snippet     funcTest
 abbr        func Test...(t *testing.T) { ... }
 options     head
   func Test${1}(t *testing.T) {
-    testCases := map[string]struct{
+    tests := map[string]struct{
       ${2:TARGET}
     }{
       "${3:TARGET:test case description}": {
@@ -31,7 +31,7 @@ options     head
       },
     }
 
-    for name, testCase := range testCases {
+    for name, test := range tests {
       t.Run(name, func(t *testing.T) {
         ${5:TARGET}
       })
