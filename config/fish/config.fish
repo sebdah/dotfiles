@@ -72,7 +72,10 @@ function tmux-init
     "saltside/api-gateway" \
     "saltside/core-service" \
     "saltside/email-service" \
+    "saltside/external-admin-service" \
     "saltside/infrastructure" \
+    "saltside/inventory-service" \
+    "saltside/lib" \
     "saltside/platform-admin-data-contracts" \
     "saltside/platform-data-contracts" \
     "saltside/platform-puppet" \
