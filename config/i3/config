@@ -149,15 +149,17 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-bar {
-        status_command i3status
-}
-
 # Hide the borders on the outer edges of the window
-hide_edge_borders both
+hide_edge_borders smart
+
+# Set wallpapers using nitogene (
+
+# i3-gaps configuration
+for_window [class="^.*"] border pixel 2
+gaps inner 0
+gaps outer 0
 
 # Start up applications:
 exec --no-startup-id dropbox start
 exec --no-startup-id nm-applet
+exec polybar example --reload
