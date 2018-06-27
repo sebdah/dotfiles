@@ -605,6 +605,14 @@ au FileType sh set softtabstop=2
 au FileType sh set tabstop=2
 
 "----------------------------------------------
+" Language: C++
+"----------------------------------------------
+au FileType cpp set expandtab
+au FileType cpp set shiftwidth=4
+au FileType cpp set softtabstop=4
+au FileType cpp set tabstop=4
+
+"----------------------------------------------
 " Language: CSS
 "----------------------------------------------
 au FileType css set expandtab
