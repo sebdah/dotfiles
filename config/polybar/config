@@ -18,6 +18,7 @@ alert = #bd2c40
 
 [bar/example]
 monitor = ${env:MONITOR:eDP1}
+;monitor = ${env:MONITOR:DP2}
 width = 100%
 height = 27
 ;height = 40
