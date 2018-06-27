@@ -3,8 +3,10 @@ URxvt.scrollBar: false
 URxvt.background: black
 URxvt.foreground: grey
 
-URxvt*font: xft:Fira Code Retina:pixelsize=18;hinting=True;antialias=True
-URxvt*boldFont: xft:Fira Code Retina:pixelsize=18;hinting=True;antialias=True
+URxvt*font: xft:Fira Code Retina:pixelsize=19;hinting=True;antialias=True
+URxvt*boldFont: xft:Fira Code Retina:pixelsize=19;hinting=True;antialias=True
+!URxvt*font: xft:Fira Code Retina:pixelsize=27;hinting=True;antialias=True
+!URxvt*boldFont: xft:Fira Code Retina:pixelsize=27;hinting=True;antialias=True
 URxvt*letterSpace: 0
 
 *.foreground: #F8F8F2
