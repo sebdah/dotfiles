@@ -59,9 +59,10 @@ end
 
 function tmux-init
   tmux new -d -s "common/control" -c /home/sebdah
-  tmux new -d -s "common/weechat" -c /home/sebdah
 
-  set GITLAB_PROJECTS "funcd/notify"
+  set GITLAB_PROJECTS \
+    "sebdah/bzr" \
+    "funcd/notify" \
 
   set GITHUB_PROJECTS \
     "saltside/admin" \
@@ -70,12 +71,17 @@ function tmux-init
     "saltside/apex-bridge" \
     "saltside/apex-config" \
     "saltside/api-gateway" \
+    "saltside/chat-service" \
     "saltside/core-service" \
     "saltside/email-service" \
     "saltside/external-admin-service" \
+    "saltside/image-service" \
     "saltside/infrastructure" \
     "saltside/inventory-service" \
     "saltside/lib" \
+    "saltside/notification-service" \
+    "saltside/payment-admin" \
+    "saltside/payment-service" \
     "saltside/platform-admin-data-contracts" \
     "saltside/platform-data-contracts" \
     "saltside/platform-puppet" \
@@ -85,6 +91,7 @@ function tmux-init
     "saltside/search-service" \
     "saltside/search-service-v2" \
     "saltside/sms-service" \
+    "saltside/store" \
     "saltside/web" \
     "saltside/web-pwa" \
     "saltside/workstation" \
