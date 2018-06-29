@@ -162,5 +162,5 @@ gaps outer 0
 # Start up applications:
 exec --no-startup-id dropbox start
 exec --no-startup-id nm-applet
-exec polybar example --reload
-exec --no-startup-id flameshot
+exec flameshot
+exec ~/bin/configure-session.sh
