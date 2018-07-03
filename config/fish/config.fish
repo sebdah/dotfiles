@@ -61,6 +61,7 @@ function tmux-init
   tmux new -d -s "common/control" -c /home/sebdah
 
   set GITLAB_PROJECTS \
+    "sebdah/blood-moon" \
     "sebdah/bzr" \
     "funcd/notify" \
 
