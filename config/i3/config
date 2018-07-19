@@ -152,15 +152,22 @@ bindsym $mod+r mode "resize"
 # Hide the borders on the outer edges of the window
 hide_edge_borders smart
 
-# Set wallpapers using nitogene (
-
 # i3-gaps configuration
 for_window [class="^.*"] border pixel 2
 gaps inner 0
 gaps outer 0
 
-# Start up applications:
+# Start up applications
 exec --no-startup-id dropbox start
 exec --no-startup-id nm-applet
-exec flameshot
 exec ~/bin/configure-session.sh
+exec --no-startup-id i3-msg 'workspace 1; exec firefox-developer-edition; workspace 1'
+exec --no-startup-id i3-msg 'workspace 2; exec urxvt; workspace 2'
+exec --no-startup-id i3-msg 'workspace 3; exec slack; workspace 3'
+exec --no-startup-id i3-msg 'workspace 4; exec thunderbird; workspace 4'
+
+# Assign workspaces to different monitors
+workspace 1 output DP1
+workspace 2 output DP1
+workspace 3 output eDP1
+workspace 4 output DP1
