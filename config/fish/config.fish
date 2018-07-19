@@ -6,6 +6,7 @@ alias grep 'grep --color=auto'
 alias scp "scp -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
 alias ssh "ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
 alias tmux "tmux -2"
+alias apexssh "~/go/src/github.com/saltside/apex/scripts/apexssh"
 
 alias agrea "cd ~/go/src/github.com/agrea"
 alias funcd "cd ~/go/src/gitlab.com/funcd"
@@ -81,6 +82,7 @@ function tmux-init
     "saltside/inventory-service" \
     "saltside/lib" \
     "saltside/notification-service" \
+    "saltside/offer-service" \
     "saltside/payment-admin" \
     "saltside/payment-service" \
     "saltside/platform-admin-data-contracts" \
