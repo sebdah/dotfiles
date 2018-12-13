@@ -62,6 +62,7 @@ function tmux-init
 
   set GITHUB_PROJECTS \
     "NordiskFilmDistribution/agillic-event-converter" \
+    "NordiskFilmDistribution/infrastructure" \
     "NordiskFilmDistribution/minutes-watched" \
     "Oresundsbron/notification-service" \
     "saltside/admin" \
@@ -93,7 +94,9 @@ function tmux-init
     "saltside/sms-service" \
     "saltside/store" \
     "saltside/web" \
+    "saltside/web-gateway" \
     "saltside/web-pwa" \
+    "saltside/web-router" \
     "saltside/workstation" \
     "skymill/portal"
 
