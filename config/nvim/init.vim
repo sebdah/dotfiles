@@ -71,8 +71,10 @@ Plug 'zimbatm/haproxy.vim'                     " HAProxy syntax highlighting
 
 " Colorschemes
 Plug 'NLKNguyen/papercolor-theme'
-Plug 'kaicataldo/material.vim'
+Plug 'altercation/vim-colors-solarized'
 Plug 'ayu-theme/ayu-vim'
+Plug 'kaicataldo/material.vim'
+Plug 'rakr/vim-one'
 
 call plug#end()
 
@@ -153,9 +155,16 @@ endif
 
 set background=dark
 
-"let g:material_theme_style = 'dark'
-"let ayucolor = 'dark'
-colorscheme PaperColor
+" Material colorscheme settings
+let g:material_theme_style = 'dark'
+
+" Ayu colorscheme settings
+let ayucolor = 'dark'
+
+" One colorscheme settings
+let g:one_allow_italics = 1
+
+colorscheme one
 
 " Override the search highlight color with a combination that is easier to
 " read. The default PaperColor is dark green backgroun with black foreground.
