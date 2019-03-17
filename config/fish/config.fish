@@ -11,7 +11,7 @@ alias apexssh "~/go/src/github.com/saltside/apex/scripts/apexssh"
 alias agrea "cd ~/go/src/github.com/agrea"
 alias funcd "cd ~/go/src/gitlab.com/funcd"
 alias sebdah "cd ~/go/src/github.com/sebdah"
-alias skymill "cd ~/go/src/github.com/skymill"
+alias skymill "cd ~/go/src/gitlab.com/skymill"
 alias work "cd ~/go/src/github.com/saltside"
 
 # Environment variables
@@ -60,15 +60,19 @@ end
 function tmux-init
   tmux new -d -s "common/control" -c /home/sebdah
 
+  set GITLAB_PROJECTS \
+    "skymill/portal"
+
   set GITHUB_PROJECTS \
     "NordiskFilmDistribution/agillic-event-converter" \
     "NordiskFilmDistribution/infrastructure" \
     "NordiskFilmDistribution/minutes-watched" \
+    "NordiskFilmDistribution/talend-export-organizer" \
+    "NordiskFilmDistribution/sql-executor" \
     "Oresundsbron/notification-service" \
     "saltside/admin" \
     "saltside/admin-service" \
     "saltside/apex" \
-    "saltside/apex-bridge" \
     "saltside/apex-config" \
     "saltside/api-gateway-v2" \
     "saltside/chat-service" \
@@ -97,11 +101,14 @@ function tmux-init
     "saltside/web-gateway" \
     "saltside/web-pwa" \
     "saltside/web-router" \
-    "saltside/workstation" \
-    "skymill/portal"
+    "saltside/workstation"
 
   for project in $GITHUB_PROJECTS
     tmux new -d -s "$project" -c /Users/sebdah/go/src/github.com/$project
+  end
+
+  for project in $GITLAB_PROJECTS
+    tmux new -d -s "$project" -c /Users/sebdah/go/src/gitlab.com/$project
   end
 end
 
@@ -111,3 +118,7 @@ end
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [ -f /Users/sebdah/go/src/github.com/NordiskFilmDistribution/Serverless/node_modules/tabtab/.completions/sls.fish ]; and . /Users/sebdah/go/src/github.com/NordiskFilmDistribution/Serverless/node_modules/tabtab/.completions/sls.fish
+
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[ -f /Users/sebdah/go/src/github.com/NordiskFilmDistribution/talend-export-organizer/node_modules/tabtab/.completions/slss.fish ]; and . /Users/sebdah/go/src/github.com/NordiskFilmDistribution/talend-export-organizer/node_modules/tabtab/.completions/slss.fish
