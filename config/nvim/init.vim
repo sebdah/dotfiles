@@ -60,13 +60,13 @@ Plug 'leafgarland/typescript-vim'              " TypeScript syntax highlighting
 Plug 'lifepillar/pgsql.vim'                    " PostgreSQL syntax highlighting
 Plug 'mhartington/nvim-typescript', {'do': './install.sh'} " TypeScript auto completion
 Plug 'mxw/vim-jsx'                             " JSX syntax highlighting
-Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' } " Go auto completion
+"Plug 'mdempsky/gocode', { 'rtp': 'nvim', 'do': '~/.vim/plugged/gocode/nvim/symlink.sh' }
 Plug 'pangloss/vim-javascript'                 " JavaScript syntax highlighting
 Plug 'plasticboy/vim-markdown'                 " Markdown syntax highlighting
 Plug 'rodjek/vim-puppet'                       " Puppet syntax highlighting
 Plug 'tclh123/vim-thrift'                      " Thrift syntax highlighting
 Plug 'zchee/deoplete-go', { 'do': 'make'}      " Go auto completion
-Plug 'zchee/deoplete-jedi'                     " Go auto completion
+"Plug 'zchee/deoplete-jedi'                     " Go auto completion
 Plug 'zimbatm/haproxy.vim'                     " HAProxy syntax highlighting
 
 " Colorschemes
@@ -287,13 +287,21 @@ if has('nvim')
 endif
 
 " Disable deoplete when in multi cursor mode
-function! Multiple_cursors_before()
-    let b:deoplete_disable_auto_complete = 1
-endfunction
+"function! Multiple_cursors_before()
+    "let b:deoplete_disable_auto_complete = 1
+"endfunction
 
-function! Multiple_cursors_after()
-    let b:deoplete_disable_auto_complete = 0
-endfunction
+"function! Multiple_cursors_after()
+    "let b:deoplete_disable_auto_complete = 0
+"endfunction
+
+let g:deoplete#sources#go#gocode_binary = $HOME.'/go/bin/gocode'
+let g:deoplete#sources#go#source_importer = 1
+
+call deoplete#custom#option({
+\ 'auto_complete_delay': 0,
+\ 'auto_refresh_delay': 10,
+\})
 
 "----------------------------------------------
 " Plugin: bling/vim-airline
@@ -548,7 +556,7 @@ au FileType go nmap <leader>gD <Plug>(go-doc)
 au FileType go nmap <leader>gDv <Plug>(go-doc-vertical)
 
 " Run goimports when running gofmt
-let g:go_fmt_command = "goimports"
+let g:go_fmt_command = "goreturns"
 
 " Set neosnippet as snippet engine
 let g:go_snippet_engine = "neosnippet"
@@ -577,6 +585,8 @@ let g:go_list_type = "quickfix"
 
 " Add the failing test name to the output of :GoTest
 let g:go_test_show_name = 1
+
+let g:go_gocode_propose_source=1
 
 " gometalinter configuration
 let g:go_metalinter_command = ""

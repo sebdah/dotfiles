@@ -1,0 +1,1 @@
+/Users/sebdah/.vim/plugged/gocode/nvim/autoload/gocomplete.vim
