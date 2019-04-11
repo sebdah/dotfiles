@@ -1,5 +1,5 @@
 . ~/.profile-secrets.fish
-. ~/.dotfiles/clearance-fish/fish_prompt.fish
+. ~/dotfiles/clearance-fish/fish_prompt.fish
 
 # Aliases
 alias grep 'grep --color=auto'
@@ -18,10 +18,12 @@ alias work "cd ~/go/src/github.com/saltside"
 set -gx PATH \
   ~/bin \
   ~/go/bin \
+  /var/lib/snapd/snap/bin \
   /usr/local/bin \
   /usr/bin \
   /usr/sbin \
   ~/go/src/github.com/saltside/workstation/bin \
+  ~/.gem/ruby/2.6.0/bin \
   $PATH
 
 set -gx LESS '-F -g -i -M -R -S -w -X -z-4'
@@ -104,11 +106,11 @@ function tmux-init
     "saltside/workstation"
 
   for project in $GITHUB_PROJECTS
-    tmux new -d -s "$project" -c /Users/sebdah/go/src/github.com/$project
+    tmux new -d -s "$project" -c /home/sebdah/go/src/github.com/$project
   end
 
   for project in $GITLAB_PROJECTS
-    tmux new -d -s "$project" -c /Users/sebdah/go/src/gitlab.com/$project
+    tmux new -d -s "$project" -c /home/sebdah/go/src/gitlab.com/$project
   end
 end
 
