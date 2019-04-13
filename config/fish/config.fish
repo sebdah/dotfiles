@@ -66,12 +66,6 @@ function tmux-init
     "skymill/portal"
 
   set GITHUB_PROJECTS \
-    "NordiskFilmDistribution/agillic-event-converter" \
-    "NordiskFilmDistribution/infrastructure" \
-    "NordiskFilmDistribution/minutes-watched" \
-    "NordiskFilmDistribution/talend-export-organizer" \
-    "NordiskFilmDistribution/sql-executor" \
-    "Oresundsbron/notification-service" \
     "saltside/admin" \
     "saltside/admin-service" \
     "saltside/apex" \
@@ -92,6 +86,7 @@ function tmux-init
     "saltside/platform-admin-data-contracts" \
     "saltside/platform-data-contracts" \
     "saltside/platform-puppet" \
+    "saltside/platform-puppet-v2" \
     "saltside/platform-thrift-files" \
     "saltside/review-service" \
     "saltside/sandbox" \
