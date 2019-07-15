@@ -62,9 +62,6 @@ end
 function tmux-init
   tmux new -d -s "common/control" -c /home/sebdah
 
-  set GITLAB_PROJECTS \
-    "skymill/portal"
-
   set GITHUB_PROJECTS \
     "saltside/admin" \
     "saltside/admin-service" \
@@ -75,6 +72,7 @@ function tmux-init
     "saltside/core-service" \
     "saltside/email-service" \
     "saltside/external-admin-service" \
+    "saltside/external-admin-data-contracts" \
     "saltside/image-service" \
     "saltside/infrastructure" \
     "saltside/inventory-service" \
@@ -102,10 +100,6 @@ function tmux-init
 
   for project in $GITHUB_PROJECTS
     tmux new -d -s "$project" -c /home/sebdah/go/src/github.com/$project
-  end
-
-  for project in $GITLAB_PROJECTS
-    tmux new -d -s "$project" -c /home/sebdah/go/src/gitlab.com/$project
   end
 end
 
