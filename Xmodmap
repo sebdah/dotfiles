@@ -1,4 +1,29 @@
+! Map control to caps lock
 clear lock
 clear control
 add control = Caps_Lock Control_L Control_R
 keycode 66 = Control_L Control_L NoSymbol NoSymbol
+
+! Swap left alt and left super
+!keycode 64 = Super_L NoSymbol Super_L NoSymbol Super_L
+!keycode 133 = Alt_L Meta_L Alt_L Meta_L Alt_L Meta_L
+!keycode 204 = NoSymbol Super_L NoSymbol Super_L NoSymbol Super_L
+!keycode 206 = NoSymbol Alt_L NoSymbol Alt_L NoSymbol Alt_L
+!remove mod1 = Alt_L
+!remove mod4 = Super_L
+!add mod1 = Super_L
+!add mod4 = Alt_L
+
+keycode 64 = Alt_L
+keycode 133 = Super_L
+remove Mod1 = Alt_L
+remove Mod4 = Super_L
+add Mod1 = Super_L
+add Mod4 = Alt_L
+
+!keycode 108 = Alt_R
+!keycode 134 = Super_R
+!remove Mod1 = Alt_R
+!remove Mod4 = Super_R
+!add Mod1 = Super_R
+!add Mod4 = Alt_R
