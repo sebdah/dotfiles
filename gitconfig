@@ -57,3 +57,9 @@
 	user = sebdah
 [commit]
 	gpgsign = true
+[gitflow "feature.finish"]
+	push = yes
+[gitflow "bugfix.finish"]
+	push = yes
+[gitflow "hotfix.finish"]
+	push = yes
