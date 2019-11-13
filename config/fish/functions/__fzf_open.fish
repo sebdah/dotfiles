@@ -11,8 +11,20 @@ function __fzf_open -d "Open files and directories."
     set -l dir $commandline[1]
     set -l fzf_query $commandline[2]
 
-    set -l options "e/editor" "p/preview=?"
+    if not type -q argparse
+        set created_argparse
+        function argparse
+            functions -e argparse # deletes itself
+        end
+        if contains -- --editor $argv; or contains -- -e $argv
+            set _flag_editor "yes"
+        end
+        if contains -- --preview $argv; or contains -- -p $argv
+            set _flag_preview "yes"
+        end
+    end
 
+    set -l options "e/editor" "p/preview=?"
     argparse $options -- $argv
 
     set -l preview_cmd

@@ -59,7 +59,7 @@ function __fzf_complete -d 'fzf completion and print selection back to commandli
         set -l query
         string join -- \n $complist \
         | sort \
-        | eval (__fzfcmd) $initial_query --print-query (__fzf_complete_opts) \
+        | eval (__fzfcmd) (string escape --no-quoted -- $initial_query) --print-query (__fzf_complete_opts) \
         | cut -f1 \
         | while read -l r
             # first line is the user entered query
@@ -73,6 +73,7 @@ function __fzf_complete -d 'fzf completion and print selection back to commandli
 
         # exit if user canceled
         if test -z "$query" ;and test -z "$result"
+            commandline -f repaint
             return
         end
 
@@ -97,7 +98,7 @@ function __fzf_complete -d 'fzf completion and print selection back to commandli
             case '~'
                 commandline -t -- (string sub -s 2 (string escape -n -- $r))
             case '*'
-                commandline -t -- (string escape -n -- $r)
+                commandline -t -- $r
         end
         [ $i -lt (count $result) ]; and commandline -i ' '
     end
@@ -106,6 +107,9 @@ function __fzf_complete -d 'fzf completion and print selection back to commandli
 end
 
 function __fzf_complete_opts_common
+    if set -q FZF_DEFAULT_OPTS
+        echo $FZF_DEFAULT_OPTS
+    end
     echo --cycle --reverse --inline-info
 end
 
@@ -158,5 +162,8 @@ function __fzf_complete_opts -d 'fzf options for fish tab completion'
             __fzf_complete_opts_3
         case '*'
             echo $FZF_COMPLETE
+    end
+    if set -q FZF_COMPLETE_OPTS
+        echo $FZF_COMPLETE_OPTS
     end
 end

@@ -3,8 +3,18 @@ function __fzf_cd -d "Change directory"
     set -l dir $commandline[1]
     set -l fzf_query $commandline[2]
 
-    set -l options  "h/hidden"
+    if not type -q argparse
+        # Fallback for fish shell version < 2.7
+        function argparse
+            functions -e argparse # deletes itself
+        end
+        if contains -- --hidden $argv; or contains -- -h $argv
+            set _flag_hidden "yes"
+        end
+    end
 
+    # Fish shell version >= v2.7, use argparse
+    set -l options  "h/hidden"
     argparse $options -- $argv
 
     set -l COMMAND
