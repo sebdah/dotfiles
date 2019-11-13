@@ -63,3 +63,5 @@
 	push = yes
 [gitflow "hotfix.finish"]
 	push = yes
+[url "git@github.com:"]
+	insteadOf = https://github.com/
