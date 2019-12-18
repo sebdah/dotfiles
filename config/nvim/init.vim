@@ -25,6 +25,7 @@ Plug 'itchyny/calendar.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
+Plug 'junegunn/vim-emoji'
 Plug 'majutsushi/tagbar'
 Plug 'mhinz/vim-signify'
 Plug 'mileszs/ack.vim'
@@ -825,3 +826,5 @@ au FileType yaml set expandtab
 au FileType yaml set shiftwidth=2
 au FileType yaml set softtabstop=2
 au FileType yaml set tabstop=2
+
+set completefunc=emoji#complete
