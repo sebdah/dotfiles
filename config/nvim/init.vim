@@ -47,6 +47,8 @@ if !has('nvim')
 endif
 
 " Language support
+"Plug 'mdempsky/gocode', { 'rtp': 'nvim', 'do': '~/.vim/plugged/gocode/nvim/symlink.sh' }
+"Plug 'zchee/deoplete-jedi'                     " Go auto completion
 Plug 'HerringtonDarkholme/yats.vim'            " TypeScript syntax
 Plug 'aklt/plantuml-syntax'                    " PlantUML syntax highlighting
 Plug 'cespare/vim-toml'                        " toml syntax highlighting
@@ -56,19 +58,18 @@ Plug 'digitaltoad/vim-pug'                     " Pug syntax highlighting
 Plug 'fatih/vim-go'                            " Go support
 Plug 'fishbullet/deoplete-ruby'                " Ruby auto completion
 Plug 'hashivim/vim-terraform'                  " Terraform syntax highlighting
+Plug 'jparise/vim-graphql'                     " GraphQL syntax highlighting and indentation
 Plug 'kchmck/vim-coffee-script'                " CoffeeScript syntax highlighting
 Plug 'kylef/apiblueprint.vim'                  " API Blueprint syntax highlighting
 Plug 'leafgarland/typescript-vim'              " TypeScript syntax highlighting
 Plug 'lifepillar/pgsql.vim'                    " PostgreSQL syntax highlighting
 Plug 'mhartington/nvim-typescript', {'do': './install.sh'} " TypeScript auto completion
 Plug 'mxw/vim-jsx'                             " JSX syntax highlighting
-"Plug 'mdempsky/gocode', { 'rtp': 'nvim', 'do': '~/.vim/plugged/gocode/nvim/symlink.sh' }
 Plug 'pangloss/vim-javascript'                 " JavaScript syntax highlighting
 Plug 'plasticboy/vim-markdown'                 " Markdown syntax highlighting
 Plug 'rodjek/vim-puppet'                       " Puppet syntax highlighting
 Plug 'tclh123/vim-thrift'                      " Thrift syntax highlighting
 Plug 'zchee/deoplete-go', { 'do': 'make'}      " Go auto completion
-"Plug 'zchee/deoplete-jedi'                     " Go auto completion
 Plug 'zimbatm/haproxy.vim'                     " HAProxy syntax highlighting
 
 " Colorschemes
