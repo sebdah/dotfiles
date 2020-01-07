@@ -28,7 +28,7 @@ set -gx PATH \
 
 set -gx LESS '-F -g -i -M -R -S -w -X -z-4'
 set -gx GOPATH ~/go
-set -gx GOPRIVATE 'github.com/saltside/*,github.com/NordiskFilmDistribution/*'
+set -gx GOPRIVATE 'github.com/saltside/*,github.com/NordiskFilmDistribution/*,github.com/sebdah/devinsight'
 set -gx BROWSER open
 set -gx EDITOR nvim
 set -gx VISUAL nvim
