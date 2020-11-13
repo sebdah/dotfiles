@@ -69,14 +69,15 @@ Plug 'pangloss/vim-javascript'                 " JavaScript syntax highlighting
 Plug 'plasticboy/vim-markdown'                 " Markdown syntax highlighting
 Plug 'rodjek/vim-puppet'                       " Puppet syntax highlighting
 Plug 'tclh123/vim-thrift'                      " Thrift syntax highlighting
-Plug 'zchee/deoplete-go', { 'do': 'make'}      " Go auto completion
+Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}      " Go auto completion
 Plug 'zimbatm/haproxy.vim'                     " HAProxy syntax highlighting
 
 " Colorschemes
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'altercation/vim-colors-solarized'
 Plug 'ayu-theme/ayu-vim'
-Plug 'kaicataldo/material.vim'
+Plug 'dikiaap/minimalist'
+Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 Plug 'rakr/vim-one'
 
 call plug#end()
@@ -159,7 +160,7 @@ endif
 set background=dark
 
 " Material colorscheme settings
-let g:material_theme_style = 'dark'
+let g:material_theme_style = 'darker-community'
 
 " Ayu colorscheme settings
 let ayucolor = 'dark'
@@ -167,7 +168,7 @@ let ayucolor = 'dark'
 " One colorscheme settings
 let g:one_allow_italics = 1
 
-colorscheme one
+colorscheme material
 
 " Override the search highlight color with a combination that is easier to
 " read. The default PaperColor is dark green backgroun with black foreground.
@@ -299,7 +300,7 @@ endif
 "endfunction
 
 let g:deoplete#sources#go#gocode_binary = $HOME.'/go/bin/gocode'
-let g:deoplete#sources#go#source_importer = 1
+"let g:deoplete#sources#go#source_importer = 1
 
 call deoplete#custom#option({
 \ 'auto_complete_delay': 0,
@@ -386,6 +387,9 @@ let g:calendar_view = "days"                  " Set days as the default view
 "----------------------------------------------
 " Plugin: 'junegunn/fzf.vim'
 "----------------------------------------------
+nnoremap <F4> :Commits<cr>
+nnoremap <F5> :BCommits<cr>
+nnoremap <F7> :Ag
 nnoremap <c-p> :FZF<cr>
 
 "----------------------------------------------

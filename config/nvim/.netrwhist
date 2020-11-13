@@ -1,3 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =1
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/home/sebdah/go/src/github.com/saltside/core-service'
+let g:netrw_dirhist_3='/home/sebdah/go/src/github.com/saltside/core-service/patches/kbg'
+let g:netrw_dirhist_2='/home/sebdah/go/src/github.com/saltside/core-service/patches/kbg/models'
 let g:netrw_dirhist_1='/home/sebdah/dotfiles/kitty'
