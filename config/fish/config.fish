@@ -2,6 +2,7 @@
 . ~/dotfiles/clearance-fish/fish_prompt.fish
 
 # Aliases
+alias ls 'exa'
 alias grep 'grep --color=auto'
 alias scp "scp -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
 alias ssh "ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
@@ -28,7 +29,7 @@ set -gx PATH \
 
 set -gx LESS '-F -g -i -M -R -S -w -X -z-4'
 set -gx GOPATH ~/go
-set -gx GOPRIVATE 'github.com/saltside/*,github.com/NordiskFilmDistribution/*,github.com/sebdah/devinsight'
+set -gx GOPRIVATE 'github.com/saltside/*,github.com/NordiskFilmDistribution/*,github.com/sebdah/devinsight,github.com/clockwork-guru/*'
 set -gx BROWSER open
 set -gx EDITOR nvim
 set -gx VISUAL nvim
@@ -38,6 +39,7 @@ set -gx LANGUAGE en_US.utf-8
 set -gx LC_ALL en_US.UTF-8
 set -gx FZF_DEFAULT_COMMAND 'ag --hidden --skip-vcs-ignores --ignore .git --ignore vendor --ignore node_modules -g ""'
 set -gx LSCOLORS 'Exfxcxdxbxegedabagacad'
+set -gx NVM_SYMLINK_CURRENT true
 
 # Disable the fish greeting
 set fish_greeting ""
@@ -62,6 +64,9 @@ end
 
 function tmux-init
   tmux new -d -s "common/control" -c /home/sebdah
+
+  set GITLAB_PROJECTS \
+    "sebdah/coditivity"
 
   set GITHUB_PROJECTS \
     "saltside/admin" \
@@ -98,6 +103,10 @@ function tmux-init
     "saltside/web-pwa" \
     "saltside/web-router" \
     "saltside/workstation"
+
+  for project in $GITLAB_PROJECTS
+    tmux new -d -s "$project" -c /home/sebdah/go/src/gitlab.com/$project
+  end
 
   for project in $GITHUB_PROJECTS
     tmux new -d -s "$project" -c /home/sebdah/go/src/github.com/$project

@@ -8,6 +8,7 @@ SETUVAR FZF_TMUX_HEIGHT:40\x25
 SETUVAR __fish_init_2_39_8:\x1d
 SETUVAR __fish_init_2_3_0:\x1d
 SETUVAR __fish_init_3_x:\x1d
+SETUVAR __fish_initialized:3100
 SETUVAR _fish_abbr_cist:hub\x20ci\x2dstatus
 SETUVAR _fish_abbr_cistw:watch\x20\x2dn2\x20hub\x20ci\x2dstatus
 SETUVAR _fish_abbr_gL:git\x20pull
@@ -43,6 +44,8 @@ SETUVAR _fish_abbr_gsp:git\x20stash\x20pop
 SETUVAR _fish_abbr_gst:git\x20status
 SETUVAR _fish_abbr_gwC:git\x20clean\x20\x2dffdx
 SETUVAR _fish_abbr_gwd:git\x20diff
+SETUVAR _fish_abbr_l:exa\x20\x2dl\x20\x2d\x2dgit\x20\x2d\x2dgroup\x2ddirectories\x2dfirst
+SETUVAR _fish_abbr_lsl:exa\x20\x2dl\x20\x2d\x2dheader\x20\x2d\x2dgit
 SETUVAR _fish_abbr_w:saltside\x2dworkstation
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
 SETUVAR fish_color_cancel:\x2dr
@@ -55,6 +58,7 @@ SETUVAR fish_color_error:brred
 SETUVAR fish_color_escape:bryellow\x1e\x2d\x2dbold
 SETUVAR fish_color_history_current:\x2d\x2dbold
 SETUVAR fish_color_host:normal
+SETUVAR fish_color_host_remote:yellow
 SETUVAR fish_color_match:\x2d\x2dbackground\x3dbrblue
 SETUVAR fish_color_normal:normal
 SETUVAR fish_color_operator:bryellow
@@ -63,6 +67,7 @@ SETUVAR fish_color_quote:yellow
 SETUVAR fish_color_redirection:brblue
 SETUVAR fish_color_search_match:bryellow\x1e\x2d\x2dbackground\x3dbrblack
 SETUVAR fish_color_selection:white\x1e\x2d\x2dbold\x1e\x2d\x2dbackground\x3dbrblack
+SETUVAR fish_color_status:red
 SETUVAR fish_color_user:brgreen
 SETUVAR fish_color_valid_path:\x2d\x2dunderline
 SETUVAR fish_key_bindings:fish_default_key_bindings
@@ -71,5 +76,5 @@ SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_user_abbreviations:gL\x20git\x20pull\x1egst\x20git\x20status\x1ega\x20git\x20add\x1egc\x20git\x20commit\x20\x2d\x2dverbose\x1egp\x20git\x20push\x1egpr\x20hub\x20pull\x2drequest\x1egbc\x20git\x20checkout\x20\x2db\x1egs\x20git\x20stash\x1egsp\x20git\x20stash\x20pop\x1egS\x20git\x20submodule\x1egR\x20git\x20rebase\x1egRi\x20git\x20rebase\x20\x2d\x2dinteractive\x1egRc\x20git\x20rebase\x20\x2d\x2dcontinue\x1egRs\x20git\x20rebase\x20\x2d\x2dskip\x1egca\x20git\x20commit\x20\x2d\x2damend\x20\x2d\x2dverbose\x1ew\x20saltside\x2dworkstation\x1egcl\x20git\x20clone\x1egcp\x20git\x20cherry\x2dpick\x1egrps\x20git\x20rev\x2dparse\x20\x2d\x2dshort\x20HEAD\x1egco\x20git\x20checkout\x1egSu\x20git\x20submodule\x20update\x20\x2d\x2dinit\x20\x2d\x2drecursive\x1egg\x20git\x20grep\x1eggi\x20git\x20grep\x20\x2di\x1egwd\x20git\x20diff\x1egpf\x20git\x20push\x20\x2d\x2dforce\x2dwith\x2dlease\x1egm\x20git\x20merge\x1egf\x20git\x20fetch\x1egb\x20git\x20branch\x1egRa\x20git\x20rebase\x20\x2d\x2dabort\x1egcf\x20git\x20commit\x20\x2d\x2dfixup\x1ecistw\x20watch\x20\x2dn2\x20hub\x20ci\x2dstatus\x1ecist\x20hub\x20ci\x2dstatus\x1egbD\x20git\x20branch\x20\x2dD\x1egSa\x20git\x20submodule\x20add\x1egwC\x20git\x20clean\x20\x2dffdx
-SETUVAR fish_user_paths:/Users/sebdah/\x2efzf/bin\x1e/home/sebdah/\x2efzf/bin
+SETUVAR fish_user_paths:/home/sebdah/\x2econfig/nvm/11\x2e14\x2e0/bin\x1e/home/sebdah/\x2econfig/nvm/13\x2e9\x2e0/bin\x1e/Users/sebdah/\x2efzf/bin\x1e/home/sebdah/\x2efzf/bin
 SETUVAR pure_version:2\x2e1\x2e8
