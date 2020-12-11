@@ -27,6 +27,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/vim-emoji'
 Plug 'majutsushi/tagbar'
+Plug 'mg979/vim-visual-multi'
 Plug 'mhinz/vim-signify'
 Plug 'mileszs/ack.vim'
 Plug 'neomake/neomake'
@@ -35,7 +36,6 @@ Plug 'sbdchd/neoformat'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'sebdah/vim-delve'
-Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'vimwiki/vimwiki'
@@ -523,12 +523,6 @@ au FileType vimwiki set expandtab
 au FileType vimwiki set shiftwidth=2
 au FileType vimwiki set softtabstop=2
 au FileType vimwiki set tabstop=2
-
-"----------------------------------------------
-" Plugin: 'terryma/vim-multiple-cursors'
-"----------------------------------------------
-let g:multi_cursor_next_key='<C-n>'
-let g:multi_cursor_skip_key='<C-b>'
 
 "----------------------------------------------
 " Plugin: zchee/deoplete-go
