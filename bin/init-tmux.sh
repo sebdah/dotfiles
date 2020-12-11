@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-tmux new -d -s "common" -c /home/sebdah
+tmux new -d -s "common" -n system -c /home/sebdah bpytop
 tmux new -d -s "saltside/admin" -c /home/sebdah/go/src/github.com/saltside/admin
 tmux new -d -s "saltside/admin-service" -c /home/sebdah/go/src/github.com/saltside/admin-service
 tmux new -d -s "saltside/apex" -c /home/sebdah/go/src/github.com/saltside/apex
