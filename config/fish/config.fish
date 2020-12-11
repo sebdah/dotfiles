@@ -1,5 +1,5 @@
 . ~/.profile-secrets.fish
-. ~/dotfiles/clearance-fish/fish_prompt.fish
+#. ~/dotfiles/clearance-fish/fish_prompt.fish
 
 # Aliases
 alias ls 'exa'
@@ -63,10 +63,7 @@ function dcleanup
 end
 
 function tmux-init
-  tmux new -d -s "common/control" -c /home/sebdah
-
-  set GITLAB_PROJECTS \
-    "sebdah/coditivity"
+  tmux new -d -s "common" -c /home/sebdah
 
   set GITHUB_PROJECTS \
     "saltside/admin" \
@@ -104,22 +101,7 @@ function tmux-init
     "saltside/web-router" \
     "saltside/workstation"
 
-  for project in $GITLAB_PROJECTS
-    tmux new -d -s "$project" -c /home/sebdah/go/src/gitlab.com/$project
-  end
-
   for project in $GITHUB_PROJECTS
     tmux new -d -s "$project" -c /home/sebdah/go/src/github.com/$project
   end
 end
-
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[ -f /Users/sebdah/go/src/github.com/NordiskFilmDistribution/Serverless/node_modules/tabtab/.completions/serverless.fish ]; and . /Users/sebdah/go/src/github.com/NordiskFilmDistribution/Serverless/node_modules/tabtab/.completions/serverless.fish
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[ -f /Users/sebdah/go/src/github.com/NordiskFilmDistribution/Serverless/node_modules/tabtab/.completions/sls.fish ]; and . /Users/sebdah/go/src/github.com/NordiskFilmDistribution/Serverless/node_modules/tabtab/.completions/sls.fish
-
-# tabtab source for slss package
-# uninstall by removing these lines or running `tabtab uninstall slss`
-[ -f /Users/sebdah/go/src/github.com/NordiskFilmDistribution/talend-export-organizer/node_modules/tabtab/.completions/slss.fish ]; and . /Users/sebdah/go/src/github.com/NordiskFilmDistribution/talend-export-organizer/node_modules/tabtab/.completions/slss.fish
