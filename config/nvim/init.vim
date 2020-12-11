@@ -390,7 +390,7 @@ let g:calendar_view = "days"                  " Set days as the default view
 "----------------------------------------------
 nnoremap <F4> :Commits<cr>
 nnoremap <F5> :BCommits<cr>
-nnoremap <F7> :Ag
+nnoremap <c-f> :Ag<cr>
 nnoremap <c-p> :FZF<cr>
 
 "----------------------------------------------
