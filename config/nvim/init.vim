@@ -79,6 +79,7 @@ Plug 'ayu-theme/ayu-vim'
 Plug 'dikiaap/minimalist'
 Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 Plug 'rakr/vim-one'
+Plug 'cocopon/iceberg.vim'
 
 call plug#end()
 
