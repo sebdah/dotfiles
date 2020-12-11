@@ -1,9 +1,6 @@
 [submodule "clearance-fish"]
 	path = clearance-fish
 	url = git@github.com:sebdah/clearance-fish.git
-[submodule "config/kitty/kitty-themes"]
-	path = config/kitty/kitty-themes
-	url = git@github.com:dexpota/kitty-themes.git
 [submodule ".tmux/plugins/tpm"]
 	path = .tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
