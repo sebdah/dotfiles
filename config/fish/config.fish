@@ -37,7 +37,7 @@ set -gx PAGER less
 set -gx LANG en_US.UTF-8
 set -gx LANGUAGE en_US.utf-8
 set -gx LC_ALL en_US.UTF-8
-set -gx FZF_DEFAULT_COMMAND 'ag --hidden --skip-vcs-ignores --ignore .git --ignore vendor --ignore node_modules -g ""'
+set -gx FZF_DEFAULT_COMMAND 'ag --hidden -p ~/.agignore -g ""'
 set -gx LSCOLORS 'Exfxcxdxbxegedabagacad'
 set -gx NVM_SYMLINK_CURRENT true
 
@@ -60,48 +60,4 @@ function dcleanup
   docker rm -v (docker ps --filter status=exited -q ^ /dev/null) ^ /dev/null
   docker rmi (docker images --filter dangling=true -q ^ /dev/null) ^ /dev/null
   docker volume rm (docker volume ls -qf dangling=true)
-end
-
-function tmux-init
-  tmux new -d -s "common" -c /home/sebdah
-
-  set GITHUB_PROJECTS \
-    "saltside/admin" \
-    "saltside/admin-service" \
-    "saltside/apex" \
-    "saltside/apex-config" \
-    "saltside/api-gateway-v2" \
-    "saltside/chat-service" \
-    "saltside/core-service" \
-    "saltside/email-service" \
-    "saltside/external-admin-service" \
-    "saltside/external-admin-data-contracts" \
-    "saltside/image-service" \
-    "saltside/infrastructure" \
-    "saltside/inventory-service" \
-    "saltside/lib" \
-    "saltside/notification-service" \
-    "saltside/offer-service" \
-    "saltside/payment-admin" \
-    "saltside/payment-service" \
-    "saltside/platform-admin-data-contracts" \
-    "saltside/platform-data-contracts" \
-    "saltside/platform-puppet" \
-    "saltside/platform-puppet-v2" \
-    "saltside/platform-thrift-files" \
-    "saltside/review-service" \
-    "saltside/sandbox" \
-    "saltside/search-service" \
-    "saltside/search-service-v2" \
-    "saltside/sms-service" \
-    "saltside/store" \
-    "saltside/web" \
-    "saltside/web-gateway" \
-    "saltside/web-pwa" \
-    "saltside/web-router" \
-    "saltside/workstation"
-
-  for project in $GITHUB_PROJECTS
-    tmux new -d -s "$project" -c /home/sebdah/go/src/github.com/$project
-  end
 end
