@@ -61,3 +61,8 @@ function dcleanup
   docker rmi (docker images --filter dangling=true -q ^ /dev/null) ^ /dev/null
   docker volume rm (docker volume ls -qf dangling=true)
 end
+
+# gcleanup is cleaning local git branches that have already been merged on origin.
+function gcleanup
+  git branch -r --merged | grep -v master | sed 's/origin\///' | xargs -n 1 git push --delete origin
+end
