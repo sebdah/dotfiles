@@ -24,7 +24,7 @@ set -gx PATH \
   /usr/bin \
   /usr/sbin \
   ~/go/src/github.com/saltside/workstation/bin \
-  ~/.gem/ruby/2.6.0/bin \
+  ~/.gem/ruby/2.7.0/bin \
   $PATH
 
 set -gx LESS '-F -g -i -M -R -S -w -X -z-4'
