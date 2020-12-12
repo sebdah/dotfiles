@@ -66,3 +66,29 @@ end
 function gcleanup
   git branch -r --merged | grep -v master | sed 's/origin\///' | xargs -n 1 git push --delete origin
 end
+
+# gLa is pulling all repositories
+function gLa
+  set -lx root ~/go/src/github.com/saltside
+
+  for r in (ls -1 $root)
+    cd $root/$r
+
+    set_color blue;
+    echo -ne "Pulling $r.."
+    set_color normal;
+
+    git pull > /dev/null
+
+    if test $status -gt 0
+      echo -e " ❌"
+    else
+      set -lx branch (git branch --show-current)
+      echo -ne " ($branch)"
+      set_color green;
+      echo -e " 🗸"
+    end
+  end
+
+  set_color normal;
+end
