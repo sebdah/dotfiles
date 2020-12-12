@@ -31,5 +31,6 @@ tmux new -d -s "saltside/search-service-v2" -c /home/sebdah/go/src/github.com/sa
 tmux new -d -s "saltside/sms-service" -c /home/sebdah/go/src/github.com/saltside/sms-service
 tmux new -d -s "saltside/web" -c /home/sebdah/go/src/github.com/saltside/web
 tmux new -d -s "saltside/web-gateway" -c /home/sebdah/go/src/github.com/saltside/web-gateway
+tmux new -d -s "saltside/web-pwa" -c /home/sebdah/go/src/github.com/saltside/web-pwa
 tmux new -d -s "saltside/web-router" -c /home/sebdah/go/src/github.com/saltside/web-router
 tmux new -d -s "saltside/workstation" -c /home/sebdah/go/src/github.com/saltside/workstation
