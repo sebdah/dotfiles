@@ -27,6 +27,7 @@ tmux new -d -s "saltside/platform-proto-files" -c /home/sebdah/go/src/github.com
 tmux new -d -s "saltside/platform-thrift-files" -c /home/sebdah/go/src/github.com/saltside/platform-thrift-files
 tmux new -d -s "saltside/review-service" -c /home/sebdah/go/src/github.com/saltside/review-service
 tmux new -d -s "saltside/sandbox" -c /home/sebdah/go/src/github.com/saltside/sandbox
+tmux new -d -s "saltside/scheduler-service" -c /home/sebdah/go/src/github.com/saltside/scheduler-service
 tmux new -d -s "saltside/search-service-v2" -c /home/sebdah/go/src/github.com/saltside/search-service-v2
 tmux new -d -s "saltside/sms-service" -c /home/sebdah/go/src/github.com/saltside/sms-service
 tmux new -d -s "saltside/web" -c /home/sebdah/go/src/github.com/saltside/web
