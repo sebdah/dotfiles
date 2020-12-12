@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 ln -s $(pwd)/.agignore ${HOME}/.agignore
-ln -s $(pwd)/.config/configstore ${HOME}/.config/configstore
 ln -s $(pwd)/.config/direnv ${HOME}/.config/direnv
 ln -s $(pwd)/.config/fish ${HOME}/.config/fish
 ln -s $(pwd)/.config/git ${HOME}/.config/git
