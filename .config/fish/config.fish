@@ -92,3 +92,8 @@ function gLa
 
   set_color normal;
 end
+
+# tC is cleaning all tmux sessions.
+function tC
+  tmux list-sessions | awk 'BEGIN{FS=":"}{print $1}' | xargs -n 1 tmux kill-session -t
+end
