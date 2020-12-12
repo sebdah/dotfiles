@@ -15,3 +15,4 @@ ln -s $(pwd)/.gitignore.global ${HOME}/.gitignore
 ln -s $(pwd)/.tmux ${HOME}/.tmux
 ln -s $(pwd)/.tmux.conf ${HOME}/.tmux.conf
 ln -s $(pwd)/.urlview ${HOME}/.urlview
+ln -s $(pwd)/bin ${HOME}/bin
