@@ -14,7 +14,6 @@ Plug 'tpope/vim-rhubarb'           " Depenency for tpope/fugitive
 
 " General plugins
 Plug 'Shougo/denite.nvim'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'  " Default snippets for many languages
 Plug 'bling/vim-airline'
@@ -53,7 +52,6 @@ Plug 'aklt/plantuml-syntax'                    " PlantUML syntax highlighting
 Plug 'cespare/vim-toml'                        " toml syntax highlighting
 Plug 'chr4/nginx.vim'                          " nginx syntax highlighting
 Plug 'dag/vim-fish'                            " Fish syntax highlighting
-Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}      " Go auto completion
 Plug 'digitaltoad/vim-pug'                     " Pug syntax highlighting
 Plug 'fatih/vim-go'                            " Go support
 Plug 'hashivim/vim-terraform'                  " Terraform syntax highlighting
@@ -141,6 +139,12 @@ autocmd BufWritePre * :%s/\s\+$//e
 
 " Center the screen quickly
 nnoremap <space> zz
+
+"----------------------------------------------
+" Editing
+"----------------------------------------------
+" Compete options for the pop up menu for autocompletion.
+set completeopt=menu,noselect
 
 "----------------------------------------------
 " Colors
@@ -288,31 +292,6 @@ autocmd BufEnter * :call BookmarkMapKeys()
 autocmd BufEnter NERD_tree_* :call BookmarkUnmapKeys()
 
 "----------------------------------------------
-" Plugin: Shougo/deoplete.nvim
-"----------------------------------------------
-if has('nvim')
-    " Enable deoplete on startup
-    let g:deoplete#enable_at_startup = 1
-endif
-
-" Disable deoplete when in multi cursor mode
-"function! Multiple_cursors_before()
-    "let b:deoplete_disable_auto_complete = 1
-"endfunction
-
-"function! Multiple_cursors_after()
-    "let b:deoplete_disable_auto_complete = 0
-"endfunction
-
-let g:deoplete#sources#go#gocode_binary = $HOME.'/go/bin/gocode'
-"let g:deoplete#sources#go#source_importer = 1
-
-call deoplete#custom#option({
-\ 'auto_complete_delay': 0,
-\ 'auto_refresh_delay': 10,
-\})
-
-"----------------------------------------------
 " Plugin: bling/vim-airline
 "----------------------------------------------
 " Show status bar by default.
@@ -392,10 +371,11 @@ let g:calendar_view = "days"                  " Set days as the default view
 "----------------------------------------------
 " Plugin: 'junegunn/fzf.vim'
 "----------------------------------------------
-nnoremap <F4> :Commits<cr>
-nnoremap <F5> :BCommits<cr>
-nnoremap <c-f> :Ag<cr>
-nnoremap <c-p> :FZF<cr>
+nnoremap <a-g> :Commits<cr>
+nnoremap <a-s-g> :BCommits<cr>
+nnoremap <a-f> :Ag<cr>
+nnoremap <a-p> :FZF<cr>
+nnoremap <a-r> :Commands<cr>
 
 "----------------------------------------------
 " Plugin: 'majutsushi/tagbar'
@@ -529,15 +509,6 @@ au FileType vimwiki set softtabstop=2
 au FileType vimwiki set tabstop=2
 
 "----------------------------------------------
-" Plugin: zchee/deoplete-go
-"----------------------------------------------
-" Enable completing of go pointers
-let g:deoplete#sources#go#pointer = 1
-
-" Enable autocomplete of unimported packages
-let g:deoplete#sources#go#unimported_packages = 0
-
-"----------------------------------------------
 " Language: Golang
 "----------------------------------------------
 au FileType go set noexpandtab
@@ -560,6 +531,8 @@ au FileType go nmap <leader>gdv <Plug>(go-def-vertical)
 au FileType go nmap <leader>gdh <Plug>(go-def-split)
 au FileType go nmap <leader>gD <Plug>(go-doc)
 au FileType go nmap <leader>gDv <Plug>(go-doc-vertical)
+
+au filetype go inoremap <buffer> . .<C-x><C-o>
 
 " Run goimports when running gofmt
 let g:go_fmt_command = "goimports"
@@ -589,10 +562,12 @@ let g:go_auto_sameids = 1
 " Fix for location list when vim-go is used together with Syntastic
 let g:go_list_type = "quickfix"
 
+" Using gopls to find definitions and information.
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
+
 " Add the failing test name to the output of :GoTest
 let g:go_test_show_name = 1
-
-let g:go_gocode_propose_source=1
 
 " gometalinter configuration
 let g:go_metalinter_command = ""
