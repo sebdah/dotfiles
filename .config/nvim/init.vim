@@ -372,10 +372,11 @@ let g:calendar_view = "days"                  " Set days as the default view
 "----------------------------------------------
 " Plugin: 'junegunn/fzf.vim'
 "----------------------------------------------
+nnoremap <a-p> :FZF<cr>
 nnoremap <a-g> :Commits<cr>
 nnoremap <a-s-g> :BCommits<cr>
+nnoremap <a-d> :GitFiles?<cr>
 nnoremap <a-f> :Ag<cr>
-nnoremap <a-p> :FZF<cr>
 nnoremap <a-r> :Commands<cr>
 
 " Configure preview window
