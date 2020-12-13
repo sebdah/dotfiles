@@ -47,16 +47,14 @@ if !has('nvim')
 endif
 
 " Language support
-"Plug 'mdempsky/gocode', { 'rtp': 'nvim', 'do': '~/.vim/plugged/gocode/nvim/symlink.sh' }
-"Plug 'zchee/deoplete-jedi'                     " Go auto completion
 Plug 'HerringtonDarkholme/yats.vim'            " TypeScript syntax
 Plug 'aklt/plantuml-syntax'                    " PlantUML syntax highlighting
 Plug 'cespare/vim-toml'                        " toml syntax highlighting
 Plug 'chr4/nginx.vim'                          " nginx syntax highlighting
 Plug 'dag/vim-fish'                            " Fish syntax highlighting
+Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}      " Go auto completion
 Plug 'digitaltoad/vim-pug'                     " Pug syntax highlighting
 Plug 'fatih/vim-go'                            " Go support
-Plug 'fishbullet/deoplete-ruby'                " Ruby auto completion
 Plug 'hashivim/vim-terraform'                  " Terraform syntax highlighting
 Plug 'jparise/vim-graphql'                     " GraphQL syntax highlighting and indentation
 Plug 'kchmck/vim-coffee-script'                " CoffeeScript syntax highlighting
@@ -69,7 +67,7 @@ Plug 'pangloss/vim-javascript'                 " JavaScript syntax highlighting
 Plug 'plasticboy/vim-markdown'                 " Markdown syntax highlighting
 Plug 'rodjek/vim-puppet'                       " Puppet syntax highlighting
 Plug 'tclh123/vim-thrift'                      " Thrift syntax highlighting
-Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}      " Go auto completion
+Plug 'vim-ruby/vim-ruby'                       " Ruby support
 Plug 'zimbatm/haproxy.vim'                     " HAProxy syntax highlighting
 
 " Colorschemes
@@ -243,6 +241,11 @@ nnoremap <leader>h :split<cr>
 
 " Closing splits
 nnoremap <leader>q :close<cr>
+
+"----------------------------------------------
+" Tags
+"----------------------------------------------
+set tags=tags;/
 
 "----------------------------------------------
 " Plugin: MattesGroeger/vim-bookmarks
@@ -768,8 +771,19 @@ au FileType ruby set shiftwidth=2
 au FileType ruby set softtabstop=2
 au FileType ruby set tabstop=2
 
-" Enable neomake for linting.
-"au FileType ruby autocmd BufWritePost * Neomake
+"
+" Plugin: Enable neomake for linting.
+"
+" Vim will load/evaluate code in order to provide completions. This may
+" cause some code execution, which may be a concern.
+let g:rubycomplete_buffer_loading = 1
+
+" In context 1 above, Vim can parse the entire buffer to add a list of
+" classes to the completion results.
+let g:rubycomplete_classes_in_global = 1
+
+" Vim can parse a Gemfile, in case gems are being implicitly required.
+let g:rubycomplete_load_gemfile = 1
 
 "----------------------------------------------
 " Language: SQL
