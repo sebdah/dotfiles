@@ -41,12 +41,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'vimwiki/vimwiki'
 
-" Vim only plugins
-if !has('nvim')
-    Plug 'Shougo/vimproc.vim', {'do' : 'make'}  " Needed to make sebdah/vim-delve work on Vim
-    Plug 'Shougo/vimshell.vim'                  " Needed to make sebdah/vim-delve work on Vim
-endif
-
 " Language support
 Plug 'HerringtonDarkholme/yats.vim'            " TypeScript syntax
 Plug 'aklt/plantuml-syntax'                    " PlantUML syntax highlighting
