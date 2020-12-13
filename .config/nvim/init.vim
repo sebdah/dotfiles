@@ -97,7 +97,7 @@ set cursorline                    " highlight the current line for the cursor
 set encoding=utf-8
 set expandtab                     " expands tabs to spaces
 set list                          " show trailing whitespace
-set listchars=tab:\|\ ,extends:›,precedes:‹,nbsp:·,trail:▫
+set listchars=tab:\·\ ,extends:›,precedes:‹,nbsp:˙,trail:▫
 set nospell                       " disable spelling
 set noswapfile                    " disable swapfile usage
 set nowrap
