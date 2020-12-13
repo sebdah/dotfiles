@@ -167,7 +167,7 @@ let ayucolor = 'dark'
 " One colorscheme settings
 let g:one_allow_italics = 1
 
-colorscheme material
+colorscheme ayu
 
 " Toggle background with <leader>bg
 map <leader>bg :let &background = (&background == "dark"? "light" : "dark")<cr>
