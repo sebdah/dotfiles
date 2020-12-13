@@ -16,12 +16,13 @@ Plug 'tpope/vim-rhubarb'           " Depenency for tpope/fugitive
 Plug 'Shougo/denite.nvim'
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'  " Default snippets for many languages
+Plug 'Xuyuanp/nerdtree-git-plugin'             " Add git support for nerdtree
 Plug 'bling/vim-airline'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ctrlpvim/ctrlp.vim'          " CtrlP is installed to support tag finding in vim-go
 Plug 'editorconfig/editorconfig-vim'
 Plug 'itchyny/calendar.vim'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/vim-emoji'
@@ -29,12 +30,12 @@ Plug 'majutsushi/tagbar'
 Plug 'mg979/vim-visual-multi'
 Plug 'mhinz/vim-signify'
 Plug 'mileszs/ack.vim'
+Plug 'ncm2/float-preview.nvim'                 " Support floating preview windows in neovim
 Plug 'neomake/neomake'
-Plug 'rbgrouleff/bclose.vim'
-Plug 'sbdchd/neoformat'
 Plug 'preservim/nerdcommenter'
 Plug 'preservim/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'             " Add git support for nerdtree
+Plug 'rbgrouleff/bclose.vim'
+Plug 'sbdchd/neoformat'
 Plug 'sebdah/vim-delve'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
@@ -377,6 +378,9 @@ nnoremap <a-f> :Ag<cr>
 nnoremap <a-p> :FZF<cr>
 nnoremap <a-r> :Commands<cr>
 
+" Configure preview window
+let g:fzf_preview_window = ['down:80%', 'ctrl-/']
+
 "----------------------------------------------
 " Plugin: 'majutsushi/tagbar'
 "----------------------------------------------
@@ -412,6 +416,15 @@ let g:tagbar_type_go = {
     \ 'ctagsbin'  : 'gotags',
     \ 'ctagsargs' : '-sort -silent'
 \ }
+
+"----------------------------------------------
+" Plugin: ncm2/float-preview.nvim
+"
+" Create a preview dock based on Neovim's floating window concept.
+"----------------------------------------------
+" Show the preview in a docked window. Alternatively it would float next to
+" the autocompletion window.
+let g:float_preview#docked = 1
 
 "----------------------------------------------
 " Plugin: plasticboy/vim-markdown
