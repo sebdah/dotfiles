@@ -68,10 +68,11 @@ Plug 'zimbatm/haproxy.vim'                     " HAProxy syntax highlighting
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'altercation/vim-colors-solarized'
 Plug 'ayu-theme/ayu-vim'
+Plug 'cocopon/iceberg.vim'
 Plug 'dikiaap/minimalist'
 Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 Plug 'rakr/vim-one'
-Plug 'cocopon/iceberg.vim'
+Plug 'ulwlu/elly.vim'
 
 call plug#end()
 
