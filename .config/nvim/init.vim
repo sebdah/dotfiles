@@ -86,7 +86,6 @@ set autowrite                     " write when switching buffers
 set autowriteall                  " write on :quit
 set clipboard=unnamedplus
 set colorcolumn=81                " highlight the 80th column as an indicator
-set completeopt-=preview          " remove the horrendous preview window
 set cursorline                    " highlight the current line for the cursor
 set encoding=utf-8
 set expandtab                     " expands tabs to spaces
@@ -141,6 +140,9 @@ nnoremap <space> zz
 "----------------------------------------------
 " Compete options for the pop up menu for autocompletion.
 set completeopt=menu,noselect
+
+" remove the horrendous preview window
+set completeopt-=preview
 
 "----------------------------------------------
 " Colors
@@ -211,16 +213,19 @@ augroup qf
 augroup END
 
 " Fix some common typos
-cnoreabbrev W! w!
-cnoreabbrev Q! q!
-cnoreabbrev Qall! qall!
-cnoreabbrev Wq wq
-cnoreabbrev Wa wa
-cnoreabbrev wQ wq
-cnoreabbrev WQ wq
-cnoreabbrev W w
 cnoreabbrev Q q
+cnoreabbrev Q! q!
 cnoreabbrev Qall qall
+cnoreabbrev Qall! qall!
+cnoreabbrev Qa qa
+cnoreabbrev Qw qw
+cnoreabbrev Qwa qwa
+cnoreabbrev W w
+cnoreabbrev W! w!
+cnoreabbrev WQ wq
+cnoreabbrev Wa wa
+cnoreabbrev Wq wq
+cnoreabbrev wQ wq
 
 "----------------------------------------------
 " Splits
