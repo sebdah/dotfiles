@@ -31,6 +31,7 @@ SETUVAR _fish_abbr_gcf:git\x20commit\x20\x2d\x2dfixup
 SETUVAR _fish_abbr_gcl:git\x20clone
 SETUVAR _fish_abbr_gco:git\x20checkout
 SETUVAR _fish_abbr_gcp:git\x20cherry\x2dpick
+SETUVAR _fish_abbr_gd:git\x20diff
 SETUVAR _fish_abbr_gf:git\x20fetch\x20\x2d\x2dprune
 SETUVAR _fish_abbr_gg:git\x20grep
 SETUVAR _fish_abbr_ggi:git\x20grep\x20\x2di
