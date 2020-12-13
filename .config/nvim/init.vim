@@ -8,18 +8,18 @@
 call plug#begin('~/.vim/plugged')
 
 " Dependencies
-Plug 'Shougo/neocomplcache'        " Depenency for Shougo/neosnippet
-Plug 'godlygeek/tabular'           " This must come before plasticboy/vim-markdown
-Plug 'tpope/vim-rhubarb'           " Depenency for tpope/fugitive
+Plug 'Shougo/neocomplcache'                    " Depenency for Shougo/neosnippet
+Plug 'godlygeek/tabular'                       " This must come before plasticboy/vim-markdown
+Plug 'tpope/vim-rhubarb'                       " Depenency for tpope/fugitive
 
 " General plugins
 Plug 'Shougo/denite.nvim'
 Plug 'Shougo/neosnippet'
-Plug 'Shougo/neosnippet-snippets'  " Default snippets for many languages
+Plug 'Shougo/neosnippet-snippets'              " Default snippets for many languages
 Plug 'Xuyuanp/nerdtree-git-plugin'             " Add git support for nerdtree
 Plug 'bling/vim-airline'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'ctrlpvim/ctrlp.vim'          " CtrlP is installed to support tag finding in vim-go
+Plug 'ctrlpvim/ctrlp.vim'                      " CtrlP is installed to support tag finding in vim-go
 Plug 'editorconfig/editorconfig-vim'
 Plug 'itchyny/calendar.vim'
 Plug 'junegunn/fzf'
