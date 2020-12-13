@@ -374,7 +374,7 @@ nnoremap <a-f> :Ag<cr>
 nnoremap <a-r> :Commands<cr>
 
 " Configure preview window
-let g:fzf_preview_window = ['down:80%', 'ctrl-/']
+let g:fzf_preview_window = ['right:50%', 'ctrl-/']
 
 "----------------------------------------------
 " Plugin: 'majutsushi/tagbar'
