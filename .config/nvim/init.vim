@@ -59,7 +59,7 @@ Plug 'mxw/vim-jsx'                             " JSX syntax highlighting
 Plug 'pangloss/vim-javascript'                 " JavaScript syntax highlighting
 Plug 'plasticboy/vim-markdown'                 " Markdown syntax highlighting
 Plug 'rodjek/vim-puppet'                       " Puppet syntax highlighting
-Plug 'tclh123/vim-thrift'                      " Thrift syntax highlighting
+Plug 'solarnz/thrift.vim'                      " Thrift syntax highlighting
 Plug 'vim-ruby/vim-ruby'                       " Ruby support
 Plug 'zimbatm/haproxy.vim'                     " HAProxy syntax highlighting
 
