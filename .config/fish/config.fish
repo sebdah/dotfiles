@@ -93,6 +93,21 @@ function gLa
   set_color normal;
 end
 
+function gBa
+  set -lx root ~/go/src/github.com/saltside
+
+  for r in (ls -1 $root)
+    cd $root/$r
+
+    set_color blue;
+    echo -ne "$r"
+    set_color normal;
+
+    set -lx branch (git branch --show-current)
+    echo -ne " ($branch)\n"
+  end
+end
+
 # tC is cleaning all tmux sessions.
 function tC
   tmux list-sessions | awk 'BEGIN{FS=":"}{print $1}' | xargs -n 1 tmux kill-session -t
