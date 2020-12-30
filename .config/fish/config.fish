@@ -45,7 +45,7 @@ set -gx NVM_SYMLINK_CURRENT true
 set fish_greeting ""
 
 # Enable direnv (https://direnv.net/)
-eval (direnv hook fish)
+eval (direnv hook fish | source)
 
 # s is running sandbox commands using the local sandbox, never the one in the
 # workstation.
