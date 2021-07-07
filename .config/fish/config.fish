@@ -70,6 +70,10 @@ function gLa
   set -lx root ~/go/src/github.com/saltside
 
   for r in (ls -1 $root)
+    if ! test -d $root/$r
+      continue
+    end
+
     cd $root/$r
 
     set_color blue;
@@ -84,7 +88,35 @@ function gLa
       set -lx branch (git branch --show-current)
       echo -ne " ($branch)"
       set_color green;
-      echo -e " 🗸"
+      echo -e " ✅"
+    end
+  end
+
+  set_color normal;
+end
+
+# gSua is pulling all repositories
+function gSua
+  set -lx root ~/go/src/github.com/saltside
+
+  for r in (ls -1 $root)
+    if ! test -d $root/$r
+      continue
+    end
+
+    cd $root/$r
+
+    set_color blue;
+    echo -ne "Updating submodules $r.."
+    set_color normal;
+
+    git submodule update --init --recursive &> /dev/null
+
+    if test $status -gt 0
+      echo -e " ❌"
+    else
+      set_color green;
+      echo -e " ✅"
     end
   end
 
@@ -95,6 +127,10 @@ function gBa
   set -lx root ~/go/src/github.com/saltside
 
   for r in (ls -1 $root)
+    if ! test -d $root/$r
+      continue
+    end
+
     cd $root/$r
 
     set_color blue;
