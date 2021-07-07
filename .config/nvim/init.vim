@@ -17,7 +17,7 @@ Plug 'Shougo/denite.nvim'
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'              " Default snippets for many languages
 Plug 'Xuyuanp/nerdtree-git-plugin'             " Add git support for nerdtree
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
 Plug 'chrisbra/csv.vim'                        " CSV file helpers
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ctrlpvim/ctrlp.vim'                      " CtrlP is installed to support tag finding in vim-go
