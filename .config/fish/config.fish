@@ -10,9 +10,7 @@ alias tmux "tmux -2"
 alias apexssh "~/go/src/github.com/saltside/apex/scripts/apexssh"
 
 alias agrea "cd ~/go/src/github.com/agrea"
-alias funcd "cd ~/go/src/gitlab.com/funcd"
 alias sebdah "cd ~/go/src/github.com/sebdah"
-alias skymill "cd ~/go/src/gitlab.com/skymill"
 alias work "cd ~/go/src/github.com/saltside"
 
 # Environment variables
