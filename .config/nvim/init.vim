@@ -1,79 +1,83 @@
 "----------------------------------------------
 " Plugin management
 "
-" Download vim-plug from the URL below and follow the installation
+" Download vundle from the URL below and follow the installation
 " instructions:
-" https://github.com/junegunn/vim-plug
+" https://github.com/VundleVim/Vundle.vim
 "----------------------------------------------
-call plug#begin('~/.vim/plugged')
+set nocompatible                                 " be iMproved, required
+filetype off                                     " required
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " Dependencies
-Plug 'Shougo/neocomplcache'                    " Depenency for Shougo/neosnippet
-Plug 'godlygeek/tabular'                       " This must come before plasticboy/vim-markdown
-Plug 'tpope/vim-rhubarb'                       " Depenency for tpope/fugitive
+Plugin 'Shougo/neocomplcache'                    " Depenency for Shougo/neosnippet
+Plugin 'godlygeek/tabular'                       " This must come before plasticboy/vim-markdown
+Plugin 'tpope/vim-rhubarb'                       " Depenency for tpope/fugitive
 
 " General plugins
-Plug 'Shougo/denite.nvim'
-Plug 'Shougo/neosnippet'
-Plug 'Shougo/neosnippet-snippets'              " Default snippets for many languages
-Plug 'Xuyuanp/nerdtree-git-plugin'             " Add git support for nerdtree
-Plug 'vim-airline/vim-airline'
-Plug 'chrisbra/csv.vim'                        " CSV file helpers
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'ctrlpvim/ctrlp.vim'                      " CtrlP is installed to support tag finding in vim-go
-Plug 'editorconfig/editorconfig-vim'
-Plug 'junegunn/fzf'
-Plug 'junegunn/fzf.vim'
-Plug 'junegunn/goyo.vim'
-Plug 'majutsushi/tagbar'
-Plug 'mg979/vim-visual-multi'
-Plug 'mhinz/vim-signify'
-Plug 'mileszs/ack.vim'
-Plug 'ncm2/float-preview.nvim'                 " Support floating preview windows in neovim
-Plug 'neomake/neomake'
-Plug 'preservim/nerdcommenter'
-Plug 'preservim/nerdtree'
-Plug 'rbgrouleff/bclose.vim'
-Plug 'sbdchd/neoformat'
-Plug 'sebdah/vim-delve'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-surround'
-Plug 'vimwiki/vimwiki'
+Plugin 'Shougo/denite.nvim'
+Plugin 'Shougo/neosnippet'
+Plugin 'Shougo/neosnippet-snippets'              " Default snippets for many languages
+Plugin 'Xuyuanp/nerdtree-git-plugin'             " Add git support for nerdtree
+Plugin 'vim-airline/vim-airline'
+Plugin 'chrisbra/csv.vim'                        " CSV file helpers
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'ctrlpvim/ctrlp.vim'                      " CtrlP is installed to support tag finding in vim-go
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
+Plugin 'junegunn/goyo.vim'
+Plugin 'majutsushi/tagbar'
+Plugin 'mg979/vim-visual-multi'
+Plugin 'mhinz/vim-signify'
+Plugin 'mileszs/ack.vim'
+Plugin 'ncm2/float-preview.nvim'                 " Support floating preview windows in neovim
+Plugin 'neomake/neomake'
+Plugin 'preservim/nerdcommenter'
+Plugin 'preservim/nerdtree'
+Plugin 'rbgrouleff/bclose.vim'
+Plugin 'sbdchd/neoformat'
+Plugin 'sebdah/vim-delve'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
+Plugin 'vimwiki/vimwiki'
 
 " Language support
-Plug 'HerringtonDarkholme/yats.vim'            " TypeScript syntax
-Plug 'aklt/plantuml-syntax'                    " PlantUML syntax highlighting
-Plug 'cespare/vim-toml'                        " toml syntax highlighting
-Plug 'chr4/nginx.vim'                          " nginx syntax highlighting
-Plug 'dag/vim-fish'                            " Fish syntax highlighting
-Plug 'digitaltoad/vim-pug'                     " Pug syntax highlighting
-Plug 'fatih/vim-go'                            " Go support
-Plug 'hashivim/vim-terraform'                  " Terraform syntax highlighting
-Plug 'jparise/vim-graphql'                     " GraphQL syntax highlighting and indentation
-Plug 'kchmck/vim-coffee-script'                " CoffeeScript syntax highlighting
-Plug 'kylef/apiblueprint.vim'                  " API Blueprint syntax highlighting
-Plug 'leafgarland/typescript-vim'              " TypeScript syntax highlighting
-Plug 'lifepillar/pgsql.vim'                    " PostgreSQL syntax highlighting
-Plug 'mhartington/nvim-typescript', {'do': './install.sh'} " TypeScript auto completion
-Plug 'mxw/vim-jsx'                             " JSX syntax highlighting
-Plug 'pangloss/vim-javascript'                 " JavaScript syntax highlighting
-Plug 'plasticboy/vim-markdown'                 " Markdown syntax highlighting
-Plug 'rodjek/vim-puppet'                       " Puppet syntax highlighting
-Plug 'solarnz/thrift.vim'                      " Thrift syntax highlighting
-Plug 'vim-ruby/vim-ruby'                       " Ruby support
-Plug 'zimbatm/haproxy.vim'                     " HAProxy syntax highlighting
+Plugin 'HerringtonDarkholme/yats.vim'            " TypeScript syntax
+Plugin 'aklt/plantuml-syntax'                    " PlantUML syntax highlighting
+Plugin 'cespare/vim-toml'                        " toml syntax highlighting
+Plugin 'chr4/nginx.vim'                          " nginx syntax highlighting
+Plugin 'dag/vim-fish'                            " Fish syntax highlighting
+Plugin 'digitaltoad/vim-pug'                     " Pug syntax highlighting
+Plugin 'fatih/vim-go'                            " Go support
+Plugin 'hashivim/vim-terraform'                  " Terraform syntax highlighting
+Plugin 'jparise/vim-graphql'                     " GraphQL syntax highlighting and indentation
+Plugin 'kchmck/vim-coffee-script'                " CoffeeScript syntax highlighting
+Plugin 'kylef/apiblueprint.vim'                  " API Blueprint syntax highlighting
+Plugin 'leafgarland/typescript-vim'              " TypeScript syntax highlighting
+Plugin 'lifepillar/pgsql.vim'                    " PostgreSQL syntax highlighting
+Plugin 'mhartington/nvim-typescript', {'do': './install.sh'} " TypeScript auto completion
+Plugin 'mxw/vim-jsx'                             " JSX syntax highlighting
+Plugin 'pangloss/vim-javascript'                 " JavaScript syntax highlighting
+Plugin 'plasticboy/vim-markdown'                 " Markdown syntax highlighting
+Plugin 'rodjek/vim-puppet'                       " Puppet syntax highlighting
+Plugin 'solarnz/thrift.vim'                      " Thrift syntax highlighting
+Plugin 'vim-ruby/vim-ruby'                       " Ruby support
+Plugin 'zimbatm/haproxy.vim'                     " HAProxy syntax highlighting
 
 " Colorschemes
-Plug 'NLKNguyen/papercolor-theme'
-Plug 'altercation/vim-colors-solarized'
-Plug 'ayu-theme/ayu-vim'
-Plug 'cocopon/iceberg.vim'
-Plug 'dikiaap/minimalist'
-Plug 'kaicataldo/material.vim', { 'branch': 'main' }
-Plug 'rakr/vim-one'
-Plug 'ulwlu/elly.vim'
+Plugin 'NLKNguyen/papercolor-theme'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'ayu-theme/ayu-vim'
+Plugin 'cocopon/iceberg.vim'
+Plugin 'dikiaap/minimalist'
+Plugin 'kaicataldo/material.vim', { 'branch': 'main' }
+Plugin 'rakr/vim-one'
+Plugin 'ulwlu/elly.vim'
 
-call plug#end()
+call vundle#end()                                " required for Vundle
+filetype plugin indent on                        " required for Vundle
 
 "----------------------------------------------
 " General settings
@@ -111,7 +115,7 @@ if has('nvim')
     " example:
     " pip3.6 install -U neovim
     let g:python_host_prog = '/usr/bin/python2'
-    let g:python3_host_prog = '/usr/bin/python3'
+    let g:python3_host_prog = '/usr/local/bin/python3'
 endif
 
 " Enable mouse if possible
