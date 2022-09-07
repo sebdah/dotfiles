@@ -32,6 +32,7 @@ set -gx BROWSER open
 set -gx EDITOR nvim
 set -gx VISUAL nvim
 set -gx PAGER less
+set -gx GPG_TTY (tty)
 set -gx LANG en_US.UTF-8
 set -gx LANGUAGE en_US.utf-8
 set -gx LC_ALL en_US.UTF-8
@@ -74,7 +75,7 @@ function gLa
       continue
     end
 
-    cd $root/$r
+    pushd $root/$r
 
     set_color blue;
     echo -ne "Pulling $r.."
@@ -90,6 +91,8 @@ function gLa
       set_color green;
       echo -e " ✅"
     end
+
+    popd
   end
 
   set_color normal;
@@ -104,7 +107,7 @@ function gSua
       continue
     end
 
-    cd $root/$r
+    pushd $root/$r
 
     set_color blue;
     echo -ne "Updating submodules $r.."
@@ -118,6 +121,8 @@ function gSua
       set_color green;
       echo -e " ✅"
     end
+
+    popd
   end
 
   set_color normal;
@@ -131,7 +136,7 @@ function gBa
       continue
     end
 
-    cd $root/$r
+    pushd $root/$r
 
     set_color blue;
     echo -ne "$r"
@@ -139,6 +144,8 @@ function gBa
 
     set -lx branch (git branch --show-current)
     echo -ne " ($branch)\n"
+
+    popd
   end
 end
 
@@ -146,3 +153,4 @@ end
 function tC
   tmux list-sessions | awk 'BEGIN{FS=":"}{print $1}' | xargs -n 1 tmux kill-session -t
 end
+rvm default

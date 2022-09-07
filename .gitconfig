@@ -57,7 +57,7 @@
 [push]
 	default = current
 [filter "lfs"]
-	clean = git lfs clean %f
+	clean = git-lfs clean -- %f
 	smudge = git lfs smudge %f
 	required = true
 [rebase]
@@ -77,4 +77,6 @@
 [url "git@github.com:"]
 	insteadOf = https://github.com/
 [credential]
-	helper = store
+	helper = osxkeychain
+[init]
+	defaultBranch = main
