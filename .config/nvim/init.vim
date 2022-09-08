@@ -1,14 +1,8 @@
 "----------------------------------------------
 " Plug management
-"
-" Download vundle from the URL below and follow the installation
-" instructions:
-" https://github.com/VundleVim/Vundle.vim
-"----------------------------------------------
+"---------------------------------------------
 set nocompatible                                 " be iMproved, required
 filetype off                                     " required
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
 
 call plug#begin()
 " Dependencies
@@ -21,11 +15,11 @@ Plug 'Shougo/denite.nvim'
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'              " Default snippets for many languages
 Plug 'Xuyuanp/nerdtree-git-plugin'             " Add git support for nerdtree
-Plug 'vim-airline/vim-airline'
 Plug 'chrisbra/csv.vim'                        " CSV file helpers
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ctrlpvim/ctrlp.vim'                      " CtrlP is installed to support tag finding in vim-go
 Plug 'editorconfig/editorconfig-vim'
+Plug 'github/copilot.vim'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
@@ -42,6 +36,7 @@ Plug 'sbdchd/neoformat'
 Plug 'sebdah/vim-delve'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
+Plug 'vim-airline/vim-airline'
 Plug 'vimwiki/vimwiki'
 
 " Language support
@@ -77,6 +72,9 @@ Plug 'dikiaap/minimalist'
 Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 Plug 'rakr/vim-one'
 Plug 'ulwlu/elly.vim'
+
+" Load last
+Plug 'ryanoasis/vim-devicons'                  " Icons for NerdTree / Airline etc
 
 call plug#end()                                  " required for Vundle
 filetype plugin indent on                        " required for Vundle
@@ -350,6 +348,13 @@ let g:ctrlp_map = ''
 " Enable support for bidirectional motions
 map  <leader><leader>w <Plug>(easymotion-bd-w)
 nmap <leader><leader>w <Plug>(easymotion-overwin-w)
+
+
+"----------------------------------------------
+" Plugin: github/copilot.vim
+"----------------------------------------------
+" Set a custom path for node for copilot.
+let g:copilot_node_command = '/Users/sebdah/.config/nvm/17.9.1/bin/node'
 
 "----------------------------------------------
 " Plugin: 'itchyny/calendar.vim'
