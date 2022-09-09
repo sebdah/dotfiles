@@ -18,6 +18,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'             " Add git support for nerdtree
 Plug 'chrisbra/csv.vim'                        " CSV file helpers
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ctrlpvim/ctrlp.vim'                      " CtrlP is installed to support tag finding in vim-go
+Plug 'dense-analysis/ale'                      " Linting support for multiple languages
 Plug 'editorconfig/editorconfig-vim'
 Plug 'github/copilot.vim'
 Plug 'junegunn/fzf'
