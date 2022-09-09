@@ -5,7 +5,6 @@ ln -s $(pwd)/.config/direnv ${HOME}/.config/direnv
 ln -s $(pwd)/.config/fish ${HOME}/.config/fish
 ln -s $(pwd)/.config/git ${HOME}/.config/git
 ln -s $(pwd)/.config/htop ${HOME}/.config/htop
-ln -s $(pwd)/.config/hub ${HOME}/.config/hub
 ln -s $(pwd)/.config/kitty ${HOME}/.config/kitty
 ln -s $(pwd)/.config/nvim ${HOME}/.config/nvim
 ln -s $(pwd)/.gitconfig ${HOME}/.gitconfig
