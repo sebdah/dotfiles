@@ -6,5 +6,4 @@
 *.log
 npm*.log*
 .vim-bookmarks
-tags
 .rakeTasks
