@@ -1,5 +1,4 @@
 . ~/.profile-secrets.fish
-#. ~/dotfiles/clearance-fish/fish_prompt.fish
 
 # Aliases
 alias ls 'exa'
@@ -7,27 +6,24 @@ alias grep 'grep --color=auto'
 alias scp "scp -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
 alias ssh "ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
 alias tmux "tmux -2"
-alias apexssh "~/go/src/github.com/saltside/apex/scripts/apexssh"
 
 alias agrea "cd ~/go/src/github.com/agrea"
 alias sebdah "cd ~/go/src/github.com/sebdah"
-alias work "cd ~/go/src/github.com/saltside"
 
 # Environment variables
 set -gx PATH \
-  ~/bin \
-  ~/go/bin \
-  /var/lib/snapd/snap/bin \
-  /usr/local/bin \
+  /bin \
   /usr/bin \
   /usr/sbin \
-  ~/go/src/github.com/saltside/workstation/bin \
-  ~/.gem/ruby/2.7.0/bin \
-  $PATH
+  /usr/local/bin \
+  /var/lib/snapd/snap/bin \
+  ~/bin \
+  ~/.local/bin \
+  ~/go/bin
 
 set -gx LESS '-F -g -i -M -R -S -w -X -z-4'
 set -gx GOPATH ~/go
-set -gx GOPRIVATE 'github.com/saltside/*,github.com/NordiskFilmDistribution/*,github.com/sebdah/devinsight,github.com/clockwork-guru/*'
+set -gx GOPRIVATE 'github.com/sebdah/devinsight,github.com/clockwork-guru/*'
 set -gx BROWSER open
 set -gx EDITOR nvim
 set -gx VISUAL nvim
@@ -46,14 +42,6 @@ set fish_greeting ""
 # Enable direnv (https://direnv.net/)
 eval (direnv hook fish | source)
 
-# s is running sandbox commands using the local sandbox, never the one in the
-# workstation.
-function s --description "s <command>"
-  cd ~/go/src/github.com/saltside/sandbox
-  saltside-workstation run ./bin/sandbox -t aws $argv
-  cd -
-end
-
 # dcleanup can be used to clean up docker images.
 function dcleanup
   docker rm -v (docker ps --filter status=exited -q ^ /dev/null) ^ /dev/null
@@ -68,14 +56,12 @@ end
 
 # gLa is pulling all repositories
 function gLa
-  set -lx root ~/go/src/github.com/saltside
-
-  for r in (ls -1 $root)
-    if ! test -d $root/$r
+  for r in (ls -1)
+    if ! test -d $r
       continue
     end
 
-    pushd $root/$r
+    pushd $r
 
     set_color blue;
     echo -ne "Pulling $r.."
@@ -100,14 +86,12 @@ end
 
 # gSua is pulling all repositories
 function gSua
-  set -lx root ~/go/src/github.com/saltside
-
-  for r in (ls -1 $root)
-    if ! test -d $root/$r
+  for r in (ls -1)
+    if ! test -d $r
       continue
     end
 
-    pushd $root/$r
+    pushd $r
 
     set_color blue;
     echo -ne "Updating submodules $r.."
@@ -129,14 +113,12 @@ function gSua
 end
 
 function gBa
-  set -lx root ~/go/src/github.com/saltside
-
-  for r in (ls -1 $root)
-    if ! test -d $root/$r
+  for r in (ls -1)
+    if ! test -d $r
       continue
     end
 
-    pushd $root/$r
+    pushd $r
 
     set_color blue;
     echo -ne "$r"
@@ -153,4 +135,3 @@ end
 function tC
   tmux list-sessions | awk 'BEGIN{FS=":"}{print $1}' | xargs -n 1 tmux kill-session -t
 end
-rvm default
