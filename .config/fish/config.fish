@@ -12,6 +12,7 @@ alias sebdah "cd ~/go/src/github.com/sebdah"
 
 # Environment variables
 set -gx PATH \
+  /opt/facebook/hg/bin \
   /bin \
   /usr/bin \
   /usr/sbin \
