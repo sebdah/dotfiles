@@ -35,6 +35,10 @@
       create: true
       path: agignore
       relink: true
+    ~/.gitconfig:
+      create: true
+      path: gitconfig
+      relink: true
     ~/.gitignore:
       create: true
       path: gitignore
