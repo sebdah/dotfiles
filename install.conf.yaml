@@ -13,10 +13,6 @@
       create: true
       path: bin
       relink: true
-    ~/.config/direnv:
-      create: true
-      path: config/direnv
-      relink: true
     ~/.config/fish:
       create: true
       path: config/fish

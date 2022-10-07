@@ -43,9 +43,6 @@ set -gx VISUAL nvim
 # Disable the fish greeting
 set fish_greeting ""
 
-# Enable direnv (https://direnv.net/)
-eval (direnv hook fish | source)
-
 # dcleanup can be used to clean up docker images.
 function dcleanup
   docker rm -v (docker ps --filter status=exited -q ^ /dev/null) ^ /dev/null
