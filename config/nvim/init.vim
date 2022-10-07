@@ -63,6 +63,16 @@ Plug 'solarnz/thrift.vim'                      " Thrift syntax highlighting
 Plug 'vim-ruby/vim-ruby'                       " Ruby support
 Plug 'zimbatm/haproxy.vim'                     " HAProxy syntax highlighting
 
+" Meta related
+if getenv('meta') == 'true'
+    Plug 'neovim/nvim-lspconfig'
+    Plug 'jose-elias-alvarez/null-ls.nvim'
+    Plug 'nvim-treesitter/nvim-treesitter'     " Required by telescope.vim
+    Plug 'nvim-telescope/telescope.nvim'
+    Plug 'nvim-lua/plenary.nvim'
+    Plug '/usr/share/fb-editor-support/nvim', {'as': 'meta.nvim'}
+endif
+
 " Colorschemes
 Plug 'EdenEast/nightfox.nvim'
 Plug 'NLKNguyen/papercolor-theme'
@@ -79,6 +89,21 @@ Plug 'ryanoasis/vim-devicons'                  " Icons for NerdTree / Airline et
 
 call plug#end()                                  " required for Vundle
 filetype plugin indent on                        " required for Vundle
+
+"----------------------------------------------
+" Meta configuration
+"----------------------------------------------
+if getenv('meta') == 'true'
+    lua << EOF
+require("meta.lsp")
+local servers = { "rusty@meta", "pyls@meta", "pyre@meta", "thriftlsp@meta", "cppls@meta" }
+for _, lsp in ipairs(servers) do
+  require("lspconfig")[lsp].setup {
+    on_attach = on_attach,
+  }
+end
+EOF
+endif
 
 "----------------------------------------------
 " General settings
