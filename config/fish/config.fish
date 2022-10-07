@@ -1,4 +1,6 @@
-. ~/.profile-secrets.fish
+if test -e ~/.profile-secrets.fish
+  . ~/.profile-secrets.fish
+end
 
 # Aliases
 alias ls 'exa'
