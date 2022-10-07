@@ -1,5 +1,5 @@
-[submodule ".tmux/plugins/tpm"]
-	path = .tmux/plugins/tpm
+[submodule "tmux/plugins/tpm"]
+	path = tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
 [submodule ".config/kitty/kitty-themes"]
 	path = .config/kitty/kitty-themes
