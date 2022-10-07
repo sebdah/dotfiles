@@ -23,20 +23,21 @@ set -gx PATH \
   ~/.local/bin \
   ~/go/bin
 
-set -gx LESS '-F -g -i -M -R -S -w -X -z-4'
-set -gx GOPATH ~/go
-set -gx GOPRIVATE 'github.com/sebdah/devinsight,github.com/clockwork-guru/*'
 set -gx BROWSER open
 set -gx EDITOR nvim
-set -gx VISUAL nvim
-set -gx PAGER less
+set -gx FZF_DEFAULT_COMMAND 'ag --hidden -p ~/.agignore -g ""'
+set -gx GOPATH ~/go
+set -gx GOPRIVATE 'github.com/sebdah/devinsight,github.com/clockwork-guru/*'
 set -gx GPG_TTY (tty)
 set -gx LANG en_US.UTF-8
 set -gx LANGUAGE en_US.utf-8
 set -gx LC_ALL en_US.UTF-8
-set -gx FZF_DEFAULT_COMMAND 'ag --hidden -p ~/.agignore -g ""'
+set -gx LESS '-F -g -i -M -R -S -w -X -z-4'
 set -gx LSCOLORS 'Exfxcxdxbxegedabagacad'
 set -gx NVM_SYMLINK_CURRENT true
+set -gx PAGER less
+set -gx TERM screen-256color
+set -gx VISUAL nvim
 
 # Disable the fish greeting
 set fish_greeting ""
@@ -137,3 +138,5 @@ end
 function tC
   tmux list-sessions | awk 'BEGIN{FS=":"}{print $1}' | xargs -n 1 tmux kill-session -t
 end
+
+starship init fish | source

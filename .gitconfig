@@ -1,6 +1,6 @@
 [user]
 	name = Sebastian Dahlgren
-	email = sebastian.dahlgren@gmail.com
+	email = sebdah@fb.com
 	signingkey = 0AAC354611A9CF4B
 [alias]
 	branches = !git for-each-ref \
