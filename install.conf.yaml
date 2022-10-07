@@ -1,3 +1,13 @@
+- shell:
+  -
+    description: Set fish as the default shell
+    command: chsh -s $(which fish)
+  -
+    description: Install Starship (https://starship.rs/)
+    command: "curl -sS https://starship.rs/install.sh | sh"
+    stdin: true
+    stdout: true
+
 - link:
     ~/bin:
       create: true
