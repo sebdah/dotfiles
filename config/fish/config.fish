@@ -23,7 +23,8 @@ set -gx PATH \
   /var/lib/snapd/snap/bin \
   ~/bin \
   ~/.local/bin \
-  ~/go/bin
+  ~/go/bin \
+  ~/.fzf/bin
 
 set -gx BROWSER open
 set -gx EDITOR nvim
