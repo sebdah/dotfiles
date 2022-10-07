@@ -48,8 +48,6 @@ SETUVAR _fish_abbr_gsp:git\x20stash\x20pop
 SETUVAR _fish_abbr_gst:git\x20status
 SETUVAR _fish_abbr_gwC:git\x20clean\x20\x2dffdx
 SETUVAR _fish_abbr_gwd:git\x20diff
-SETUVAR _fish_abbr_l:exa\x20\x2dl\x20\x2d\x2dgit\x20\x2d\x2dgroup\x2ddirectories\x2dfirst
-SETUVAR _fish_abbr_la:exa\x20\x2dl\x20\x2d\x2dgit\x20\x2d\x2dgroup\x2ddirectories\x2dfirst\x20\x2da
 SETUVAR _fish_abbr_ta:tmux\x20a\x20\x2dt\x20common
 SETUVAR _fish_abbr_w:saltside\x2dworkstation
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
