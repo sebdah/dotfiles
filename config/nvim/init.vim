@@ -64,14 +64,12 @@ Plug 'vim-ruby/vim-ruby'                       " Ruby support
 Plug 'zimbatm/haproxy.vim'                     " HAProxy syntax highlighting
 
 " Meta related
-if getenv('meta') == 'true'
-    Plug 'neovim/nvim-lspconfig'
-    Plug 'jose-elias-alvarez/null-ls.nvim'
-    Plug 'nvim-treesitter/nvim-treesitter'     " Required by telescope.vim
-    Plug 'nvim-telescope/telescope.nvim'
-    Plug 'nvim-lua/plenary.nvim'
-    Plug '/usr/share/fb-editor-support/nvim', {'as': 'meta.nvim'}
-endif
+Plug 'neovim/nvim-lspconfig'
+Plug 'jose-elias-alvarez/null-ls.nvim'
+Plug 'nvim-treesitter/nvim-treesitter'     " Required by telescope.vim
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug '/usr/share/fb-editor-support/nvim', {'as': 'meta.nvim'}
 
 " Colorschemes
 Plug 'EdenEast/nightfox.nvim'
@@ -87,23 +85,99 @@ Plug 'ulwlu/elly.vim'
 " Load last
 Plug 'ryanoasis/vim-devicons'                  " Icons for NerdTree / Airline etc
 
-call plug#end()                                  " required for Vundle
-filetype plugin indent on                        " required for Vundle
+call plug#end()                                " End Plug config section
 
 "----------------------------------------------
 " Meta configuration
 "----------------------------------------------
-if getenv('meta') == 'true'
-    lua << EOF
-require("meta.lsp")
-local servers = { "rusty@meta", "pyls@meta", "pyre@meta", "thriftlsp@meta", "cppls@meta" }
+"if getenv('meta') == 'true'
+lua << EOF
+local meta = require("meta")
+
+-- Keybinds
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>p",
+  [[<cmd>Telescope myles<CR>]],
+  { noremap = true, silent = true }
+)
+
+-- Local LSP Configs
+-- This imports ~/.config/nvim/lua/lsp.lua or ~/.config/nvim/lua/lsp/init.lua.
+local lsp_util = require("lsp")
+-- This imports `lua/lspconfig/init.lua` from the nvim-lspconfig plugin.
+local nvim_lsp = require("lspconfig")
+
+-- Enable Meta specific commands like e.g. MetaDiffOpenFiles, GetCodehubLink
+require("meta.cmds")
+
+-------------------------------------------------------------------------------
+-- LSP server configuration
+-------------------------------------------------------------------------------
+local servers = {
+  "rusty@meta",
+  "pyls@meta",
+  "wasabi@meta",
+  "pyre@meta",
+  "thriftlsp@meta",
+  "cppls@meta",
+  "buckls@meta",
+  "erlang@meta",
+  "gopls@meta",
+}
 for _, lsp in ipairs(servers) do
   require("lspconfig")[lsp].setup {
     on_attach = on_attach,
+    capabilities = lsp_util.capabilities,
+    print_meta_ls_statuses_to_messages = false,
   }
 end
+
+-- Start a language server client from a native lspconfig config.
+nvim_lsp["flow"].setup({
+  cmd = { "flow", "lsp" },
+  on_attach = lsp_util.on_attach,
+  capabilities = lsp_util.capabilities,
+})
+
+nvim_lsp["hhvm"].setup({
+  on_attach = lsp_util.on_attach,
+  capabilities = lsp_util.capabilities,
+})
+
+-------------------------------------------------------------------------------
+-- Null LS configuration
+-------------------------------------------------------------------------------
+-- This imports `lua/null-ls/init.lua` from the null-ls plugin.
+local null_ls = require("null-ls")
+-- Register allows you to add more null-ls sources after having already called
+-- null_ls.setup().
+null_ls.register({
+  meta.null_ls.diagnostics.arclint,
+  meta.null_ls.formatting.arclint,
+})
+
+-------------------------------------------------------------------------------
+-- Tree sitter configuration
+-------------------------------------------------------------------------------
+require("nvim-treesitter.install").prefer_git = true
+require("nvim-treesitter.install").command_extra_args = {
+    curl = { "--proxy", "http://fwdproxy:8080" },
+}
 EOF
-endif
+
+" fzf commands
+command! -bang -nargs=* Tbgs
+  \ call fzf#vim#grep(
+  \   'tbgs -c on '.shellescape(<q-args>), 1,
+  \   fzf#vim#with_preview(), <bang>0)
+
+command! -bang -nargs=* Tbgf
+  \ call fzf#vim#grep(
+  \   'tbgf -c on '.shellescape(<q-args>), 1,
+  \   fzf#vim#with_preview(), <bang>0)
+
+"endif
 
 "----------------------------------------------
 " General settings
