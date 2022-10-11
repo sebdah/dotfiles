@@ -102,14 +102,4 @@ local on_attach = function(client, bufnr)
 end
 M.on_attach = on_attach
 
--- null-ls configs
-local null_ls = require("null-ls")
-null_ls.setup({
-  on_attach = on_attach,
-  sources = {
-    null_ls.builtins.formatting.trim_whitespace,
-    null_ls.builtins.formatting.trim_newlines,
-  },
-})
-
 return M
