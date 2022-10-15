@@ -1,4 +1,19 @@
 "----------------------------------------------
+" Meta configuration
+"---------------------------------------------
+" Determine if we're in a Meta environment or not. This will have side effects
+" on key bindings and plugins that we're loading.
+let s:meta_env = "false"
+
+if getcwd() =~ ".*/fbsource.*" || getcwd() =~ ".*/configerator.*" || getcwd() =~ ".*/www.*"
+    let s:meta_env = "true"
+endif
+
+if s:meta_env == "true"
+    echomsg "> Loading Meta environment    ..."
+endif
+
+"----------------------------------------------
 " Plug management
 "---------------------------------------------
 set nocompatible                                 " be iMproved, required
@@ -64,7 +79,7 @@ Plug 'vim-ruby/vim-ruby'                       " Ruby support
 Plug 'zimbatm/haproxy.vim'                     " HAProxy syntax highlighting
 
 " Meta related
-if $META == "true"
+if s:meta_env == "true"
     Plug 'neovim/nvim-lspconfig'
     Plug 'jose-elias-alvarez/null-ls.nvim'
     Plug 'nvim-treesitter/nvim-treesitter'     " Required by telescope.vim
@@ -92,19 +107,12 @@ call plug#end()                                " End Plug config section
 "----------------------------------------------
 " Meta configuration
 "----------------------------------------------
-if $META == "true"
+if s:meta_env == "true"
+    " General Meta configuration
     lua require("meta_config")
 
-    " fzf commands
-    command! -bang -nargs=* Tbgs
-      \ call fzf#vim#grep(
-      \   'tbgs -c on '.shellescape(<q-args>), 1,
-      \   fzf#vim#with_preview(), <bang>0)
-
-    command! -bang -nargs=* Tbgf
-      \ call fzf#vim#grep(
-      \   'tbgf -c on '.shellescape(<q-args>), 1,
-      \   fzf#vim#with_preview(), <bang>0)
+    " Mercurial configuration
+    lua require('meta.hg').setup()
 endif
 
 "----------------------------------------------
@@ -403,12 +411,44 @@ let g:calendar_view = "days"                  " Set days as the default view
 "----------------------------------------------
 " Plugin: 'junegunn/fzf.vim'
 "----------------------------------------------
+if s:meta_env == "true"
+    command! -bang -nargs=* Cbgs
+      \ call fzf#vim#grep(
+      \   'cbgs --forcedir ~/configerator --exclude "raw_config" -c on '.shellescape(<q-args>), 1,
+      \   fzf#vim#with_preview(), <bang>0)
+
+    command! -bang -nargs=* Cbgf
+      \ call fzf#vim#grep(
+      \   'cbgf --forcedir ~/configerator --exclude "raw_config" -c on '.shellescape(<q-args>), 1,
+      \   fzf#vim#with_preview(), <bang>0)
+
+    command! -bang -nargs=* Fbgs
+      \ call fzf#vim#grep(
+      \   'fbgs --forcedir ~/fbsource/fbcode -c on '.shellescape(<q-args>), 1,
+      \   fzf#vim#with_preview(), <bang>0)
+
+    command! -bang -nargs=* Fbgf
+      \ call fzf#vim#grep(
+      \   'fbgf --forcedir ~/fbsource/fbcode -c on '.shellescape(<q-args>), 1,
+      \   fzf#vim#with_preview(), <bang>0)
+
+    command! -bang -nargs=* Tbgs
+      \ call fzf#vim#grep(
+      \   'tbgs --forcedir ~/www -c on '.shellescape(<q-args>), 1,
+      \   fzf#vim#with_preview(), <bang>0)
+
+    command! -bang -nargs=* Tbgf
+      \ call fzf#vim#grep(
+      \   'tbgf --forcedir ~/www -c on '.shellescape(<q-args>), 1,
+      \   fzf#vim#with_preview(), <bang>0)
+
+endif
+
 nnoremap <c-p> :FZF<cr>
-nnoremap <a-p> :FZF<cr>
-nnoremap <a-c> :Commands<cr>
 nnoremap <a-g> :Commits<cr>
 nnoremap <a-s-g> :BCommits<cr>
 nnoremap <a-d> :GitFiles?<cr>
+nnoremap <a-c> :Commands<cr>
 nnoremap <a-f> :Ag<cr>
 nnoremap <a-r> :Commands<cr>
 
@@ -546,9 +586,9 @@ let g:neosnippet#snippets_directory='~/.config/nvim/snippets'
 "----------------------------------------------
 " Path to wiki
 let g:vimwiki_list = [{
-        \ 'path': '~/Dropbox/vimwiki',
-        \ 'syntax': 'markdown',
-        \ 'ext': '.vimwiki.markdown'}]
+    \ 'path': '~/Dropbox/vimwiki',
+    \ 'syntax': 'markdown',
+    \ 'ext': '.vimwiki.markdown'}]
 
 au FileType vimwiki set expandtab
 au FileType vimwiki set shiftwidth=2
