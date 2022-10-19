@@ -409,6 +409,12 @@ let g:calendar_week_number = 1                " Show week numbers
 let g:calendar_view = "days"                  " Set days as the default view
 
 "----------------------------------------------
+" Plugin: 'junegunn/goyo.vim'
+"----------------------------------------------
+" Set the default width of Goyo.
+let g:goyo_width = 120
+
+"----------------------------------------------
 " Plugin: 'junegunn/fzf.vim'
 "----------------------------------------------
 if s:meta_env == "true"
