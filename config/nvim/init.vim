@@ -35,7 +35,6 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'ctrlpvim/ctrlp.vim'                      " CtrlP is installed to support tag finding in vim-go
 Plug 'dense-analysis/ale'                      " Linting support for multiple languages
 Plug 'editorconfig/editorconfig-vim'
-Plug 'github/copilot.vim'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
@@ -341,13 +340,6 @@ let g:ctrlp_map = ''
 " Enable support for bidirectional motions
 map  <leader><leader>w <Plug>(easymotion-bd-w)
 nmap <leader><leader>w <Plug>(easymotion-overwin-w)
-
-
-"----------------------------------------------
-" Plugin: github/copilot.vim
-"----------------------------------------------
-" Set a custom path for node for copilot.
-let g:copilot_node_command = '/Users/sebdah/.config/nvm/17.9.1/bin/node'
 
 "----------------------------------------------
 " Plugin: 'itchyny/calendar.vim'
