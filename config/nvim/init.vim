@@ -282,45 +282,6 @@ nnoremap <leader>q :close<cr>
 set tags=tags;/
 
 "----------------------------------------------
-" Plugin: MattesGroeger/vim-bookmarks
-"----------------------------------------------
-" Auto save bookmarks
-let g:bookmark_auto_save = 1
-
-" Store the bookmarks in the projects
-let g:bookmark_save_per_working_dir = 1
-
-" Disable the default key mappings
-let g:bookmark_no_default_key_mappings = 1
-
-" Configure key mappings
-" This part also fixes conflicts with NERDTree
-function! BookmarkMapKeys()
-    nmap Mm :BookmarkToggle<cr>
-    nmap Mi :BookmarkAnnotate<cr>
-    nmap Mn :BookmarkNext<cr>
-    nmap Mp :BookmarkPrev<cr>
-    nmap Ma :BookmarkShowAll<cr>
-    nmap Mc :BookmarkClear<cr>
-    nmap Mx :BookmarkClearAll<cr>
-    nmap Mkk :BookmarkMoveUp
-    nmap Mjj :BookmarkMoveDown
-endfunction
-function! BookmarkUnmapKeys()
-    unmap Mm
-    unmap Mi
-    unmap Mn
-    unmap Mp
-    unmap Ma
-    unmap Mc
-    unmap Mx
-    unmap Mkk
-    unmap Mjj
-endfunction
-autocmd BufEnter * :call BookmarkMapKeys()
-autocmd BufEnter NERD_tree_* :call BookmarkUnmapKeys()
-
-"----------------------------------------------
 " Plugin: bling/vim-airline
 "----------------------------------------------
 " Show status bar by default.
