@@ -21,14 +21,11 @@ filetype off                                     " required
 
 call plug#begin()
 " Dependencies
-Plug 'Shougo/neocomplcache'                    " Depenency for Shougo/neosnippet
 Plug 'godlygeek/tabular'                       " This must come before plasticboy/vim-markdown
 Plug 'tpope/vim-rhubarb'                       " Depenency for tpope/fugitive
 
 " General plugins
 Plug 'Shougo/denite.nvim'
-Plug 'Shougo/neosnippet'
-Plug 'Shougo/neosnippet-snippets'              " Default snippets for many languages
 Plug 'Xuyuanp/nerdtree-git-plugin'             " Add git support for nerdtree
 Plug 'chrisbra/csv.vim'                        " CSV file helpers
 Plug 'christoomey/vim-tmux-navigator'
@@ -521,26 +518,6 @@ let g:delve_backend = "native"
 "----------------------------------------------
 " Toggle centerpad with a key mapping.
 nnoremap <silent><leader>z <cmd>Centerpad<cr>
-
-"----------------------------------------------
-" Plugin: Shougo/neosnippet
-"----------------------------------------------
-" Disable the default snippets (needed since we do not install
-" Shougo/neosnippet-snippets).
-"
-" Below you can disable default snippets for specific languages. If you set the
-" language to _ it sets the default for all languages.
-let g:neosnippet#disable_runtime_snippets = {
-    \ 'go': 1
-\}
-
-" Keybindings
-imap <C-k> <Plug>(neosnippet_expand_or_jump)
-smap <C-k> <Plug>(neosnippet_expand_or_jump)
-xmap <C-k> <Plug>(neosnippet_expand_target)
-
-" Set the path to our snippets
-let g:neosnippet#snippets_directory='~/.config/nvim/snippets'
 
 "----------------------------------------------
 " Plugin: vimwiki/vimwiki
