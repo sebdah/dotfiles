@@ -76,12 +76,12 @@ Plug 'vim-ruby/vim-ruby'                       " Ruby support
 Plug 'zimbatm/haproxy.vim'                     " HAProxy syntax highlighting
 
 " Meta related
+Plug 'neovim/nvim-lspconfig'
+Plug 'jose-elias-alvarez/null-ls.nvim'
+Plug 'nvim-treesitter/nvim-treesitter'         " Required by telescope.vim
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-lua/plenary.nvim'
 if s:meta_env == "true"
-    Plug 'neovim/nvim-lspconfig'
-    Plug 'jose-elias-alvarez/null-ls.nvim'
-    Plug 'nvim-treesitter/nvim-treesitter'     " Required by telescope.vim
-    Plug 'nvim-telescope/telescope.nvim'
-    Plug 'nvim-lua/plenary.nvim'
     Plug '/usr/share/fb-editor-support/nvim', {'as': 'meta.nvim'}
 endif
 
