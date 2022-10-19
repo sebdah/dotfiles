@@ -50,6 +50,7 @@ Plug 'preservim/nerdtree'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'sbdchd/neoformat'
 Plug 'sebdah/vim-delve'
+Plug 'smithbm2316/centerpad.nvim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
@@ -566,6 +567,12 @@ let g:NERDTreeChDirMode = 2
 "----------------------------------------------
 " Set the Delve backend.
 let g:delve_backend = "native"
+
+"----------------------------------------------
+" Plugin: smithbm2316/centerpad.nvim
+"----------------------------------------------
+" Toggle centerpad with a key mapping.
+nnoremap <silent><leader>z <cmd>Centerpad<cr>
 
 "----------------------------------------------
 " Plugin: Shougo/neosnippet
