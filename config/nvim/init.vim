@@ -155,11 +155,6 @@ if has('nvim')
     let g:python3_host_prog = '/usr/local/bin/python3'
 endif
 
-" Enable mouse if possible
-if has('mouse')
-    set mouse=a
-endif
-
 " Allow vim to set a custom font or color for a word
 syntax enable
 
