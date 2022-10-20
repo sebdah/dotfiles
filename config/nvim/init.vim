@@ -43,7 +43,6 @@ Plug 'majutsushi/tagbar'
 Plug 'mg979/vim-visual-multi'
 Plug 'mhinz/vim-signify'
 Plug 'mileszs/ack.vim'
-Plug 'ncm2/float-preview.nvim'                 " Support floating preview windows in neovim
 Plug 'neomake/neomake'
 Plug 'preservim/nerdcommenter'
 Plug 'preservim/nerdtree'
@@ -455,13 +454,16 @@ let g:coq_settings = {
 \ }
 
 "----------------------------------------------
-" Plugin: ncm2/float-preview.nvim
-"
-" Create a preview dock based on Neovim's floating window concept.
+" Plugin: nvim-treesitter/nvim-treesitter
 "----------------------------------------------
-" Show the preview in a docked window. Alternatively it would float next to
-" the autocompletion window.
-let g:float_preview#docked = 1
+lua << EOF
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = "python",
+  indent = {
+    enable = true,
+  },
+}
+EOF
 
 "----------------------------------------------
 " Plugin: plasticboy/vim-markdown
