@@ -69,13 +69,11 @@ Plug 'kchmck/vim-coffee-script'                " CoffeeScript syntax highlightin
 Plug 'kylef/apiblueprint.vim'                  " API Blueprint syntax highlighting
 Plug 'leafgarland/typescript-vim'              " TypeScript syntax highlighting
 Plug 'lifepillar/pgsql.vim'                    " PostgreSQL syntax highlighting
-Plug 'mhartington/nvim-typescript', {'do': './install.sh'} " TypeScript auto completion
 Plug 'mxw/vim-jsx'                             " JSX syntax highlighting
 Plug 'pangloss/vim-javascript'                 " JavaScript syntax highlighting
 Plug 'plasticboy/vim-markdown'                 " Markdown syntax highlighting
 Plug 'rodjek/vim-puppet'                       " Puppet syntax highlighting
 Plug 'solarnz/thrift.vim'                      " Thrift syntax highlighting
-Plug 'vim-ruby/vim-ruby'                       " Ruby support
 Plug 'zimbatm/haproxy.vim'                     " HAProxy syntax highlighting
 
 " Meta related
@@ -784,20 +782,6 @@ au FileType ruby set expandtab
 au FileType ruby set shiftwidth=2
 au FileType ruby set softtabstop=2
 au FileType ruby set tabstop=2
-
-"
-" Plugin: Enable neomake for linting.
-"
-" Vim will load/evaluate code in order to provide completions. This may
-" cause some code execution, which may be a concern.
-let g:rubycomplete_buffer_loading = 1
-
-" In context 1 above, Vim can parse the entire buffer to add a list of
-" classes to the completion results.
-let g:rubycomplete_classes_in_global = 1
-
-" Vim can parse a Gemfile, in case gems are being implicitly required.
-let g:rubycomplete_load_gemfile = 1
 
 "----------------------------------------------
 " Language: SQL
