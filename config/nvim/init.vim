@@ -456,10 +456,13 @@ let g:coq_settings = {
 "----------------------------------------------
 lua << EOF
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = "python",
-  indent = {
-    enable = true,
-  },
+    ensure_installed = "python",
+    highlight = {
+        enable = false,
+    },
+    indent = {
+        enable = true,
+    },
 }
 EOF
 
