@@ -24,8 +24,12 @@ call plug#begin()
 Plug 'godlygeek/tabular'                       " This must come before plasticboy/vim-markdown
 Plug 'tpope/vim-rhubarb'                       " Depenency for tpope/fugitive
 
+" Auto completion
+Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
+Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
+Plug 'ms-jpq/coq.thirdparty', {'branch': '3p'}
+
 " General plugins
-Plug 'Shougo/denite.nvim'
 Plug 'Xuyuanp/nerdtree-git-plugin'             " Add git support for nerdtree
 Plug 'chrisbra/csv.vim'                        " CSV file helpers
 Plug 'christoomey/vim-tmux-navigator'
@@ -441,6 +445,13 @@ let g:tagbar_type_go = {
     \ },
     \ 'ctagsbin'  : 'gotags',
     \ 'ctagsargs' : '-sort -silent'
+\ }
+
+"----------------------------------------------
+" Plugin: ms-jpq/coq_nvim
+"----------------------------------------------
+let g:coq_settings = {
+    \ "auto_start": "shut-up"
 \ }
 
 "----------------------------------------------
