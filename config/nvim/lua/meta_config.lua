@@ -21,7 +21,7 @@ require("meta.cmds")
 -- LSP server configuration
 -------------------------------------------------------------------------------
 local servers = {
-  "rusty@meta",
+  --"rusty@meta",
   "pyls@meta",
   "wasabi@meta",
   "pyre@meta",

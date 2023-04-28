@@ -448,7 +448,11 @@ let g:tagbar_type_go = {
 " Plugin: ms-jpq/coq_nvim
 "----------------------------------------------
 let g:coq_settings = {
-    \ "auto_start": "shut-up"
+    \ "auto_start": "shut-up",
+    \ "keymap": {
+        \ "bigger_preview": "",
+        \ "jump_to_mark": ""
+    \ }
 \ }
 
 "----------------------------------------------
@@ -777,6 +781,9 @@ au FileType python set expandtab
 au FileType python set shiftwidth=4
 au FileType python set softtabstop=4
 au FileType python set tabstop=4
+if s:meta_env == "true"
+    au BufRead,BufNewFile *.inc set filetype=python
+endif
 
 "----------------------------------------------
 " Language: Ruby
