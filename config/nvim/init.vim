@@ -79,9 +79,11 @@ Plug 'zimbatm/haproxy.vim'                     " HAProxy syntax highlighting
 " Meta related
 Plug 'neovim/nvim-lspconfig'
 Plug 'jose-elias-alvarez/null-ls.nvim'
-Plug 'nvim-treesitter/nvim-treesitter'         " Required by telescope.vim
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-lua/plenary.nvim'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-nvim-lsp'
 if s:meta_env == "true"
     Plug '/usr/share/fb-editor-support/nvim', {'as': 'meta.nvim'}
 endif
@@ -95,7 +97,6 @@ Plug 'cocopon/iceberg.vim'
 Plug 'dikiaap/minimalist'
 Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 Plug 'rakr/vim-one'
-Plug 'ulwlu/elly.vim'
 
 " Load last
 Plug 'ryanoasis/vim-devicons'                  " Icons for NerdTree / Airline etc
@@ -106,11 +107,8 @@ call plug#end()                                " End Plug config section
 " Meta configuration
 "----------------------------------------------
 if s:meta_env == "true"
-    " General Meta configuration
-    lua require("meta_config")
-
-    " Mercurial configuration
-    lua require('meta.hg').setup()
+    lua require("lsp")
+    lua require("local")
 endif
 
 "----------------------------------------------

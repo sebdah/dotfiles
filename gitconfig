@@ -1,7 +1,7 @@
 [user]
 	name = Sebastian Dahlgren
 	email = sebdah@meta.com
-	signingkey = 0AAC354611A9CF4B
+	;signingkey = 0AAC354611A9CF4B
 [alias]
 	branches = !git for-each-ref \
 		--sort=-committerdate \
@@ -67,7 +67,7 @@
 [github]
 	user = sebdah
 [commit]
-	gpgsign = true
+	gpgsign = false
 [gitflow "feature.finish"]
 	push = yes
 [gitflow "bugfix.finish"]
@@ -80,3 +80,9 @@
 	helper = osxkeychain
 [init]
 	defaultBranch = main
+[http]
+  proxy=https://fwdproxy:8082
+  proxySSLCert=/var/facebook/credentials/sebdah/x509/sebdah.pem
+  proxySSLKey=/var/facebook/credentials/sebdah/x509/sebdah.pem
+[gpg]
+	program = gpg2
