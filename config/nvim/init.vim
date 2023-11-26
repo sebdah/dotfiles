@@ -33,7 +33,6 @@ Plug 'ms-jpq/coq.thirdparty', {'branch': '3p'}
 Plug 'Xuyuanp/nerdtree-git-plugin'             " Add git support for nerdtree
 Plug 'chrisbra/csv.vim'                        " CSV file helpers
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'ctrlpvim/ctrlp.vim'                      " CtrlP is installed to support tag finding in vim-go
 Plug 'dense-analysis/ale'                      " Linting support for multiple languages
 Plug 'editorconfig/editorconfig-vim'
 Plug 'junegunn/fzf'
@@ -48,12 +47,10 @@ Plug 'preservim/nerdcommenter'
 Plug 'preservim/nerdtree'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'sbdchd/neoformat'
-Plug 'sebdah/vim-delve'
 Plug 'smithbm2316/centerpad.nvim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
-Plug 'vimwiki/vimwiki'
 
 " Language support
 Plug 'HerringtonDarkholme/yats.vim'            " TypeScript syntax
@@ -533,30 +530,10 @@ let NERDTreeShowHidden = 1
 let g:NERDTreeChDirMode = 2
 
 "----------------------------------------------
-" Plugin: sebdah/vim-delve
-"----------------------------------------------
-" Set the Delve backend.
-let g:delve_backend = "native"
-
-"----------------------------------------------
 " Plugin: smithbm2316/centerpad.nvim
 "----------------------------------------------
 " Toggle centerpad with a key mapping.
 nnoremap <silent><leader>z <cmd>Centerpad<cr>
-
-"----------------------------------------------
-" Plugin: vimwiki/vimwiki
-"----------------------------------------------
-" Path to wiki
-let g:vimwiki_list = [{
-    \ 'path': '~/Dropbox/vimwiki',
-    \ 'syntax': 'markdown',
-    \ 'ext': '.vimwiki.markdown'}]
-
-au FileType vimwiki set expandtab
-au FileType vimwiki set shiftwidth=2
-au FileType vimwiki set softtabstop=2
-au FileType vimwiki set tabstop=2
 
 "----------------------------------------------
 " Language: Golang
