@@ -339,6 +339,12 @@ map  <leader><leader>w <Plug>(easymotion-bd-w)
 nmap <leader><leader>w <Plug>(easymotion-overwin-w)
 
 "----------------------------------------------
+" Plugin: github/copilot.vim
+"----------------------------------------------
+" Set a custom path for node for copilot.
+let g:copilot_node_command = '/Users/sebdah/.config/nvm/20.10.0/bin/node'
+
+"----------------------------------------------
 " Plugin: 'itchyny/calendar.vim'
 "----------------------------------------------
 " Enable Google Calendar integration.
