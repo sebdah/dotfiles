@@ -1,7 +1,8 @@
 [user]
 	name = Sebastian Dahlgren
-	email = sebdah@meta.com
-	;signingkey = 0AAC354611A9CF4B
+	;email = sebdah@meta.com
+	email = sebastian.dahlgren@gmail.com
+	signingkey = 0AAC354611A9CF4B
 [alias]
 	branches = !git for-each-ref \
 		--sort=-committerdate \
@@ -76,6 +77,8 @@
 	push = yes
 [url "git@github.com:"]
 	insteadOf = https://github.com/
+[url "git@gitlab.com:"]
+	insteadOf = https://gitlab.com/
 [credential]
 	helper = osxkeychain
 [init]
