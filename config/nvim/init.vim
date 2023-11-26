@@ -35,6 +35,7 @@ Plug 'chrisbra/csv.vim'                        " CSV file helpers
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'dense-analysis/ale'                      " Linting support for multiple languages
 Plug 'editorconfig/editorconfig-vim'
+Plug 'github/copilot.vim'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
