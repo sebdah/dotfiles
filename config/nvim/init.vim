@@ -96,6 +96,7 @@ Plug 'ayu-theme/ayu-vim'
 Plug 'cocopon/iceberg.vim'
 Plug 'dikiaap/minimalist'
 Plug 'kaicataldo/material.vim', { 'branch': 'main' }
+Plug 'marko-cerovac/material.nvim'
 Plug 'rakr/vim-one'
 
 " Load last
@@ -456,6 +457,7 @@ let g:coq_settings = {
 "----------------------------------------------
 " Plugin: nvim-treesitter/nvim-treesitter
 "----------------------------------------------
+if s:meta_env == "true"
 lua << EOF
 require'nvim-treesitter.configs'.setup {
     ensure_installed = "python",
@@ -467,6 +469,7 @@ require'nvim-treesitter.configs'.setup {
     },
 }
 EOF
+endif
 
 "----------------------------------------------
 " Plugin: plasticboy/vim-markdown
