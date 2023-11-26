@@ -30,12 +30,8 @@ set -gx PATH \
 set -gx BROWSER open
 set -gx EDITOR nvim
 set -gx FZF_DEFAULT_COMMAND 'ag --hidden -p ~/.agignore -g ""'
-<<<<<<< HEAD
 set -gx GOPATH ~/go /data/users/sebdah/fbsource/fbcode /data/users/sebdah/fbsource/fbcode/third-party-go /data/users/sebdah/fbsource/fbcode/third-party-go/vendor /data/users/sebdah/fbsource/fbcode/third-party-source/go
 set -gx GOPRIVATE 'github.com/sebdah/devinsight,github.com/clockwork-guru/*'
-=======
-set -gx GOPATH ~/go
->>>>>>> 3dcb42c ([git] Fix gitlab SSH rewrite)
 set -gx GPG_TTY (tty)
 set -gx LANG en_US.UTF-8
 set -gx LANGUAGE en_US.utf-8
