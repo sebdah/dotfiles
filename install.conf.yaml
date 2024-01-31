@@ -1,7 +1,7 @@
 - shell:
   -
-    description: Set fish as the default shell
-    command: chsh -s $(which fish)
+    description: Set zsh as the default shell
+    command: chsh -s $(which zsh)
   -
     description: Install Starship (https://starship.rs/)
     command: "curl -sS https://starship.rs/install.sh | sh"
@@ -12,10 +12,6 @@
     ~/bin:
       create: true
       path: bin
-      relink: true
-    ~/.config/fish:
-      create: true
-      path: config/fish
       relink: true
     ~/.config/git:
       create: true
@@ -49,6 +45,10 @@
       create: true
       path: gitignore
       relink: true
+    ~/.zprezto:
+      create: true
+      path: prezto
+      relink: true
     ~/.tmux:
       create: true
       path: tmux
@@ -60,4 +60,8 @@
     ~/.urlview:
       create: true
       path: urlview
+      relink: true
+    ~/.zshrc:
+      create: true
+      path: zshrc
       relink: true

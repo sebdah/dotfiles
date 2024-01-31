@@ -45,6 +45,8 @@ Plug 'mileszs/ack.vim'
 Plug 'neomake/neomake'
 Plug 'preservim/nerdcommenter'
 Plug 'preservim/nerdtree'
+Plug 'ray-x/guihua.lua', {'do': 'cd lua/fzy && make' }
+Plug 'ray-x/navigator.lua'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'sbdchd/neoformat'
 Plug 'smithbm2316/centerpad.nvim'
@@ -322,8 +324,7 @@ nnoremap <silent> <c-\> :TmuxNavigatePrevious<cr>
 "----------------------------------------------
 " Plugin: github/copilot.vim
 "----------------------------------------------
-" Set a custom path for node for copilot.
-let g:copilot_node_command = '/Users/sebdah/.config/nvm/20.10.0/bin/node'
+imap <silent><script><expr> <Tab> copilot#Accept("\<CR>")
 
 "----------------------------------------------
 " Plugin: 'junegunn/goyo.vim'
@@ -415,6 +416,12 @@ let g:tagbar_type_go = {
 \ }
 
 "----------------------------------------------
+" Plugin: mileszs/ack.vim
+"----------------------------------------------
+" Open ack
+nnoremap <leader>a :Ack!<space>
+
+"----------------------------------------------
 " Plugin: ms-jpq/coq_nvim
 "----------------------------------------------
 let g:coq_settings = {
@@ -424,6 +431,15 @@ let g:coq_settings = {
         \ "jump_to_mark": ""
     \ }
 \ }
+
+"----------------------------------------------
+" Plugin: neomake/neomake
+"----------------------------------------------
+" Configure signs.
+let g:neomake_error_sign   = {'text': '✖', 'texthl': 'NeomakeErrorSign'}
+let g:neomake_warning_sign = {'text': '∆', 'texthl': 'NeomakeWarningSign'}
+let g:neomake_message_sign = {'text': '➤', 'texthl': 'NeomakeMessageSign'}
+let g:neomake_info_sign    = {'text': 'ℹ', 'texthl': 'NeomakeInfoSign'}
 
 "----------------------------------------------
 " Plugin: nvim-treesitter/nvim-treesitter
@@ -458,19 +474,9 @@ let g:vim_markdown_toc_autofit = 1
 nnoremap <leader>w :Bclose<cr>
 
 "----------------------------------------------
-" Plugin: mileszs/ack.vim
+" Plugin: ray-x/navigator.lua
 "----------------------------------------------
-" Open ack
-nnoremap <leader>a :Ack!<space>
-
-"----------------------------------------------
-" Plugin: neomake/neomake
-"----------------------------------------------
-" Configure signs.
-let g:neomake_error_sign   = {'text': '✖', 'texthl': 'NeomakeErrorSign'}
-let g:neomake_warning_sign = {'text': '∆', 'texthl': 'NeomakeWarningSign'}
-let g:neomake_message_sign = {'text': '➤', 'texthl': 'NeomakeMessageSign'}
-let g:neomake_info_sign    = {'text': 'ℹ', 'texthl': 'NeomakeInfoSign'}
+lua require'navigator'.setup()
 
 "----------------------------------------------
 " Plugin: scrooloose/nerdtree

@@ -59,8 +59,9 @@
 	default = current
 [filter "lfs"]
 	clean = git-lfs clean -- %f
-	smudge = git lfs smudge %f
+	smudge = git-lfs smudge -- %f
 	required = true
+	process = git-lfs filter-process
 [rebase]
 	autosquash = true
 [branch]
@@ -68,7 +69,7 @@
 [github]
 	user = sebdah
 [commit]
-	gpgsign = false
+	gpgsign = true
 [gitflow "feature.finish"]
 	push = yes
 [gitflow "bugfix.finish"]
