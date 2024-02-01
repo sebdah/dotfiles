@@ -2,8 +2,15 @@
 eval "$(starship init zsh)"
 
 # Aliases
-alias ls="ls --color=auto"
+alias ga="git add"
+alias gc="git commit"
+alias gca="git commit --amend"
+alias gp="git push"
 alias gst="git status"
+alias gL="git pull"
+alias gSu="git submodule update --init --recursive"
+alias la="ls --color=auto -l"
+alias ls="ls --color=auto"
 alias scp="scp -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
 alias ssh="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
 alias tmux="tmux -2"
