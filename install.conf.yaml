@@ -45,10 +45,6 @@
       create: true
       path: gitignore
       relink: true
-    ~/.zprezto:
-      create: true
-      path: prezto
-      relink: true
     ~/.tmux:
       create: true
       path: tmux
