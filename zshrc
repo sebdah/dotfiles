@@ -2,11 +2,13 @@
 eval "$(starship init zsh)"
 
 # Aliases
+alias ..="cd .."
 alias ga="git add"
 alias gc="git commit"
 alias gca="git commit --amend"
 alias gp="git push"
 alias gst="git status"
+alias gwd="git diff"
 alias gL="git pull"
 alias gSu="git submodule update --init --recursive"
 alias la="ls --color=auto -l"
