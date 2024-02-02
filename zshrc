@@ -41,6 +41,11 @@ export VISUAL="nvim"
 # FZF configuration
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# Facebook initialization
+if [[ $HOSTNAME == *"facebook.com"* ]] ; then
+  source /usr/facebook/ops/rc/master.zshrc
+fi
+
 # dcleanup can be used to clean up docker images.
 dcleanup () {
   docker rm -v $(docker ps --filter status=exited -q 2>&1 /dev/null) 2>&1 /dev/null
