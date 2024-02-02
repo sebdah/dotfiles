@@ -62,3 +62,15 @@ gcleanup () {
 tC () {
   tmux list-sessions | awk 'BEGIN{FS=":"}{print $1}' | xargs -n 1 tmux kill-session -t
 }
+
+# Turn on the Facebook proxy
+proxy-on () {
+  export HTTP_PROXY="fwdproxy:8080"
+  export HTTPS_PROXY="fwdproxy:8080"
+}
+
+# Turn off the Facebook proxy
+proxy-off () {
+  unset HTTP_PROXY
+  unset HTTPS_PROXY
+}
