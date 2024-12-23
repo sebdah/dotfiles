@@ -1,19 +1,4 @@
 "----------------------------------------------
-" Meta configuration
-"---------------------------------------------
-" Determine if we're in a Meta environment or not. This will have side effects
-" on key bindings and plugins that we're loading.
-let s:meta_env = "false"
-
-if getcwd() =~ ".*/fbsource.*" || getcwd() =~ ".*/configerator.*" || getcwd() =~ ".*/www.*"
-    let s:meta_env = "true"
-endif
-
-if s:meta_env == "true"
-    echomsg "> Loading Meta environment    ..."
-endif
-
-"----------------------------------------------
 " Plug management
 "---------------------------------------------
 set nocompatible                                 " be iMproved, required
@@ -34,7 +19,6 @@ Plug 'Xuyuanp/nerdtree-git-plugin'             " Add git support for nerdtree
 Plug 'chrisbra/csv.vim'                        " CSV file helpers
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'github/copilot.vim'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
@@ -45,8 +29,6 @@ Plug 'mileszs/ack.vim'
 Plug 'neomake/neomake'
 Plug 'preservim/nerdcommenter'
 Plug 'preservim/nerdtree'
-Plug 'ray-x/guihua.lua', {'do': 'cd lua/fzy && make' }
-Plug 'ray-x/navigator.lua'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'sbdchd/neoformat'
 Plug 'smithbm2316/centerpad.nvim'
@@ -76,16 +58,13 @@ Plug 'solarnz/thrift.vim'                      " Thrift syntax highlighting
 Plug 'zimbatm/haproxy.vim'                     " HAProxy syntax highlighting
 
 " Meta related
-Plug 'neovim/nvim-lspconfig'
-Plug 'jose-elias-alvarez/null-ls.nvim'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'nvim-telescope/telescope.nvim'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'hrsh7th/nvim-cmp'
-Plug 'hrsh7th/cmp-nvim-lsp'
-if s:meta_env == "true"
-    Plug '/usr/share/fb-editor-support/nvim', {'as': 'meta.nvim'}
-endif
+"Plug 'neovim/nvim-lspconfig'
+"Plug 'jose-elias-alvarez/null-ls.nvim'
+"Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+"Plug 'nvim-telescope/telescope.nvim'
+"Plug 'nvim-lua/plenary.nvim'
+"Plug 'hrsh7th/nvim-cmp'
+"Plug 'hrsh7th/cmp-nvim-lsp'
 
 " Colorschemes
 Plug 'EdenEast/nightfox.nvim'
@@ -102,14 +81,6 @@ Plug 'rakr/vim-one'
 Plug 'ryanoasis/vim-devicons'                  " Icons for NerdTree / Airline etc
 
 call plug#end()                                " End Plug config section
-
-"----------------------------------------------
-" Meta configuration
-"----------------------------------------------
-if s:meta_env == "true"
-    lua require("lsp")
-    lua require("local")
-endif
 
 "----------------------------------------------
 " General settings
@@ -335,39 +306,6 @@ let g:goyo_width = 120
 "----------------------------------------------
 " Plugin: 'junegunn/fzf.vim'
 "----------------------------------------------
-if s:meta_env == "true"
-    command! -bang -nargs=* Cbgs
-      \ call fzf#vim#grep(
-      \   'cbgs --forcedir ~/configerator --exclude "raw_config" -c on '.shellescape(<q-args>), 1,
-      \   fzf#vim#with_preview(), <bang>0)
-
-    command! -bang -nargs=* Cbgf
-      \ call fzf#vim#grep(
-      \   'cbgf --forcedir ~/configerator --exclude "raw_config" -c on '.shellescape(<q-args>), 1,
-      \   fzf#vim#with_preview(), <bang>0)
-
-    command! -bang -nargs=* Fbgs
-      \ call fzf#vim#grep(
-      \   'fbgs --forcedir ~/fbsource/fbcode -c on '.shellescape(<q-args>), 1,
-      \   fzf#vim#with_preview(), <bang>0)
-
-    command! -bang -nargs=* Fbgf
-      \ call fzf#vim#grep(
-      \   'fbgf --forcedir ~/fbsource/fbcode -c on '.shellescape(<q-args>), 1,
-      \   fzf#vim#with_preview(), <bang>0)
-
-    command! -bang -nargs=* Tbgs
-      \ call fzf#vim#grep(
-      \   'tbgs --forcedir ~/www -c on '.shellescape(<q-args>), 1,
-      \   fzf#vim#with_preview(), <bang>0)
-
-    command! -bang -nargs=* Tbgf
-      \ call fzf#vim#grep(
-      \   'tbgf --forcedir ~/www -c on '.shellescape(<q-args>), 1,
-      \   fzf#vim#with_preview(), <bang>0)
-
-endif
-
 nnoremap <c-p> :FZF<cr>
 nnoremap <a-g> :Commits<cr>
 nnoremap <a-s-g> :BCommits<cr>
@@ -442,23 +380,6 @@ let g:neomake_message_sign = {'text': '➤', 'texthl': 'NeomakeMessageSign'}
 let g:neomake_info_sign    = {'text': 'ℹ', 'texthl': 'NeomakeInfoSign'}
 
 "----------------------------------------------
-" Plugin: nvim-treesitter/nvim-treesitter
-"----------------------------------------------
-if s:meta_env == "true"
-lua << EOF
-require'nvim-treesitter.configs'.setup {
-    ensure_installed = "python",
-    highlight = {
-        enable = true,
-    },
-    indent = {
-        enable = true,
-    },
-}
-EOF
-endif
-
-"----------------------------------------------
 " Plugin: plasticboy/vim-markdown
 "----------------------------------------------
 " Disable folding
@@ -476,7 +397,7 @@ nnoremap <leader>w :Bclose<cr>
 "----------------------------------------------
 " Plugin: ray-x/navigator.lua
 "----------------------------------------------
-lua require'navigator'.setup()
+"lua require'navigator'.setup()
 
 "----------------------------------------------
 " Plugin: scrooloose/nerdtree
@@ -744,9 +665,6 @@ au FileType python set expandtab
 au FileType python set shiftwidth=4
 au FileType python set softtabstop=4
 au FileType python set tabstop=4
-if s:meta_env == "true"
-    au BufRead,BufNewFile *.inc set filetype=python
-endif
 
 "----------------------------------------------
 " Language: Ruby
