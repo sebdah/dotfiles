@@ -75,17 +75,13 @@
 	push = yes
 [gitflow "hotfix.finish"]
 	push = yes
-;[url "git@github.com:"]
-	;insteadOf = https://github.com/
-[url "git@gitlab.com:"]
-	insteadOf = https://gitlab.com/
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+;[url "git@gitlab.com:"]
+;	insteadOf = https://gitlab.com/
 [credential]
 	helper = osxkeychain
 [init]
 	defaultBranch = main
-;[http]
-  ;proxy=https://fwdproxy:8082
-  ;proxySSLCert=/var/facebook/credentials/sebdah/x509/sebdah.pem
-  ;proxySSLKey=/var/facebook/credentials/sebdah/x509/sebdah.pem
 ;[gpg]
 	;program = gpg2

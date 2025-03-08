@@ -22,17 +22,20 @@ alias ssh="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
 alias tmux="tmux -2"
 
 # Path configuration
-path+=("/opt/homebrew/bin")
 path+=("~/.local/bin")
 path+=("~/go/bin")
+export PATH="/opt/homebrew/bin:$PATH"
 export PATH
 
 # Other environment variables
 export BROWSER="open"
 export EDITOR="nvim"
 export FZF_DEFAULT_COMMAND='ag --hidden -p ~/.agignore -g ""'
-export GOPATH="~/go:/data/users/sebdah/fbsource/fbcode:/data/users/sebdah/fbsource/fbcode/third-party-go:/data/users/sebdah/fbsource/fbcode/third-party-go/vendor:/data/users/sebdah/fbsource/fbcode/third-party-source/go"
-export GOPRIVATE='github.com/sebdah/devinsight,github.com/clockwork-guru/*,gitlab.com/agrea'
+export GOROOT="$(brew --prefix golang)/libexec"
+export GOPATH="/Users/sebdah/go:/data/users/sebdah/fbsource/fbcode:/data/users/sebdah/fbsource/fbcode/third-party-go:/data/users/sebdah/fbsource/fbcode/third-party-go/vendor:/data/users/sebdah/fbsource/fbcode/third-party-source/go"
+export GOPRIVATE='github.com/sebdah/devinsight,github.com/clockwork-guru/*,gitlab.com/agrea,gitlab.com/sebdah/emerald/*,gitlab.com/sebdah/*'
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
 export GPG_TTY=$(tty)
 export LANG="en_US.UTF-8"
 export LANGUAGE="en_US.UTF-8"
