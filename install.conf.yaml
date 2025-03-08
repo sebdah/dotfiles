@@ -33,6 +33,10 @@
       create: true
       path: config/nvim
       relink: true
+    ~/.config/starship.toml:
+      create: true
+      path: config/starship.toml
+      relink: true
     ~/.agignore:
       create: true
       path: agignore
