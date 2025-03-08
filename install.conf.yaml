@@ -1,7 +1,7 @@
 - shell:
   -
-    description: Set zsh as the default shell
-    command: chsh -s $(which zsh)
+    description: Set fish as the default shell
+    command: chsh -s $(which fish)
   -
     description: Install Starship (https://starship.rs/)
     command: "curl -sS https://starship.rs/install.sh | sh"
