@@ -43,7 +43,7 @@ Plug 'cespare/vim-toml'                        " toml syntax highlighting
 Plug 'chr4/nginx.vim'                          " nginx syntax highlighting
 Plug 'dag/vim-fish'                            " Fish syntax highlighting
 Plug 'digitaltoad/vim-pug'                     " Pug syntax highlighting
-Plug 'ray-x/go.nvim'                           " Go support
+Plug 'fatih/vim-go', {'do': ':GoUpdateBinaries'} " Go support
 Plug 'hashivim/vim-terraform'                  " Terraform syntax highlighting
 Plug 'jparise/vim-graphql'                     " GraphQL syntax highlighting and indentation
 Plug 'kchmck/vim-coffee-script'                " CoffeeScript syntax highlighting
@@ -56,15 +56,6 @@ Plug 'plasticboy/vim-markdown'                 " Markdown syntax highlighting
 Plug 'rodjek/vim-puppet'                       " Puppet syntax highlighting
 Plug 'solarnz/thrift.vim'                      " Thrift syntax highlighting
 Plug 'zimbatm/haproxy.vim'                     " HAProxy syntax highlighting
-
-" Meta related
-"Plug 'neovim/nvim-lspconfig'
-"Plug 'jose-elias-alvarez/null-ls.nvim'
-"Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-"Plug 'nvim-telescope/telescope.nvim'
-"Plug 'nvim-lua/plenary.nvim'
-"Plug 'hrsh7th/nvim-cmp'
-"Plug 'hrsh7th/cmp-nvim-lsp'
 
 " Colorschemes
 Plug 'EdenEast/nightfox.nvim'
@@ -395,11 +386,6 @@ let g:vim_markdown_toc_autofit = 1
 nnoremap <leader>w :Bclose<cr>
 
 "----------------------------------------------
-" Plugin: ray-x/navigator.lua
-"----------------------------------------------
-"lua require'navigator'.setup()
-
-"----------------------------------------------
 " Plugin: scrooloose/nerdtree
 "----------------------------------------------
 nnoremap <leader>d :NERDTreeToggle<cr>
@@ -438,78 +424,73 @@ au FileType go set shiftwidth=4
 au FileType go set softtabstop=4
 au FileType go set tabstop=4
 
+" Mappings
+au FileType go nmap <F8> :GoMetaLinter<cr>
+au FileType go nmap <F9> :GoCoverageToggle -short<cr>
+au FileType go nmap <F10> :GoTest -short<cr>
+au FileType go nmap <F12> <Plug>(go-def)
+au Filetype go nmap <leader>ga <Plug>(go-alternate-edit)
+au Filetype go nmap <leader>gah <Plug>(go-alternate-split)
+au Filetype go nmap <leader>gav <Plug>(go-alternate-vertical)
+au FileType go nmap <leader>gt :GoDeclsDir<cr>
+au FileType go nmap <leader>gc <Plug>(go-coverage-toggle)
+au FileType go nmap <leader>gd <Plug>(go-def)
+au FileType go nmap <leader>gdv <Plug>(go-def-vertical)
+au FileType go nmap <leader>gdh <Plug>(go-def-split)
+au FileType go nmap <leader>gD <Plug>(go-doc)
+au FileType go nmap <leader>gDv <Plug>(go-doc-vertical)
 
-lua require("golang")
+au filetype go inoremap <buffer> . .<C-x><C-o>
 
+" Run goimports when running gofmt
+let g:go_fmt_command = "goimports"
 
+" Set neosnippet as snippet engine
+let g:go_snippet_engine = "neosnippet"
 
-"" Mappings
-"au FileType go nmap <F8> :GoMetaLinter<cr>
-"au FileType go nmap <F9> :GoCoverageToggle -short<cr>
-"au FileType go nmap <F10> :GoTest -short<cr>
-"au FileType go nmap <F12> <Plug>(go-def)
-"au Filetype go nmap <leader>ga <Plug>(go-alternate-edit)
-"au Filetype go nmap <leader>gah <Plug>(go-alternate-split)
-"au Filetype go nmap <leader>gav <Plug>(go-alternate-vertical)
-"au FileType go nmap <leader>gt :GoDeclsDir<cr>
-"au FileType go nmap <leader>gc <Plug>(go-coverage-toggle)
-"au FileType go nmap <leader>gd <Plug>(go-def)
-"au FileType go nmap <leader>gdv <Plug>(go-def-vertical)
-"au FileType go nmap <leader>gdh <Plug>(go-def-split)
-"au FileType go nmap <leader>gD <Plug>(go-doc)
-"au FileType go nmap <leader>gDv <Plug>(go-doc-vertical)
+" Enable syntax highlighting per default
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_extra_types = 1
 
-"au filetype go inoremap <buffer> . .<C-x><C-o>
+" Show the progress when running :GoCoverage
+let g:go_echo_command_info = 1
 
-"" Run goimports when running gofmt
-"let g:go_fmt_command = "goimports"
+" Show type information
+let g:go_auto_type_info = 1
 
-"" Set neosnippet as snippet engine
-"let g:go_snippet_engine = "neosnippet"
+" Highlight variable uses
+let g:go_auto_sameids = 0
 
-"" Enable syntax highlighting per default
-"let g:go_highlight_types = 1
-"let g:go_highlight_fields = 1
-"let g:go_highlight_functions = 1
-"let g:go_highlight_methods = 1
-"let g:go_highlight_structs = 1
-"let g:go_highlight_operators = 1
-"let g:go_highlight_build_constraints = 1
-"let g:go_highlight_extra_types = 1
+" Fix for location list when vim-go is used together with Syntastic
+let g:go_list_type = "quickfix"
 
-"" Show the progress when running :GoCoverage
-"let g:go_echo_command_info = 1
+" Using gopls to find definitions and information.
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
 
-"" Show type information
-"let g:go_auto_type_info = 1
+" Add the failing test name to the output of :GoTest
+let g:go_test_show_name = 1
 
-"" Highlight variable uses
-"let g:go_auto_sameids = 0
-
-"" Fix for location list when vim-go is used together with Syntastic
-"let g:go_list_type = "quickfix"
-
-"" Using gopls to find definitions and information.
-"let g:go_def_mode='gopls'
-"let g:go_info_mode='gopls'
-
-"" Add the failing test name to the output of :GoTest
-"let g:go_test_show_name = 1
-
-"" gometalinter configuration
-"let g:go_metalinter_command = ""
-"let g:go_metalinter_deadline = "5s"
-"let g:go_metalinter_enabled = [
-    "\ 'deadcode',
-    "\ 'gas',
-    "\ 'goconst',
-    "\ 'gocyclo',
-    "\ 'golint',
-    "\ 'gosimple',
-    "\ 'ineffassign',
-    "\ 'vet',
-    "\ 'vetshadow'
-"\]
+" gometalinter configuration
+let g:go_metalinter_command = ""
+let g:go_metalinter_deadline = "5s"
+let g:go_metalinter_enabled = [
+    \ 'deadcode',
+    \ 'gas',
+    \ 'goconst',
+    \ 'gocyclo',
+    \ 'golint',
+    \ 'gosimple',
+    \ 'ineffassign',
+    \ 'vet',
+    \ 'vetshadow'
+\]
 
 "" Set whether the JSON tags should be snakecase or camelcase.
 "let g:go_addtags_transform = "snakecase"
