@@ -13,6 +13,10 @@
       create: true
       path: bin
       relink: true
+    ~/.config/fish:
+      create: true
+      path: config/fish
+      relink: true
     ~/.config/git:
       create: true
       path: config/git
@@ -20,14 +24,6 @@
     ~/.config/htop:
       create: true
       path: config/htop
-      relink: true
-    ~/.config/kitty:
-      create: true
-      path: config/kitty
-      relink: true
-    ~/.config/kitty-themes:
-      create: true
-      path: config/kitty-themes
       relink: true
     ~/.config/nvim:
       create: true
