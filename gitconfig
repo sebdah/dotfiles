@@ -77,8 +77,8 @@
 	push = yes
 [url "git@github.com:"]
 	insteadOf = https://github.com/
-;[url "git@gitlab.com:"]
-;	insteadOf = https://gitlab.com/
+[url "git@gitlab.com:"]
+	insteadOf = https://gitlab.com/
 [credential]
 	helper = osxkeychain
 [init]
