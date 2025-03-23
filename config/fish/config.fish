@@ -3,6 +3,7 @@ if test -e ~/.profile-secrets.fish
 end
 
 # Aliases
+alias ls 'ls --color'
 alias grep 'grep --color=auto'
 alias scp "scp -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
 alias ssh "ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
