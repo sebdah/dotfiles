@@ -6,3 +6,7 @@ and Linux.
 The repo is now using [dotbot](https://github.com/anishathalye/dotbot) for
 configuration. Run `./install` to link all relevant things into your
 environment.
+
+## Update Brewfile
+
+    brew bundle dump > Brewfile
