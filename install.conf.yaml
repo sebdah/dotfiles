@@ -61,3 +61,10 @@
       create: true
       path: zshrc
       relink: true
+    ~/.config/fish/conf.d/conda.fish:
+      create: true
+      path: /opt/homebrew/anaconda3/etc/fish/conf.d/conda.fish
+      relink: true
+
+- brewfile:
+  - Brewfile

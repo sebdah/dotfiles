@@ -1,10 +1,10 @@
 [submodule "tmux/plugins/tpm"]
 	path = tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
-[submodule "config/kitty/kitty-themes"]
-	path = config/kitty/kitty-themes
-	url = git@github.com:dexpota/kitty-themes.git
 [submodule "dotbot"]
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
 	ignore = dirty
+[submodule "dotbot-brew"]
+	path = dotbot-brew
+	url = https://github.com/d12frosted/dotbot-brew.git

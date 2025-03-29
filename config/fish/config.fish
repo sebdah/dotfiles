@@ -18,6 +18,7 @@ set -gx PATH \
   /opt/facebook/bin \
   /opt/facebook/hg/bin \
   /opt/homebrew/bin \
+  /opt/homebrew/anaconda3/bin \
   /bin \
   /usr/bin \
   /usr/sbin \
