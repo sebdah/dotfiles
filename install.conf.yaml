@@ -8,6 +8,9 @@
     stdin: true
     stdout: true
 
+- shell:
+  - [git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm]
+
 - link:
     ~/bin:
       create: true
