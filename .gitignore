@@ -3,3 +3,9 @@ config/configstore/update-notifier-npm.json
 config/filezilla
 config/direnv
 .tmux/plugins
+
+# Claude Code machine-local state -- never sync these
+claude/settings.local.json
+claude/plugins/
+claude/todos/
+claude/skills/*.skill

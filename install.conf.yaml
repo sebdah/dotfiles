@@ -45,6 +45,26 @@
       create: true
       path: agignore
       relink: true
+    ~/.claude/CLAUDE.md:
+      create: true
+      path: claude/CLAUDE.md
+      relink: true
+    ~/.claude/agents:
+      create: true
+      path: claude/agents
+      relink: true
+    ~/.claude/commands:
+      create: true
+      path: claude/commands
+      relink: true
+    ~/.claude/keybindings.json:
+      create: true
+      path: claude/keybindings.json
+      relink: true
+    ~/.claude/settings.json:
+      create: true
+      path: claude/settings.json
+      relink: true
     ~/.gitconfig:
       create: true
       path: gitconfig

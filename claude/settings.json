@@ -1,0 +1,45 @@
+{
+  "permissions": {
+    "allow": [
+      "Edit",
+      "Read",
+      "Write",
+      "Bash(cd *)",
+      "Bash(chmod *)",
+      "Bash(curl *)",
+      "Bash(curl -s -w '\\\\nStatus: %{http_code}\\\\n' 'http://localhost:8080/builds?error_code=INVALID')",
+      "Bash(curl -s -w '\\\\nStatus: %{http_code}\\\\n' 'http://localhost:8080/builds?runner=invalid')",
+      "Bash(curl -s -w '\\\\nStatus: %{http_code}\\\\n' 'http://localhost:8080/builds?trigger=invalid')",
+      "Bash(echo *)",
+      "Bash(env *)",
+      "Bash(find *)",
+      "Bash(git *)",
+      "Bash(git-* *)",
+      "Bash(go *)",
+      "Bash(go-* *)",
+      "Bash(grep *)",
+      "Bash(http *)",
+      "Bash(ls *)",
+      "Bash(make *)",
+      "Bash(pkill *)",
+      "Bash(pwd)",
+      "Bash(python *)",
+      "Bash(python3 *)",
+      "Bash(sleep *)",
+      "Bash(ssh *)",
+      "Bash(ssh-* *)"
+    ],
+    "deny": [
+      "Bash(rm -rf *)",
+      "Bash(sudo *)"
+    ]
+  },
+  "model": "haiku",
+  "enabledPlugins": {
+    "gopls-lsp@claude-plugins-official": true,
+    "superpowers@claude-plugins-official": true,
+    "mattpocock-skills@claude-plugins-official": true,
+    "mcp-server-dev@claude-plugins-official": true
+  },
+  "tui": "fullscreen"
+}
