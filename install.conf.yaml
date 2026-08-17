@@ -1,3 +1,6 @@
+- brewfile:
+  - Brewfile
+
 - shell:
   -
     description: Set fish as the default shell
@@ -9,7 +12,9 @@
     stdout: true
 
 - shell:
-  - [git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm]
+  -
+    description: Install tpm (https://github.com/tmux-plugins/tpm)
+    command: test -d ~/.tmux/plugins/tpm || git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 - link:
     ~/bin:
@@ -64,10 +69,3 @@
       create: true
       path: zshrc
       relink: true
-    ~/.config/fish/conf.d/conda.fish:
-      create: true
-      path: /opt/homebrew/anaconda3/etc/fish/conf.d/conda.fish
-      relink: true
-
-- brewfile:
-  - Brewfile
