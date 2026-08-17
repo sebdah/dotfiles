@@ -22,6 +22,8 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
+Plug 'kdheepak/lazygit.nvim'
+Plug 'lewis6991/gitsigns.nvim'
 Plug 'majutsushi/tagbar'
 Plug 'mg979/vim-visual-multi'
 Plug 'mhinz/vim-signify'
@@ -284,6 +286,27 @@ nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
 nnoremap <silent> <c-\> :TmuxNavigatePrevious<cr>
 
 "----------------------------------------------
+" Plug 'kdheepak/lazygit.nvim'
+"----------------------------------------------
+nnoremap <leader>lg :LazyGit<CR>
+
+"----------------------------------------------
+" Plug 'lewis6991/gitsigns.nvim'
+"----------------------------------------------
+lua <<EOF
+require('gitsigns').setup({
+  signs = {
+    add = { text = '▎' },
+    change = { text = '▎' },
+    delete = { text = '▎' },
+    topdelete = { text = '▎' },
+    changedelete = { text = '▎' },
+  },
+})
+EOF
+
+
+"----------------------------------------------
 " Plugin: github/copilot.vim
 "----------------------------------------------
 imap <silent><script><expr> <Tab> copilot#Accept("\<CR>")
@@ -356,8 +379,7 @@ nnoremap <leader>a :Ack!<space>
 let g:coq_settings = {
     \ "auto_start": "shut-up",
     \ "keymap": {
-        \ "bigger_preview": "",
-        \ "jump_to_mark": ""
+        \ "bigger_preview": ""
     \ }
 \ }
 
