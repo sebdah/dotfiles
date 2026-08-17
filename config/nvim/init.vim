@@ -376,12 +376,6 @@ nnoremap <leader>a :Ack!<space>
 "----------------------------------------------
 " Plugin: ms-jpq/coq_nvim
 "----------------------------------------------
-let g:coq_settings = {
-    \ "auto_start": "shut-up",
-    \ "keymap": {
-        \ "bigger_preview": ""
-    \ }
-\ }
 
 "----------------------------------------------
 " Plugin: neomake/neomake
