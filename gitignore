@@ -7,3 +7,5 @@
 npm*.log*
 .vim-bookmarks
 .rakeTasks
+
+**/.claude/settings.local.json
