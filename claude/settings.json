@@ -5,6 +5,8 @@
       "Read",
       "Write",
       "WebFetch(domain:docs.google.com)",
+      "Bash(brew *)",
+      "Bash(cat *)",
       "Bash(cd *)",
       "Bash(chmod *)",
       "Bash(cp *)",
@@ -37,6 +39,7 @@
       "Bash(sleep *)",
       "Bash(ssh *)",
       "Bash(ssh-* *)",
+      "Bash(tee *)",
       "Bash(which *)"
     ],
     "deny": [
@@ -51,5 +54,6 @@
     "mattpocock-skills@claude-plugins-official": true,
     "mcp-server-dev@claude-plugins-official": true
   },
-  "tui": "fullscreen"
+  "tui": "fullscreen",
+  "agentPushNotifEnabled": true
 }
