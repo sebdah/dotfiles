@@ -12,6 +12,8 @@
       "Bash(curl -s -w '\\\\nStatus: %{http_code}\\\\n' 'http://localhost:8080/builds?error_code=INVALID')",
       "Bash(curl -s -w '\\\\nStatus: %{http_code}\\\\n' 'http://localhost:8080/builds?runner=invalid')",
       "Bash(curl -s -w '\\\\nStatus: %{http_code}\\\\n' 'http://localhost:8080/builds?trigger=invalid')",
+      "Bash(docker *)",
+      "Bash(docker-compose *)",
       "Bash(echo *)",
       "Bash(env *)",
       "Bash(head *)",
